@@ -59,7 +59,12 @@ const boysOptions = {
     text: ''
   },
   tooltip: {
-    trigger: 'axis'
+    trigger: 'axis',
+    axisPointer: {
+      label: {
+        formatter: 'Day {value}'
+      }
+    }
   },
   legend: {
     data: ['Luca', 'Dami', 'Andrew', 'Liam', 'Davide', 'Ikenna']
@@ -74,6 +79,9 @@ const boysOptions = {
     feature: {
       saveAsImage: {
         name: 'Love Island Timeline Boys'
+      },
+      dataZoom: {
+        show: true,
       }
     }
   },
@@ -136,7 +144,12 @@ export let girlsOptions = {
     // text: 'Love Island 2022 Girls'
   },
   tooltip: {
-    trigger: 'axis'
+    trigger: 'axis',
+    axisPointer: {
+      label: {
+        formatter: 'Day {value}'
+      }
+    }
   },
   legend: {
     data: ['Paige', 'Amber', 'Indiyah', 'Tasha', 'Gemma'],
@@ -153,6 +166,9 @@ export let girlsOptions = {
     feature: {
       saveAsImage: {
         name: 'Love Island Timeline Girls'
+      },
+      dataZoom: {
+        show: true,
       }
     }
   },
