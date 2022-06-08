@@ -7,6 +7,7 @@ import Vulnerable from "./Vulnerable";
 // import Image from "next/image"
 import CountDown from "./CountDown";
 import CurrentCouples from "./CurrentCouples"
+import CrossTable from "./CrossTable"
 
 type Props = {};
 
@@ -16,9 +17,9 @@ const LineGraph = (props: Props) => {
     <Typography sx={{ fontSize: 24 }} className="text-slate-900 text-center underline font-bold ">
             My GF Watches Love Island
           </Typography>
-      <div className="grid grid-cols-12 gap-4 sm:p-24 p-4">
+      <div className="grid grid-cols-12 gap-4 lg:p-24 p-4">
         <Card variant="outlined" className="lg:col-span-6 col-span-12 text-center">
-          <Typography sx={{ fontSize: 24 }} className="text-slate-900 ">
+          <Typography sx={{ fontSize: 24 }} className="text-slate-900">
             Boys Timeline
           </Typography>
 
@@ -26,7 +27,7 @@ const LineGraph = (props: Props) => {
             option={boysOptions}
             notMerge={true}
             lazyUpdate={true}
-            theme={"dark"}
+            // theme={"dark"}
           />
         </Card>
 
@@ -71,7 +72,9 @@ const boysOptions = {
   },
   toolbox: {
     feature: {
-      saveAsImage: {}
+      saveAsImage: {
+        name: 'Love Island Timeline Boys'
+      }
     }
   },
   xAxis: {
@@ -148,7 +151,9 @@ export let girlsOptions = {
   },
   toolbox: {
     feature: {
-      saveAsImage: {}
+      saveAsImage: {
+        name: 'Love Island Timeline Girls'
+      }
     }
   },
   xAxis: {
