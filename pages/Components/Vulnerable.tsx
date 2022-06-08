@@ -13,7 +13,7 @@ export default function Vulnerable() {
           height="40"
           image="/image/LiamVulnerable.jpeg"
           alt="Liam"
-          className="w-1/2 lg:ml-56 md:ml-32 sm:ml-20 ml-16"
+          className="w-1/2 lg:ml-56 md:ml-32 sm:ml-20 ml-10"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
