@@ -9,10 +9,10 @@ export default function Vulnerable() {
     <Card className="col-span-6 text-center">
       <CardActionArea>
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
+          <Typography gutterBottom variant="h6" component="div">
             Currently Vulnerable
           </Typography>
-          <Typography variant="h5" color="text.secondary">
+          <Typography variant="h6" color="text.secondary">
             Liam :(
           </Typography>
         </CardContent>

@@ -60,14 +60,24 @@ const CountDown = (props: Props) => {
           <>
             <CardActionArea>
               <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
+                <Typography gutterBottom variant="h6" component="div">
                   Time Until Next Episode
                 </Typography>
-                <Typography variant="h5" color="text.secondary">
+                <Typography variant="h6" color="text.secondary">
+                  <li className="list-none">
                   {countdownTime.countdownDays} Days{" "}
+                  
+                  
                   {countdownTime.countdownHours} hrs{" "}
+                  </li>
+                  <li className="list-none">
                   {countdownTime.countdownMinutes} mins{" "}
                   {countdownTime.countdownSeconds} Secs
+                  </li>
+                  
+                  
+                  
+                  
                 </Typography>
               </CardContent>
             </CardActionArea>
