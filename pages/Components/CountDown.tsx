@@ -69,7 +69,9 @@ const CountDown = (props: Props) => {
        
           </>
         ) : (
-          <p>Deal has been Expired</p>
+            <Typography className="pl-5 ">
+            OMG Its on NOW!!
+          </Typography>
         )}
       </Card>
     </>
