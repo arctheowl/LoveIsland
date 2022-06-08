@@ -25,10 +25,10 @@ const rows = [
 
 export default function BasicTable() {
   return (
-    <Card className="col-span-6 text-center">
+    <Card className="lg:col-span-6 sm:col-span-12 text-center">
       <Typography>Current Couples</Typography>
       <TableContainer component={Paper}>
-        <Table sx={{ minWidth: 650 }} size="small" aria-label="simple table">
+        <Table size="small" aria-label="simple table">
           <TableHead>
             <TableRow>
               <TableCell>Boys</TableCell>

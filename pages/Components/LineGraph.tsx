@@ -17,7 +17,7 @@ const LineGraph = (props: Props) => {
             My GF Watches Love Island
           </Typography>
       <div className="grid grid-cols-12 gap-4 p-24">
-        <Card variant="outlined" className="col-span-6">
+        <Card variant="outlined" className="lg:col-span-6 sm:col-span-12">
           <Typography sx={{ fontSize: 24 }} className="text-slate-900 ">
             Boys Timeline
           </Typography>
@@ -30,7 +30,7 @@ const LineGraph = (props: Props) => {
           />
         </Card>
 
-        <Card variant="outlined" className="col-span-6">
+        <Card variant="outlined" className="lg:col-span-6 sm:col-span-12">
           <Typography sx={{ fontSize: 24 }} className="text-slate-900 ">
             Girls Timeline
           </Typography>
