@@ -71,8 +71,8 @@ const CountDown = (props: Props) => {
                   {countdownTime.countdownHours} hrs{" "}
                   </li>
                   <li className="list-none">
-                  {countdownTime.countdownMinutes} mins{" "}
-                  {countdownTime.countdownSeconds} Secs
+                  {countdownTime.countdownMinutes} min{" "}
+                  {countdownTime.countdownSeconds} Sec
                   </li>
                   
                   
