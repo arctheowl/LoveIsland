@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
+import { CardActionArea } from "@mui/material";
 
 type Props = {};
 
@@ -56,22 +58,22 @@ const CountDown = (props: Props) => {
       <Card className="col-span-6 text-center">
         {expiryTime !== "false" ? (
           <>
-            
-              <Typography className="pt-12 pl-5 lg:text-3xl md:text-2xl sm:text-lg">
-                Time Until Next Episode
-              </Typography>
-              <Typography className="pt-5 lg:text-3xl lg:pt-24 md:text-2xl md:pt-12 sm:text-lg sm:pt-8">
-                {countdownTime.countdownDays} Days{" "}
-                {countdownTime.countdownHours} hrs{" "}
-                {countdownTime.countdownMinutes} mins{" "}
-                {countdownTime.countdownSeconds} Secs
-              </Typography>
-       
+            <CardActionArea>
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  Time Until Next Episode
+                </Typography>
+                <Typography variant="h5" color="text.secondary">
+                  {countdownTime.countdownDays} Days{" "}
+                  {countdownTime.countdownHours} hrs{" "}
+                  {countdownTime.countdownMinutes} mins{" "}
+                  {countdownTime.countdownSeconds} Secs
+                </Typography>
+              </CardContent>
+            </CardActionArea>
           </>
         ) : (
-            <Typography className="pl-5 ">
-            OMG Its on NOW!!
-          </Typography>
+          <Typography className="pl-5 ">OMG Its on NOW!!</Typography>
         )}
       </Card>
     </>
