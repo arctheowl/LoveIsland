@@ -25,7 +25,7 @@ const rows = [
 
 export default function BasicTable() {
   return (
-    <Card className="lg:col-span-6 sm:col-span-12 text-center">
+    <Card className="lg:col-span-6 col-span-12 text-center">
       <Typography>Current Couples</Typography>
       <TableContainer component={Paper}>
         <Table size="small" aria-label="simple table">
