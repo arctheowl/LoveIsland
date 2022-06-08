@@ -80,9 +80,6 @@ const boysOptions = {
       saveAsImage: {
         name: 'Love Island Timeline Boys'
       },
-      dataZoom: {
-        show: true,
-      }
     }
   },
   xAxis: {
@@ -167,9 +164,6 @@ export let girlsOptions = {
       saveAsImage: {
         name: 'Love Island Timeline Girls'
       },
-      dataZoom: {
-        show: true,
-      }
     }
   },
   xAxis: {
