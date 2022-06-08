@@ -57,10 +57,10 @@ const CountDown = (props: Props) => {
         {expiryTime !== "false" ? (
           <>
             
-              <Typography className="pl-5 ">
+              <Typography className="pt-12 pl-5 lg:text-3xl md:text-2xl sm:text-lg">
                 Time Until Next Episode
               </Typography>
-              <Typography className="pt-5">
+              <Typography className="pt-5 lg:text-3xl lg:pt-24 md:text-2xl md:pt-12 sm:text-lg sm:pt-8">
                 {countdownTime.countdownDays} Days{" "}
                 {countdownTime.countdownHours} hrs{" "}
                 {countdownTime.countdownMinutes} mins{" "}

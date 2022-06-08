@@ -6,14 +6,15 @@ import { CardActionArea } from "@mui/material";
 
 export default function Vulnerable() {
   return (
-    <Card className="col-span-6 text-center" >
+    <Card className="col-span-6 text-center">
       <CardActionArea>
-        {/* <CardMedia
+        <CardMedia
           component="img"
-          height="140"
-          image="/static/images/cards/contemplative-reptile.jpg"
-          alt="green iguana"
-        ></CardMedia> */}
+          height="40"
+          image="/image/LiamVulnerable.jpeg"
+          alt="Liam"
+          className="w-1/2 lg:ml-56 md:ml-32 sm:ml-20 ml-16"
+        />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
             Currently Vulnerable
