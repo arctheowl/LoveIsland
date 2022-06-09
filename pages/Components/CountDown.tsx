@@ -60,12 +60,12 @@ const CountDown = (props: Props) => {
     {
       name: "dark",
       themes:
-        "text-white bg-[#100C2A] col-span-6 text-center flex items-stretch backdrop-blur-xl rounded drop-shadow-lg",
+        "text-white bg-[#100C2A] col-span-6 flex items-stretch backdrop-blur-xl rounded drop-shadow-lg grid-cols-1 grid justify-items-auto",
     },
     {
       name: "light",
       themes:
-        "text-black col-span-6 text-center flex items-stretch bg-white bg-opacity-80 backdrop-blur-xl rounded drop-shadow-lg",
+        "text-black col-span-6 flex items-stretch bg-white bg-opacity-80 backdrop-blur-xl rounded drop-shadow-lg grid grid-cols-1",
     },
   ];
 
@@ -76,21 +76,23 @@ const CountDown = (props: Props) => {
 
   return (
     <Card className={`${settings[number].themes}`}>
-      <CardContent>
-        <Typography gutterBottom variant="h6" component="div">
-          Time Until Next Episode
-        </Typography>
-        <Typography variant="h6">
-          <li className="list-none">
-            {countdownTime.countdownDays} days {countdownTime.countdownHours}{" "}
-            hrs{" "}
-          </li>
-          <li className="list-none">
-            {countdownTime.countdownMinutes} min{" "}
-            {countdownTime.countdownSeconds} sec
-          </li>
-        </Typography>
-      </CardContent>
+      <Typography
+        gutterBottom
+        variant="h6"
+        component="div"
+        className="justify-self-center pt-4"
+      >
+        Time Until Next Episode
+      </Typography>
+      <Typography variant="h6" className="list-none justify-self-center">
+        <li>
+          {countdownTime.countdownDays} days {countdownTime.countdownHours} hrs{" "}
+        </li>
+        <li>
+          {countdownTime.countdownMinutes} min {countdownTime.countdownSeconds}{" "}
+          sec
+        </li>
+      </Typography>
     </Card>
   );
 };
