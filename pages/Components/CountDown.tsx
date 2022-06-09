@@ -59,13 +59,15 @@ const CountDown = (props: Props) => {
   const settings = [
     {
       name: "dark",
-      themes:
-        "text-white bg-[#100C2A] col-span-6 flex items-stretch backdrop-blur-xl rounded drop-shadow-lg grid-cols-1 grid justify-items-auto",
+      themes: "bg-[#100C2A] text-white",
+      bg: "bg-[#100C2A]",
+      text: "text-white",
     },
     {
       name: "light",
-      themes:
-        "text-black col-span-6 flex items-stretch bg-white bg-opacity-80 backdrop-blur-xl rounded drop-shadow-lg grid grid-cols-1",
+      themes: "bg-white text-black bg-opacity-80 ",
+      bg: "bg-[#100C2A]",
+      text: "text-black",
     },
   ];
 
@@ -75,7 +77,9 @@ const CountDown = (props: Props) => {
   }
 
   return (
-    <Card className={`${settings[number].themes}`}>
+    <div
+      className={`${settings[number].themes} col-span-6 backdrop-blur-xl rounded drop-shadow-lg grid-cols-1 grid justify-items-auto`}
+    >
       <Typography
         gutterBottom
         variant="h6"
@@ -93,7 +97,7 @@ const CountDown = (props: Props) => {
           sec
         </li>
       </Typography>
-    </Card>
+    </div>
   );
 };
 

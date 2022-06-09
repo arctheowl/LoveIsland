@@ -2,7 +2,6 @@ import ReactECharts from "echarts-for-react";
 import Card from "@mui/material/Card";
 import Typography from "@mui/material/Typography";
 
-
 type Props = {
   theme: string;
 };
@@ -10,75 +9,56 @@ type Props = {
 const LineGraph = (props: Props) => {
   const { theme } = props;
 
+  const settings = [
+    {
+      name: "dark",
+      themes: "bg-[#100C2A] text-white",
+      bg: "bg-[#100C2A]",
+      text: "text-white",
+    },
+    {
+      name: "light",
+      themes: "bg-white text-black bg-opacity-80 ",
+      bg: "bg-[#100C2A]",
+      text: "text-black",
+    },
+  ];
+
+  let number = 0;
+  if (theme === "light") {
+    number = 1;
+  }
+
   return (
     <>
-      {theme === "dark" ? (
-        <>
-          <Card className="lg:col-span-6 col-span-12 text-center backdrop-blur-xl rounded drop-shadow-lg">
-            <Typography
-              sx={{ fontSize: 24 }}
-              className="bg-[#100C2A] text-white "
-            >
-              Boys Timeline
-            </Typography>
+      <div
+        className={`${settings[number].themes} col-span-6 backdrop-blur-xl rounded drop-shadow-lg grid-cols-1 grid justify-items-auto`}
+      >
+        <Typography sx={{ fontSize: 24 }} className="justify-self-center">
+          Boys Timeline
+        </Typography>
 
-            <ReactECharts
-              option={boysOptions}
-              notMerge={true}
-              lazyUpdate={true}
-              theme={"dark"}
-            />
-          </Card>
+        <ReactECharts
+          option={boysOptions}
+          notMerge={true}
+          lazyUpdate={true}
+          theme={theme}
+        />
+      </div>
 
-          <Card className="lg:col-span-6 col-span-12 text-center bg-white bg-opacity-80 backdrop-blur-xl rounded drop-shadow-lg">
-            <Typography
-              sx={{ fontSize: 24 }}
-              className="text-white bg-[#100C2A]"
-            >
-              Girls Timeline
-            </Typography>
-            <ReactECharts
-              option={girlsOptions}
-              notMerge={true}
-              lazyUpdate={true}
-              theme={"dark"}
-            />
-          </Card>
-        </>
-      ) : (
-        <>
-          <Card className="lg:col-span-6 col-span-12 text-center bg-white bg-opacity-80 backdrop-blur-xl rounded drop-shadow-lg">
-            <Typography
-              sx={{ fontSize: 24 }}
-              className="text-black "
-            >
-              Boys Timeline
-            </Typography>
-
-            <ReactECharts
-              option={boysOptions}
-              notMerge={true}
-              lazyUpdate={true}
-              // theme={"dark"}
-            />
-          </Card>
-
-          <Card className="lg:col-span-6 col-span-12 text-center bg-white bg-opacity-80 backdrop-blur-xl rounded drop-shadow-lg">
-            <Typography
-              sx={{ fontSize: 24 }}
-              className="text-black"
-            >
-              Girls Timeline
-            </Typography>
-            <ReactECharts
-              option={girlsOptions}
-              notMerge={true}
-              lazyUpdate={true}
-              // theme={"dark"}
-            />
-          </Card>
-        </>
-      )}
+      <div
+        className={`${settings[number].themes} col-span-6 backdrop-blur-xl rounded drop-shadow-lg grid-cols-1 grid justify-items-auto`}
+      >
+        <Typography sx={{ fontSize: 24 }} className="justify-self-center">
+          Girls Timeline
+        </Typography>
+        <ReactECharts
+          option={girlsOptions}
+          notMerge={true}
+          lazyUpdate={true}
+          theme={theme}
+        />
+      </div>
     </>
   );
 };
