@@ -14,7 +14,7 @@ const LineGraph = (props: Props) => {
     <>
       {theme === "dark" ? (
         <>
-          <Card className="lg:col-span-6 col-span-12 text-center bg-white bg-opacity-80 backdrop-blur-xl rounded drop-shadow-lg">
+          <Card className="lg:col-span-6 col-span-12 text-center backdrop-blur-xl rounded drop-shadow-lg">
             <Typography
               sx={{ fontSize: 24 }}
               className="bg-[#100C2A] text-white "

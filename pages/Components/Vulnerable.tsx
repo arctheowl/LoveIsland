@@ -14,15 +14,15 @@ const Vulnerable = (props: Props) => {
   const settings = [
     {
       name: "dark",
-      themes: "bg-[#100C2A] text-white ",
+      themes: "bg-[#100C2A] text-white",
       bg: "bg-[#100C2A]",
       text: "text-white"
     },
     {
       name: "light",
-      themes: "text-black bg-white bg-opacity-80",
-      bg: "bg-opacity-80",
-      text: "text-slate-900"
+      themes: "bg-white text-black bg-opacity-80 ",
+      bg: "bg-[#100C2A]",
+      text: "text-black"
     },
   ];
 
@@ -32,24 +32,24 @@ const Vulnerable = (props: Props) => {
   }
   return (
     <>
-      <Card
+      <div
         className={`${settings[number].themes} col-span-6 backdrop-blur-xl rounded drop-shadow-lg grid-cols-1 grid justify-items-auto`}
       >
         <Typography
-          className={`${settings[number].bg} ${settings[number].text} pt-4 justify-self-center`}
+          className='pt-4 justify-self-center'
           variant="h6"
           component="div"
         >
           Currently Vulnerable
         </Typography>
         <Typography
-          className={`${settings[number].bg} ${settings[number].text} pt-4 justify-self-center`}
+          className='pt-4 justify-self-center'
           variant="h6"
           component="div"
         >
           Liam :(
         </Typography>
-      </Card>
+      </div>
     </>
   );
 };
