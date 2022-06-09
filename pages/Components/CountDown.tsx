@@ -56,42 +56,41 @@ const CountDown = (props: Props) => {
     countdownTimer();
   });
 
-
   const settings = [
-    {name: 'dark', themes: 'text-white bg-[#100C2A] col-span-6 text-center flex items-stretch backdrop-blur-xl rounded drop-shadow-lg'},
-    {name: 'light', themes: 'text-black col-span-6 text-center flex items-stretch bg-white bg-opacity-80 backdrop-blur-xl rounded drop-shadow-lg'}
-  ]
-  
-  let number = 0
-  if (theme === 'light' ){
-    number = 1
+    {
+      name: "dark",
+      themes:
+        "text-white bg-[#100C2A] col-span-6 text-center flex items-stretch backdrop-blur-xl rounded drop-shadow-lg",
+    },
+    {
+      name: "light",
+      themes:
+        "text-black col-span-6 text-center flex items-stretch bg-white bg-opacity-80 backdrop-blur-xl rounded drop-shadow-lg",
+    },
+  ];
+
+  let number = 0;
+  if (theme === "light") {
+    number = 1;
   }
 
   return (
     <Card className={`${settings[number].themes}`}>
-      {expiryTime !== "false" ? (
-        <>
-          <CardActionArea>
-            <CardContent>
-              <Typography gutterBottom variant="h6" component="div">
-                Time Until Next Episode
-              </Typography>
-              <Typography variant="h6">
-                <li className="list-none">
-                  {countdownTime.countdownDays} days{" "}
-                  {countdownTime.countdownHours} hrs{" "}
-                </li>
-                <li className="list-none">
-                  {countdownTime.countdownMinutes} min{" "}
-                  {countdownTime.countdownSeconds} sec
-                </li>
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-        </>
-      ) : (
-        <Typography className="pl-5 ">OMG Its on NOW!!</Typography>
-      )}
+      <CardContent>
+        <Typography gutterBottom variant="h6" component="div">
+          Time Until Next Episode
+        </Typography>
+        <Typography variant="h6">
+          <li className="list-none">
+            {countdownTime.countdownDays} days {countdownTime.countdownHours}{" "}
+            hrs{" "}
+          </li>
+          <li className="list-none">
+            {countdownTime.countdownMinutes} min{" "}
+            {countdownTime.countdownSeconds} sec
+          </li>
+        </Typography>
+      </CardContent>
     </Card>
   );
 };

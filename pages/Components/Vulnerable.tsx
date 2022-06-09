@@ -23,14 +23,12 @@ const Vulnerable = (props: Props) => {
   return (
     <>
       <Card className={settings[number].themes}>
-        <CardActionArea>
           <CardContent className="">
             <Typography gutterBottom variant="h6" component="div">
               Currently Vulnerable
             </Typography>
             <Typography variant="h6">Liam :(</Typography>
           </CardContent>
-        </CardActionArea>
       </Card>
     </>
   );
