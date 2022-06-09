@@ -10,35 +10,28 @@ type Props = {
 
 const Vulnerable = (props: Props) => {
   const { theme } = props;
+
+  const settings = [
+    {name: 'dark', themes: 'text-white bg-[#100C2A] col-span-6 text-center flex items-stretch backdrop-blur-xl rounded drop-shadow-lg'},
+    {name: 'light', themes: 'text-black col-span-6 text-center flex items-stretch bg-white bg-opacity-80 backdrop-blur-xl rounded drop-shadow-lg'}
+  ]
+  
+  let number = 0
+  if (theme === 'light' ){
+    number = 1
+  }
   return (
     <>
-      {theme === "dark" ? (
-        <Card className="col-span-6 text-center flex items-stretch text-white bg-[#100C2A] backdrop-blur-xl rounded drop-shadow-lg">
-          <CardActionArea>
-            <CardContent className="">
-              <Typography gutterBottom variant="h6" component="div">
-                Currently Vulnerable
-              </Typography>
-              <Typography variant="h6">
-                Liam :(
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-        </Card>
-      ) : (
-        <Card className="col-span-6 text-center  flex items-stretch bg-white bg-opacity-80 backdrop-blur-xl rounded drop-shadow-lg">
-          <CardActionArea>
-            <CardContent className="">
-              <Typography gutterBottom variant="h6" component="div" >
-                Currently Vulnerable
-              </Typography>
-              <Typography variant="h6">
-                Liam :(
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-        </Card>
-      )}
+      <Card className={settings[number].themes}>
+        <CardActionArea>
+          <CardContent className="">
+            <Typography gutterBottom variant="h6" component="div">
+              Currently Vulnerable
+            </Typography>
+            <Typography variant="h6">Liam :(</Typography>
+          </CardContent>
+        </CardActionArea>
+      </Card>
     </>
   );
 };
