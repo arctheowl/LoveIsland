@@ -36,7 +36,7 @@ const Vulnerable = (props: Props) => {
         className={`${settings[number].themes} col-span-6 backdrop-blur-xl rounded drop-shadow-lg grid-cols-1 grid justify-items-auto`}
       >
         <Typography
-          className='pt-4 justify-self-center'
+          className='pt-4 justify-self-center md:p-0 pl-8'
           variant="h6"
           component="div"
         >
