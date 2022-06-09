@@ -65,14 +65,14 @@ const CountDown = (props: Props) => {
                 </Typography>
                 <Typography variant="h6" color="text.secondary">
                   <li className="list-none">
-                  {countdownTime.countdownDays} Days{" "}
+                  {countdownTime.countdownDays} days{" "}
                   
                   
                   {countdownTime.countdownHours} hrs{" "}
                   </li>
                   <li className="list-none">
                   {countdownTime.countdownMinutes} min{" "}
-                  {countdownTime.countdownSeconds} Sec
+                  {countdownTime.countdownSeconds} sec
                   </li>
                   
                   
