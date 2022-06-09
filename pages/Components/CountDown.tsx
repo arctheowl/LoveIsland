@@ -86,16 +86,10 @@ const CountDown = (props: Props) => {
         component="div"
         className="list-none justify-self-center pt-4 md:p-0 pl-8"
       >
-        Time Until Next Episode
+        It's on Now Henry
       </Typography>
       <Typography variant="h6" className="list-none justify-self-center">
-        <li>
-          {countdownTime.countdownDays} days {countdownTime.countdownHours} hrs{" "}
-        </li>
-        <li>
-          {countdownTime.countdownMinutes} min {countdownTime.countdownSeconds}{" "}
-          sec
-        </li>
+       Get on ITV2 Now!!
       </Typography>
     </div>
   );
