@@ -6,7 +6,7 @@ import { CardActionArea } from "@mui/material";
 
 export default function Vulnerable() {
   return (
-    <Card className="col-span-6 text-center">
+    <Card className="col-span-6 text-center flex items-stretch ">
       <CardActionArea>
         <CardContent>
           <Typography gutterBottom variant="h6" component="div">

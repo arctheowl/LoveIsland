@@ -99,19 +99,22 @@ const boysOptions = {
       name: 'Luca',
       type: 'line',
       stack: 'Total',
-      data: ['Paige', 'Paige', 'Paige',]
+      data: ['Paige', 'Paige'],
+      smooth: true
     },
     {
       name: 'Dami',
       type: 'line',
       stack: 'Total',
-      data: ['Amber', 'Amber', 'Amber']
+      data: ['Amber', 'Amber'],
+      smooth: true
     },
     {
       name: 'Andrew',
       type: 'line',
       stack: 'Total',
-      data: ['Tasha', 'Tasha', 'Tasha']
+      data: ['Tasha', 'Tasha'],
+      smooth: true
     },
     {
       name: 'Liam',
@@ -124,13 +127,15 @@ const boysOptions = {
       name: 'Davide',
       type: 'line',
       stack: 'Total',
-      data: ['-', 'Gemma', 'Gemma']
+      data: ['-', 'Gemma'],
+      smooth: true
     },
     {
       name: 'Ikenna',
       type: 'line',
       stack: 'Total',
-      data: ['Indiyah','Indiyah', 'Indiyah']
+      data: ['Indiyah','Indiyah'],
+      smooth: true
     }
   ]
 };
@@ -183,31 +188,36 @@ export let girlsOptions = {
       name: 'Paige',
       type: 'line',
       stack: 'Total',
-      data: ['Luca', 'Luca', 'Luca']
+      data: ['Luca', 'Luca'],
+      smooth: true
     },
     {
       name: 'Amber',
       type: 'line',
       stack: 'Total',
-      data: ['Dami', 'Dami', 'Dami']
+      data: ['Dami', 'Dami'],
+      smooth: true
     },
     {
       name: 'Tasha',
       type: 'line',
       stack: 'Total',
-      data: ['Andrew', 'Andrew', 'Andrew']
+      data: ['Andrew', 'Andrew'],
+      smooth: true
     },
     {
       name: 'Gemma',
       type: 'line',
       stack: 'Total',
-      data: ['Liam', 'Davide', 'Davide']
+      data: ['Liam', 'Davide'],
+      smooth: true
     },
     {
       name: 'Indiyah',
       type: 'line',
       stack: 'Total',
-      data: ['Ikenna','Ikenna', 'Ikenna']
+      data: ['Ikenna','Ikenna'],
+      smooth: true
     }
   ]
 };
