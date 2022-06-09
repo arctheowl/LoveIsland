@@ -86,7 +86,7 @@ const CountDown = (props: Props) => {
         component="div"
         className="list-none justify-self-center pt-4 md:p-0 pl-8"
       >
-        It's on Now Henry
+        Its on Now Henry
       </Typography>
       <Typography variant="h6" className="list-none justify-self-center">
        Get on ITV2 Now!!
