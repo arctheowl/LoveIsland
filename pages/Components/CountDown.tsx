@@ -85,7 +85,7 @@ const CountDown = (props: Props) => {
           )}
         </Card>
       ) : (
-        <Card className="col-span-6 text-center flex items-stretch bg-white bg-opacity-80 backdrop-blur-xl rounded drop-shadow-lg">
+        <Card className="text-black col-span-6 text-center flex items-stretch bg-white bg-opacity-80 backdrop-blur-xl rounded drop-shadow-lg">
           {expiryTime !== "false" ? (
             <>
               <CardActionArea>
