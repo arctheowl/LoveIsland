@@ -78,13 +78,13 @@ const CountDown = (props: Props) => {
 
   return (
     <div
-      className={`${settings[number].themes} col-span-6 backdrop-blur-xl rounded drop-shadow-lg grid-cols-1 grid justify-items-auto`}
+      className={`${settings[number].themes} col-span-6 backdrop-blur-xl rounded drop-shadow-lg grid-cols-1 grid`}
     >
       <Typography
         gutterBottom
         variant="h6"
         component="div"
-        className="justify-self-center pt-4"
+        className="list-none justify-self-center pt-4 md:p-0 pl-8"
       >
         Time Until Next Episode
       </Typography>
