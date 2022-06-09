@@ -1,55 +1,84 @@
 import ReactECharts from "echarts-for-react";
-// import { boysOptions } from "./LineGraphData/BoysData";
-// import { girlsOptions } from "./LineGraphData/GirlsData";
 import Card from "@mui/material/Card";
 import Typography from "@mui/material/Typography";
-import Vulnerable from "./Vulnerable";
-// import Image from "next/image"
-import CountDown from "./CountDown";
-import CurrentCouples from "./CurrentCouples";
-import CrossTable from "./CrossTable";
 
-type Props = {};
+
+type Props = {
+  theme: string;
+};
 
 const LineGraph = (props: Props) => {
+  const { theme } = props;
+
   return (
     <>
-      <Typography
-        sx={{ fontSize: 24 }}
-        className="text-neutral-100 text-center underline font-bold"
-      >
-        My GF Watches Love Island
-      </Typography>
-      <div className="grid grid-cols-12 gap-4 lg:p-24 p-4 ">
-        <Card className="lg:col-span-6 col-span-12 text-center bg-white bg-opacity-80 backdrop-blur-xl rounded drop-shadow-lg">
-          <Typography sx={{ fontSize: 24 }} className="text-slate-900">
-            Boys Timeline
-          </Typography>
+      {theme === "dark" ? (
+        <>
+          <Card className="lg:col-span-6 col-span-12 text-center bg-white bg-opacity-80 backdrop-blur-xl rounded drop-shadow-lg">
+            <Typography
+              sx={{ fontSize: 24 }}
+              className="bg-[#100C2A] text-white "
+            >
+              Boys Timeline
+            </Typography>
 
-          <ReactECharts
-            option={boysOptions}
-            notMerge={true}
-            lazyUpdate={true}
-            // theme={"dark"}
-          />
-        </Card>
+            <ReactECharts
+              option={boysOptions}
+              notMerge={true}
+              lazyUpdate={true}
+              theme={"dark"}
+            />
+          </Card>
 
-        <Card className="lg:col-span-6 col-span-12 text-center bg-white bg-opacity-80 backdrop-blur-xl rounded drop-shadow-lg">
-          <Typography sx={{ fontSize: 24 }} className="text-slate-900 ">
-            Girls Timeline
-          </Typography>
-          <ReactECharts
-            option={girlsOptions}
-            notMerge={true}
-            lazyUpdate={true}
-            // theme={"dark"}
-          />
-        </Card>
+          <Card className="lg:col-span-6 col-span-12 text-center bg-white bg-opacity-80 backdrop-blur-xl rounded drop-shadow-lg">
+            <Typography
+              sx={{ fontSize: 24 }}
+              className="text-white bg-[#100C2A]"
+            >
+              Girls Timeline
+            </Typography>
+            <ReactECharts
+              option={girlsOptions}
+              notMerge={true}
+              lazyUpdate={true}
+              theme={"dark"}
+            />
+          </Card>
+        </>
+      ) : (
+        <>
+          <Card className="lg:col-span-6 col-span-12 text-center bg-white bg-opacity-80 backdrop-blur-xl rounded drop-shadow-lg">
+            <Typography
+              sx={{ fontSize: 24 }}
+              className="text-black "
+            >
+              Boys Timeline
+            </Typography>
 
-        <Vulnerable />
-        <CountDown />
-        <CurrentCouples />
-      </div>
+            <ReactECharts
+              option={boysOptions}
+              notMerge={true}
+              lazyUpdate={true}
+              // theme={"dark"}
+            />
+          </Card>
+
+          <Card className="lg:col-span-6 col-span-12 text-center bg-white bg-opacity-80 backdrop-blur-xl rounded drop-shadow-lg">
+            <Typography
+              sx={{ fontSize: 24 }}
+              className="text-black"
+            >
+              Girls Timeline
+            </Typography>
+            <ReactECharts
+              option={girlsOptions}
+              notMerge={true}
+              lazyUpdate={true}
+              // theme={"dark"}
+            />
+          </Card>
+        </>
+      )}
     </>
   );
 };
