@@ -13,26 +13,26 @@ const Vulnerable = (props: Props) => {
   return (
     <>
       {theme === "dark" ? (
-        <Card className="col-span-6 text-center text-white flex items-stretch bg-[#100C2A] backdrop-blur-xl rounded drop-shadow-lg">
+        <Card className="col-span-6 text-center flex items-stretch text-white bg-[#100C2A] backdrop-blur-xl rounded drop-shadow-lg">
           <CardActionArea>
             <CardContent className="">
               <Typography gutterBottom variant="h6" component="div">
                 Currently Vulnerable
               </Typography>
-              <Typography variant="h6" color="white">
+              <Typography variant="h6">
                 Liam :(
               </Typography>
             </CardContent>
           </CardActionArea>
         </Card>
       ) : (
-        <Card className="col-span-6 text-center text-black flex items-stretch bg-white bg-opacity-80 backdrop-blur-xl rounded drop-shadow-lg">
+        <Card className="col-span-6 text-center  flex items-stretch bg-white bg-opacity-80 backdrop-blur-xl rounded drop-shadow-lg">
           <CardActionArea>
             <CardContent className="">
               <Typography gutterBottom variant="h6" component="div" >
                 Currently Vulnerable
               </Typography>
-              <Typography variant="h6" color="black">
+              <Typography variant="h6">
                 Liam :(
               </Typography>
             </CardContent>

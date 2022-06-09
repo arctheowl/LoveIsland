@@ -59,15 +59,15 @@ const CountDown = (props: Props) => {
   return (
     <>
       {theme === "dark" ? (
-        <Card className="col-span-6 text-center flex items-stretch bg-[#100C2A] backdrop-blur-xl rounded drop-shadow-lg ">
+        <Card className="col-span-6 text-center flex items-stretch text-white bg-[#100C2A] backdrop-blur-xl rounded drop-shadow-lg ">
           {expiryTime !== "false" ? (
             <>
               <CardActionArea>
                 <CardContent>
-                  <Typography gutterBottom variant="h6" component="div" color="white">
+                  <Typography gutterBottom variant="h6" component="div">
                     Time Until Next Episode
                   </Typography>
-                  <Typography variant="h6" color="white">
+                  <Typography variant="h6">
                     <li className="list-none">
                       {countdownTime.countdownDays} days{" "}
                       {countdownTime.countdownHours} hrs{" "}
@@ -93,7 +93,7 @@ const CountDown = (props: Props) => {
                   <Typography gutterBottom variant="h6" component="div">
                     Time Until Next Episode
                   </Typography>
-                  <Typography variant="h6" color="text.secondary">
+                  <Typography variant="h6">
                     <li className="list-none">
                       {countdownTime.countdownDays} days{" "}
                       {countdownTime.countdownHours} hrs{" "}
