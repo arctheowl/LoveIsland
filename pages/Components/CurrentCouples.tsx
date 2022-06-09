@@ -25,9 +25,9 @@ const rows = [
 
 export default function BasicTable() {
   return (
-    <Card className="lg:col-span-6 col-span-12 text-center">
+    <Card className="lg:col-span-6 col-span-12 text-center grid gap-4">
       <Typography>Current Couples</Typography>
-      <TableContainer component={Paper}>
+      <TableContainer component={Paper} className="p-5 bg-white bg-opacity-80 backdrop-blur-xl rounded drop-shadow-lg">
         <Table size="small" aria-label="simple table">
           <TableHead>
             <TableRow>
@@ -35,13 +35,13 @@ export default function BasicTable() {
               <TableCell align="right">Girls</TableCell>
             </TableRow>
           </TableHead>
-          <TableBody>
+          <TableBody >
             {rows.map((row) => (
               <TableRow
                 key={row.name}
                 sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
               >
-                <TableCell component="th" scope="row">
+                <TableCell component="th" scope="row" >
                   {row.name}
                 </TableCell>
                 <TableCell align="right">{row.partner}</TableCell>

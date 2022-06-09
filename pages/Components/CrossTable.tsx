@@ -27,7 +27,7 @@ const cols = ["Paige", "Amber", "Tasha", "Gemma", "Indiyah", "Vulnerable"];
 
 export default function BasicTable() {
   return (
-    <Card className="lg:col-span-8 col-span-12 text-center">
+    <Card className="lg:col-span-8 col-span-12 text-center bg-white bg-opacity-80 backdrop-blur-xl rounded drop-shadow-lg">
       <Typography>Current Couples</Typography>
       <TableContainer component={Paper}>
         <Table size="small" aria-label="simple table">

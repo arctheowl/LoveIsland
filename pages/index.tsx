@@ -9,7 +9,7 @@ const Home: NextPage = () => {
         <title>Love Island</title>
         <link rel="icon" href="/image/favicon.jpeg" />
       </Head>
-      <div className="">
+      <div className="bg-gradient-to-br from-blue-400  to-violet-600 overflow-auto h-screen">
         <LineGraph />
       </div>
     </>
