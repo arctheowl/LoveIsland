@@ -14,13 +14,15 @@ const Vulnerable = (props: Props) => {
   const settings = [
     {
       name: "dark",
-      themes:
-        "text-white bg-[#100C2A] col-span-6 flex items-stretch backdrop-blur-xl rounded drop-shadow-lg grid-cols-1 grid justify-items-auto",
+      themes: "bg-[#100C2A] text-white ",
+      bg: "bg-[#100C2A]",
+      text: "text-white"
     },
     {
       name: "light",
-      themes:
-        "text-black col-span-6 flex items-stretch bg-white bg-opacity-80 backdrop-blur-xl rounded drop-shadow-lg grid grid-cols-1",
+      themes: "text-black bg-white bg-opacity-80",
+      bg: "bg-opacity-80",
+      text: "text-slate-900"
     },
   ];
 
@@ -30,11 +32,23 @@ const Vulnerable = (props: Props) => {
   }
   return (
     <>
-      <Card className={settings[number].themes}>
-        <Typography variant="h6" component="div" className="pt-4 justify-self-center">
+      <Card
+        className={`${settings[number].themes} col-span-6 backdrop-blur-xl rounded drop-shadow-lg grid-cols-1 grid justify-items-auto`}
+      >
+        <Typography
+          className={`${settings[number].bg} ${settings[number].text} pt-4 justify-self-center`}
+          variant="h6"
+          component="div"
+        >
           Currently Vulnerable
         </Typography>
-        <Typography variant="h6" className="justify-self-center">Liam :(</Typography>
+        <Typography
+          className={`${settings[number].bg} ${settings[number].text} pt-4 justify-self-center`}
+          variant="h6"
+          component="div"
+        >
+          Liam :(
+        </Typography>
       </Card>
     </>
   );
