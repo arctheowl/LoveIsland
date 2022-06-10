@@ -151,7 +151,16 @@ const boysOptions = {
   },
   yAxis: {
     type: "category",
-    data: ["Exit", "Paige", "Amber", "Indiyah", "Tasha", "Gemma", "Ekin-Su", "Single", ],
+    data: [
+      "Exit",
+      "Tasha",
+      "Paige",
+      "Indiyah",
+      "Gemma",
+      "Ekin-Su",
+      "Amber",
+      "Single",
+    ],
   },
   series: [
     {
@@ -160,6 +169,7 @@ const boysOptions = {
       stack: "Total",
       data: ["Paige", "Paige", "Paige", "Paige", "Gemma"],
       smooth: true,
+      color: '#9a60b4'
     },
     {
       name: "Dami",
@@ -167,6 +177,7 @@ const boysOptions = {
       stack: "Total",
       data: ["Amber", "Amber", "Amber", "Amber", "Amber"],
       smooth: true,
+      color: '#fc8452'
     },
     {
       name: "Andrew",
@@ -181,6 +192,7 @@ const boysOptions = {
       stack: "Total",
       data: ["Gemma", "Single", "Single", "Single", "Exit"],
       smooth: true,
+      color: '#3ba272'
     },
     {
       name: "Davide",
@@ -188,6 +200,7 @@ const boysOptions = {
       stack: "Total",
       data: ["-", "Gemma", "Gemma", "Gemma", "Ekin-Su"],
       smooth: true,
+      color: '#91cc75' 
     },
     {
       name: "Ikenna",
@@ -195,6 +208,7 @@ const boysOptions = {
       stack: "Total",
       data: ["Indiyah", "Indiyah", "Indiyah", "Indiyah", "Indiyah"],
       smooth: true,
+      color: '#5470c6'
     },
   ],
 };
@@ -252,7 +266,16 @@ export let girlsOptions = {
     },
   },
   legend: {
-    data: ["Paige", "Amber", "Indiyah", "Tasha", "Gemma", "Ekin-Su", "Afia", "Exit"],
+    data: [
+      "Paige",
+      "Amber",
+      "Indiyah",
+      "Tasha",
+      "Gemma",
+      "Ekin-Su",
+      "Afia",
+      "Exit",
+    ],
   },
   grid: {
     left: "3%",
@@ -276,7 +299,16 @@ export let girlsOptions = {
   yAxis: {
     type: "category",
 
-    data: ["Exit", "Luca", "Dami", "Andrew", "Liam", "Davide", "Ikenna", "Single"],
+    data: [
+      "Exit",
+      "Luca",
+      "Liam",
+      "Ikenna",
+      "Davide",
+      "Dami",
+      "Andrew",
+      "Single",
+    ],
   },
   series: [
     {
@@ -285,6 +317,7 @@ export let girlsOptions = {
       stack: "Total",
       data: ["Luca", "Luca", "Luca", "Luca", "Single"],
       smooth: true,
+      color: '#5470c6'
     },
     {
       name: "Amber",
@@ -292,6 +325,7 @@ export let girlsOptions = {
       stack: "Total",
       data: ["Dami", "Dami", "Dami", "Dami", "Dami"],
       smooth: true,
+      color: '#91cc75' 
     },
     {
       name: "Tasha",
@@ -299,6 +333,7 @@ export let girlsOptions = {
       stack: "Total",
       data: ["Andrew", "Andrew", "Andrew", "Andrew", "Andrew"],
       smooth: true,
+      color: '#9a60b4'
     },
     {
       name: "Gemma",
@@ -306,6 +341,7 @@ export let girlsOptions = {
       stack: "Total",
       data: ["Liam", "Davide", "Davide", "Davide", "Luca"],
       smooth: true,
+      color:  '#ee6666' 
     },
     {
       name: "Indiyah",
@@ -313,6 +349,7 @@ export let girlsOptions = {
       stack: "Total",
       data: ["Ikenna", "Ikenna", "Ikenna", "Ikenna", "Ikenna"],
       smooth: true,
+      color: '#73c0de' 
     },
     {
       name: "Afia",
@@ -320,6 +357,7 @@ export let girlsOptions = {
       stack: "Total",
       data: ["-", "-", "-", "Single", "Single"],
       smooth: true,
+      color: '#3ba272'
     },
     {
       name: "Ekin-Su",
@@ -327,6 +365,7 @@ export let girlsOptions = {
       stack: "Total",
       data: ["-", "-", "-", "Single", "Davide"],
       smooth: true,
+      color: '#fc8452'
     },
   ],
 };
