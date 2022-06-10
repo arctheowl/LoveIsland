@@ -44,7 +44,7 @@ const FrontPage = (props: Props) => {
         <LineGraph theme={theme} />
         <Vulnerable theme={theme} />
         <CountDown theme={theme} />
-        <CurrentCouples />
+        <CurrentCouples theme={theme} />
       </div>
     </>
   );
