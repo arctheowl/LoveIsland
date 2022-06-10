@@ -58,12 +58,12 @@ const CoupleTable = (props: Props) => {
       <Typography variant="h6"
         component="div"
         className="list-none justify-self-center pt-4 md:p-0 pl-8">Current Couples</Typography>
-      <TableContainer component={Paper} className="p-5 bg-white bg-opacity-80">
-        <Table size="small" aria-label="simple table">
+      <TableContainer  className={`p-5 ${settings[number].themes}`}>
+        <Table size="small" aria-label="simple table" className={`${settings[number].themes}`}>
           <TableHead>
             <TableRow>
-              <TableCell>Boys</TableCell>
-              <TableCell align="right">Girls</TableCell>
+              <TableCell className={`${settings[number].themes}`}>Boys</TableCell>
+              <TableCell className={`${settings[number].themes}`} align="right">Girls</TableCell>
             </TableRow>
           </TableHead>
           <TableBody >
@@ -71,14 +71,12 @@ const CoupleTable = (props: Props) => {
               <TableRow
                 key={row.name}
                 sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                className={`${settings[number].themes}`}
               >
-                <TableCell component="th" scope="row" >
+                <TableCell component="th" scope="row" className={`${settings[number].themes}`}>
                   {row.name}
                 </TableCell>
-                <TableCell align="right">{row.partner}</TableCell>
-                {/* <TableCell align="right">{row.fat}</TableCell>
-                <TableCell align="right">{row.carbs}</TableCell>
-                <TableCell align="right">{row.protein}</TableCell> */}
+                <TableCell align="right" className={`${settings[number].themes}`}>{row.partner}</TableCell>
               </TableRow>
             ))}
           </TableBody>
