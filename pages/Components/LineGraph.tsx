@@ -128,7 +128,7 @@ const boysOptions = {
     },
   },
   legend: {
-    data: ["Luca", "Dami", "Andrew", "Liam", "Davide", "Ikenna"],
+    data: ["Luca", "Dami", "Andrew", "Liam", "Davide", "Ikenna", "Exit"],
   },
   grid: {
     left: "3%",
@@ -180,7 +180,7 @@ const boysOptions = {
       name: "Liam",
       type: "line",
       stack: "Total",
-      data: ["Gemma", "Single", "Single", "Single"],
+      data: ["Gemma", "Single", "Single", "Single", "Exit"],
       smooth: true,
     },
     {
@@ -253,7 +253,7 @@ export let girlsOptions = {
     },
   },
   legend: {
-    data: ["Paige", "Amber", "Indiyah", "Tasha", "Gemma", "Ekin-Su", "Afia"],
+    data: ["Paige", "Amber", "Indiyah", "Tasha", "Gemma", "Ekin-Su", "Afia", "Exit"],
   },
   grid: {
     left: "3%",
