@@ -147,7 +147,7 @@ const boysOptions = {
     axisLabel: { formatter: "Day {value}" },
     type: "category",
     boundaryGap: false,
-    data: ["0", "1", "2", "3", "4", "5", "6", "7", "8"],
+    // data: ["0", "1", "2", "3", "4"],
   },
   yAxis: {
     type: "category",
@@ -294,7 +294,7 @@ export let girlsOptions = {
     axisLabel: { formatter: "Day {value}" },
     type: "category",
     boundaryGap: false,
-    data: ["0", "1", "2", "3", "4", "5", "6", "7", "8"],
+    // data: ["0", "1", "2", "3", "4", "5", "6", "7", "8"],
   },
   yAxis: {
     type: "category",
