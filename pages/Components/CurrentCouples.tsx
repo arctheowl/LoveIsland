@@ -34,7 +34,7 @@ const CoupleTable = (props: Props) => {
       name: "dark",
       themes: "bg-[#100C2A] text-white",
       bg: "bg-[#100C2A]",
-      text: "text-white"
+      text: "white"
     },
     {
       name: "light",
@@ -70,10 +70,10 @@ const CoupleTable = (props: Props) => {
             {rows.map((row) => (
               <TableRow
                 key={row.name}
-                sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                // sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
                 className={`${settings[number].themes}`}
               >
-                <TableCell component="th" scope="row" className={`${settings[number].themes}`}>
+                <TableCell sx={{   color: settings[number].text  }} component="th" scope="row" className={`${settings[number].themes}`}>
                   {row.name}
                 </TableCell>
                 <TableCell align="right" className={`${settings[number].themes}`}>{row.partner}</TableCell>

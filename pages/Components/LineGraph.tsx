@@ -152,7 +152,7 @@ const boysOptions = {
   },
   yAxis: {
     type: "category",
-    data: ["Paige", "Amber", "Indiyah", "Tasha", "Gemma", "Single"],
+    data: ["Exit", "Paige", "Amber", "Indiyah", "Tasha", "Gemma", "Single", ],
   },
   series: [
     {
@@ -277,7 +277,7 @@ export let girlsOptions = {
   yAxis: {
     type: "category",
 
-    data: ["Luca", "Dami", "Andrew", "Liam", "Davide", "Ikenna", "Single"],
+    data: ["Exit", "Luca", "Dami", "Andrew", "Liam", "Davide", "Ikenna", "Single"],
   },
   series: [
     {
