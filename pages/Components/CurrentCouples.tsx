@@ -40,7 +40,7 @@ const CoupleTable = (props: Props) => {
       name: "light",
       themes: "bg-white text-black bg-opacity-80 ",
       bg: "bg-[#100C2A]",
-      text: "text-black"
+      text: "black"
     },
   ];
 
@@ -62,8 +62,8 @@ const CoupleTable = (props: Props) => {
         <Table size="small" aria-label="simple table" className={`${settings[number].themes}`}>
           <TableHead>
             <TableRow>
-              <TableCell className={`${settings[number].themes}`}>Boys</TableCell>
-              <TableCell className={`${settings[number].themes}`} align="right">Girls</TableCell>
+              <TableCell sx={{color: settings[number].text}} className={`${settings[number].themes}`}>Boys</TableCell>
+              <TableCell sx={{color: settings[number].text}} className={`${settings[number].themes}`} align="right">Girls</TableCell>
             </TableRow>
           </TableHead>
           <TableBody >
@@ -73,10 +73,10 @@ const CoupleTable = (props: Props) => {
                 // sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
                 className={`${settings[number].themes}`}
               >
-                <TableCell sx={{   color: settings[number].text  }} component="th" scope="row" className={`${settings[number].themes}`}>
+                <TableCell sx={{color: settings[number].text}} component="th" scope="row" className={`${settings[number].themes}`}>
                   {row.name}
                 </TableCell>
-                <TableCell align="right" className={`${settings[number].themes}`}>{row.partner}</TableCell>
+                <TableCell sx={{color: settings[number].text}} align="right" className={`${settings[number].themes}`}>{row.partner}</TableCell>
               </TableRow>
             ))}
           </TableBody>
