@@ -12,6 +12,10 @@ import Typography from "@mui/material/Typography";
 function createData(name: string, partner: string) {
   return { name, partner };
 }
+
+type Props = {
+  theme: string;
+};
 // ['Paige', 'Amber', 'Indiyah', 'Tasha', 'Gemma', 'Vulnerable']
 // ['Luca', 'Dami', 'Andrew', 'Liam', 'Davide', 'Ikenna']
 const rows = [
@@ -22,12 +26,39 @@ const rows = [
   createData("Ikenna", "Indiyah"),
   createData("Liam", "Vulnerable"),
 ];
+const CoupleTable = (props: Props) => {
+  const { theme } = props;
 
-export default function BasicTable() {
+  const settings = [
+    {
+      name: "dark",
+      themes: "bg-[#100C2A] text-white",
+      bg: "bg-[#100C2A]",
+      text: "text-white"
+    },
+    {
+      name: "light",
+      themes: "bg-white text-black bg-opacity-80 ",
+      bg: "bg-[#100C2A]",
+      text: "text-black"
+    },
+  ];
+
+  let number = 0;
+  if (theme === "light") {
+    number = 1;
+  }
+
+
   return (
-    <Card className="lg:col-span-6 col-span-12 text-center grid gap-4">
-      <Typography>Current Couples</Typography>
-      <TableContainer component={Paper} className="p-5 bg-white bg-opacity-80 backdrop-blur-xl rounded drop-shadow-lg">
+    <>
+      <div
+        className={`${settings[number].themes} col-span-6 backdrop-blur-xl rounded drop-shadow-lg grid-cols-1 grid justify-items-auto`}
+      >
+      <Typography variant="h6"
+        component="div"
+        className="list-none justify-self-center pt-4 md:p-0 pl-8">Current Couples</Typography>
+      <TableContainer component={Paper} className="p-5 bg-white bg-opacity-80">
         <Table size="small" aria-label="simple table">
           <TableHead>
             <TableRow>
@@ -53,6 +84,10 @@ export default function BasicTable() {
           </TableBody>
         </Table>
       </TableContainer>
-    </Card>
+    </div>
+
+    </>
   );
 }
+
+export default CoupleTable;

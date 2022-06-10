@@ -65,6 +65,16 @@ const LineGraph = (props: Props) => {
 
 export default LineGraph;
 
+interface IMatches {
+  person: string;
+  partner: string;
+  color: string;
+}
+
+function tooltip() {
+  return;
+}
+
 const boysOptions = {
   title: {
     text: "",
@@ -75,6 +85,46 @@ const boysOptions = {
       label: {
         formatter: "Day {value}",
       },
+    },
+    formatter: (info: any) => {
+      if (info) {
+        let group: IMatches[] = [];
+
+        const box = document.createElement("a");
+        box.style.borderWidth = "2px";
+        box.style.marginRight = "10px";
+        box.style.height = "10px";
+        box.style.width = "10px";
+        box.style.borderRadius = "5px";
+        box.style.display = "inline-block";
+
+        let innerHtml = `<b style="text-align:center">${info[0].axisValueLabel}:</b><br/><table id="myTable" border="1" cellpadding="3">`;
+
+        info.map((line: any) => {
+          if (line.value === "-") {
+            return;
+          }
+          group.push({
+            person: `${line.seriesName}`,
+            partner: `${line.value}`,
+            color: `${line.color}`,
+          });
+
+          box.style.background = `${line.color}`;
+          box.style.borderColor = `${line.color}`;
+          innerHtml +=
+            `<tr>` +
+            `<td>${box.outerHTML}</td>` +
+            `<td ">${line.seriesName}</td>` +
+            `<td ">${line.value} </td>` +
+            "</tr>";
+        });
+        innerHtml += "</table>";
+        return `
+        ${innerHtml}`;
+      } else {
+        return "No Data";
+      }
     },
   },
   legend: {
@@ -102,7 +152,7 @@ const boysOptions = {
   },
   yAxis: {
     type: "category",
-    data: ["Paige", "Amber", "Indiyah", "Tasha", "Gemma", "Vulnerable"],
+    data: ["Paige", "Amber", "Indiyah", "Tasha", "Gemma", "Single"],
   },
   series: [
     {
@@ -130,7 +180,7 @@ const boysOptions = {
       name: "Liam",
       type: "line",
       stack: "Total",
-      data: ["Gemma", "Vulnerable", "Vulnerable", "Vulnerable"],
+      data: ["Gemma", "Single", "Single", "Single"],
       smooth: true,
     },
     {
@@ -161,6 +211,46 @@ export let girlsOptions = {
         formatter: "Day {value}",
       },
     },
+    formatter: (info: any) => {
+      if (info) {
+        let group: IMatches[] = [];
+
+        const box = document.createElement("a");
+        box.style.borderWidth = "2px";
+        box.style.marginRight = "10px";
+        box.style.height = "10px";
+        box.style.width = "10px";
+        box.style.borderRadius = "5px";
+        box.style.display = "inline-block";
+
+        let innerHtml = `<b style="text-align:center">${info[0].axisValueLabel}:</b><br/><table id="myTable" border="1" cellpadding="3">`;
+
+        info.map((line: any) => {
+          if (line.value === "-") {
+            return;
+          }
+          group.push({
+            person: `${line.seriesName}`,
+            partner: `${line.value}`,
+            color: `${line.color}`,
+          });
+
+          box.style.background = `${line.color}`;
+          box.style.borderColor = `${line.color}`;
+          innerHtml +=
+            `<tr>` +
+            `<td>${box.outerHTML}</td>` +
+            `<td ">${line.seriesName}</td>` +
+            `<td ">${line.value} </td>` +
+            "</tr>";
+        });
+        innerHtml += "</table>";
+        return `
+        ${innerHtml}`;
+      } else {
+        return "No Data";
+      }
+    },
   },
   legend: {
     data: ["Paige", "Amber", "Indiyah", "Tasha", "Gemma", "Ekin-Su", "Afia"],
@@ -187,7 +277,7 @@ export let girlsOptions = {
   yAxis: {
     type: "category",
 
-    data: ["Luca", "Dami", "Andrew", "Liam", "Davide", "Ikenna", "Vulnerable"],
+    data: ["Luca", "Dami", "Andrew", "Liam", "Davide", "Ikenna", "Single"],
   },
   series: [
     {
@@ -229,14 +319,14 @@ export let girlsOptions = {
       name: "Afia",
       type: "line",
       stack: "Total",
-      data: ["-", "-", "-", "Vulnerable"],
+      data: ["-", "-", "-", "Single"],
       smooth: true,
     },
     {
       name: "Ekin-Su",
       type: "line",
       stack: "Total",
-      data: ["-", "-", "-", "Vulnerable"],
+      data: ["-", "-", "-", "Single"],
       smooth: true,
     },
   ],
