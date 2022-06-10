@@ -8,9 +8,9 @@ type Props = {
   theme: string;
 };
 
-const Singles = ["Afia", "Ekin-Su"];
+const Singles = ["Liam"];
 
-const Vulnerable = (props: Props) => {
+const OffShow = (props: Props) => {
   const { theme } = props;
 
   const settings = [
@@ -42,7 +42,7 @@ const Vulnerable = (props: Props) => {
           variant="h6"
           component="div"
         >
-          Currently Single
+          Off The Show
         </Typography>
         <Typography
           className="pt-4 justify-self-center list-none"
@@ -59,4 +59,4 @@ const Vulnerable = (props: Props) => {
   );
 };
 
-export default Vulnerable;
+export default OffShow;

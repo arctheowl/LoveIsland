@@ -4,6 +4,7 @@ import CountDown from "./CountDown";
 import CurrentCouples from "./CurrentCouples";
 import LineGraph from "./LineGraph";
 import ThemeSwitch from "./ThemeSwitch";
+import OffShow from "./OffShow";
 
 type Props = {
   theme: string;
@@ -45,6 +46,7 @@ const FrontPage = (props: Props) => {
         <Vulnerable theme={theme} />
         <CountDown theme={theme} />
         <CurrentCouples theme={theme} />
+        <OffShow theme={theme} />
       </div>
     </>
   );

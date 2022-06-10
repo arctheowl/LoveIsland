@@ -53,9 +53,6 @@ export default function BasicTable() {
                   {row.name}
                 </TableCell>
                 <TableCell>{row.partner}</TableCell>
-                {/* <TableCell align="right">{row.fat}</TableCell>
-                <TableCell align="right">{row.carbs}</TableCell>
-                <TableCell align="right">{row.protein}</TableCell> */}
               </TableRow>
             ))}
           </TableBody>
