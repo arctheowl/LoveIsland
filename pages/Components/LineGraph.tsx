@@ -1,5 +1,4 @@
 import ReactECharts from "echarts-for-react";
-import Card from "@mui/material/Card";
 import Typography from "@mui/material/Typography";
 
 type Props = {
@@ -152,7 +151,7 @@ const boysOptions = {
   },
   yAxis: {
     type: "category",
-    data: ["Exit", "Paige", "Amber", "Indiyah", "Tasha", "Gemma", "Single", ],
+    data: ["Exit", "Paige", "Amber", "Indiyah", "Tasha", "Gemma", "Ekin-Su", "Single", ],
   },
   series: [
     {

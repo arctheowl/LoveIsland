@@ -1,8 +1,4 @@
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-// import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import { CardActionArea } from "@mui/material";
 
 type Props = {
   theme: string;
@@ -49,8 +45,8 @@ const Vulnerable = (props: Props) => {
           variant="h6"
           component="div"
         >
-          {Singles.map((single)=>{
-            return <li key={single}>{single}</li>
+          {Singles.map((single) => {
+            return <li key={single}>{single}</li>;
           })}
         </Typography>
       </div>
