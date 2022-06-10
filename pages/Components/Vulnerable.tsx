@@ -53,7 +53,6 @@ const Vulnerable = (props: Props) => {
             return <li key={single}>{single}</li>
           })}
         </Typography>
-        ;
       </div>
     </>
   );

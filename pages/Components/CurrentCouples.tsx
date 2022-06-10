@@ -53,7 +53,7 @@ const CoupleTable = (props: Props) => {
   return (
     <>
       <div
-        className={`${settings[number].themes} col-span-6 backdrop-blur-xl rounded drop-shadow-lg grid-cols-1 grid justify-items-auto`}
+        className={`${settings[number].themes} col-span-12 md:col-span-6 backdrop-blur-xl rounded drop-shadow-lg grid-cols-1 grid justify-items-auto`}
       >
       <Typography variant="h6"
         component="div"

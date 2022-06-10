@@ -53,7 +53,6 @@ const OffShow = (props: Props) => {
             return <li key={single}>{single}</li>
           })}
         </Typography>
-        ;
       </div>
     </>
   );
