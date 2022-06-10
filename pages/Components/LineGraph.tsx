@@ -284,7 +284,7 @@ export let girlsOptions = {
       name: "Paige",
       type: "line",
       stack: "Total",
-      data: ["Luca", "Luca", "Luca", "Luca"],
+      data: ["Luca", "Luca", "Luca", "Luca", "Single"],
       smooth: true,
     },
     {
@@ -319,7 +319,7 @@ export let girlsOptions = {
       name: "Afia",
       type: "line",
       stack: "Total",
-      data: ["-", "-", "-", "Single"],
+      data: ["-", "-", "-", "Single", "Single"],
       smooth: true,
     },
     {
