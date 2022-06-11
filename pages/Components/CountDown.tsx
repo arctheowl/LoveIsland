@@ -13,7 +13,7 @@ const CountDown = (props: Props) => {
   const date = new Date();
   const date2 = date.getDate();
 
-  const expirydate = `${date2} jun 2022 21:00:00`;
+  const expirydate = `${date2 + 1} jun 2022 21:00:00`;
 
   const [expiryTime, setExpiryTime] = useState(expirydate);
   const [countdownTime, setCountdownTime] = useState({
