@@ -1,8 +1,5 @@
-import React, { useEffect, useState } from "react";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
+import { useEffect, useState } from "react";
 import Typography from "@mui/material/Typography";
-import { CardActionArea } from "@mui/material";
 
 type Props = {
   theme: string;
@@ -13,9 +10,15 @@ const CountDown = (props: Props) => {
   const date = new Date();
   const date2 = date.getDate();
 
-  const expirydate = `${date2 + 1} jun 2022 21:00:00`;
+  let expiryDate;
 
-  const [expiryTime, setExpiryTime] = useState(expirydate);
+  if (date.getDate() === 6) {
+    expiryDate = `${date2 + 1} jun 2022 21:00:00`;
+  } else {
+    expiryDate = `${date2} jun 2022 21:00:00`;
+  }
+
+  const [expiryTime, setExpiryTime] = useState(expiryDate);
   const [countdownTime, setCountdownTime] = useState({
     countdownDays: 0,
     countdownHours: 0,
@@ -76,6 +79,7 @@ const CountDown = (props: Props) => {
     number = 1;
   }
 
+
   return (
     <div
       className={`${settings[number].themes} col-span-6 backdrop-blur-xl rounded drop-shadow-lg grid-cols-1 grid`}
@@ -88,15 +92,27 @@ const CountDown = (props: Props) => {
       >
         Time Until Next Episode
       </Typography>
-      <Typography variant="h6" className="list-none justify-self-center">
-        <li>
-          {countdownTime.countdownDays} days {countdownTime.countdownHours} hrs{" "}
+      {expiryDate === "false" ? (
+        <Typography variant="h6" className="list-none justify-self-center">
+        <li className="pl-5">
+          Its on NOW!
         </li>
         <li>
-          {countdownTime.countdownMinutes} min {countdownTime.countdownSeconds}{" "}
-          sec
+          TUNE IN @ ITV2
         </li>
       </Typography>
+      ) : (
+        <Typography variant="h6" className="list-none justify-self-center">
+          <li>
+            {countdownTime.countdownDays} days {countdownTime.countdownHours}{" "}
+            hrs{" "}
+          </li>
+          <li>
+            {countdownTime.countdownMinutes} min{" "}
+            {countdownTime.countdownSeconds} sec
+          </li>
+        </Typography>
+      )}
     </div>
   );
 };
