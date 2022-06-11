@@ -4,8 +4,7 @@ import FrontPage from "./Components/FrontPage";
 import { useState } from "react";
 
 const Home: NextPage = () => {
-
-  const [theme, setTheme] = useState('dark')
+  const [theme, setTheme] = useState("dark");
 
   return (
     <>
@@ -13,9 +12,19 @@ const Home: NextPage = () => {
         <title>Love Island</title>
         <link rel="icon" href="/image/favicon.jpeg" />
       </Head>
-      <div className="bg-gradient-to-br from-blue-400  to-violet-600 overflow-auto h-screen">
-        <FrontPage theme={theme} setTheme={setTheme}/>
-      </div>
+      {theme === "light" ? (
+        <>
+          <div className="bg-gradient-to-br from-blue-400  to-violet-600 overflow-auto h-screen">
+            <FrontPage theme={theme} setTheme={setTheme} />
+          </div>
+        </>
+      ) : (
+        <>
+          <div className="bg-gradient-to-br from-blue-600  to-violet-900 overflow-auto h-screen">
+            <FrontPage theme={theme} setTheme={setTheme} />
+          </div>
+        </>
+      )}
     </>
   );
 };
