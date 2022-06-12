@@ -6,7 +6,7 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Typography from "@mui/material/Typography";
-import CurrentCouples from "../data/CurrentCouples.json";
+import CurrentCouples from "../../data/CurrentCouples.json";
 
 
 type Props = {

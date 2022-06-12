@@ -1,10 +1,10 @@
 import Typography from "@mui/material/Typography";
-import Vulnerable from "../Components/Vulnerable";
-import CountDown from "../Components/CountDown";
-import CurrentCouples from "../Components/CurrentCouples";
-import LineGraph from "../Components/LineGraph";
-import ThemeSwitch from "../Components/ThemeSwitch";
-import OffShow from "../Components/OffShow";
+import Vulnerable from "./Components/Vulnerable";
+import CountDown from "./Components/CountDown";
+import CurrentCouples from "./Components/CurrentCouples";
+import LineGraph from "./Components/LineGraph";
+import ThemeSwitch from "./Components/ThemeSwitch";
+import OffShow from "./Components/OffShow";
 
 type Props = {
   theme: string;
