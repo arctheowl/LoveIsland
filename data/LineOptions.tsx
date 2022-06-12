@@ -1,11 +1,21 @@
-import TimelineBoys from "./TimeLineBoys.json"
-import TimelineGirls from "./TimeLineGirls.json"
+import TimelineBoys from "./TimeLineBoys.json";
+import TimelineGirls from "./TimeLineGirls.json";
 
 interface IMatches {
   person: string;
   partner: string;
   color: string;
 }
+
+interface ITimeLineData {
+  name: string;
+  type: string;
+  stack: string;
+  data: string[];
+  smooth: boolean;
+  color: string;
+}
+
 
 export const boysOptions: any = {
   title: {
@@ -60,7 +70,7 @@ export const boysOptions: any = {
     },
   },
   legend: {
-    data: ["Luca", "Dami", "Andrew", "Liam", "Davide", "Ikenna", "Exit"],
+    data: legendData(TimelineBoys)
   },
   grid: {
     left: "3%",
@@ -85,23 +95,23 @@ export const boysOptions: any = {
   yAxis: {
     type: "category",
     data: [
-      "Exit",
-      "Tasha",
-      "Paige",
-      "Indiyah",
-      "Gemma",
-      "Ekin-Su",
-      "Amber",
-      "Single",
+      ...dataCategories(TimelineBoys),
+
+      // "Tasha",
+      // "Paige",
+      // "Indiyah",
+      // "Gemma",
+      // "Ekin-Su",
+      // "Amber",
+      // "Single",
+      // "Exit",
     ],
   },
-  series: TimelineBoys
+  series: TimelineBoys,
 };
 
 export const girlsOptions: any = {
-  title: {
-  
-  },
+  title: {},
   tooltip: {
     trigger: "axis",
     axisPointer: {
@@ -152,14 +162,7 @@ export const girlsOptions: any = {
   },
   legend: {
     data: [
-      "Paige",
-      "Amber",
-      "Indiyah",
-      "Tasha",
-      "Gemma",
-      "Ekin-Su",
-      "Afia",
-      "Exit",
+      legendData(TimelineGirls)
     ],
   },
   grid: {
@@ -185,15 +188,62 @@ export const girlsOptions: any = {
     type: "category",
 
     data: [
-      "Exit",
-      "Luca",
-      "Liam",
-      "Ikenna",
-      "Davide",
-      "Dami",
-      "Andrew",
-      "Single",
+      ...dataCategories(TimelineGirls)
     ],
   },
-  series: TimelineGirls
+  series: TimelineGirls,
 };
+
+
+
+function arraymove(arr:any, fromIndex:any, toIndex:any) {
+  var element = arr[fromIndex];
+  arr.splice(fromIndex, 1);
+  arr.splice(toIndex, 0, element);
+}
+
+function legendData(TimelineBoys: ITimeLineData[]): string[] {
+
+  let legendList: string[] = []
+  TimelineBoys.map((person) => {
+    legendList.push(person.name)
+  });
+
+  return legendList
+}
+
+function dataCategories(TimelineBoys: ITimeLineData[]): string[] {
+  let listOfGirls = [""];
+  TimelineBoys.map((person) => {
+    person.data.map((partner) => {
+      listOfGirls.push(partner);
+    });
+  });
+
+  let uniqueChars = listOfGirls.filter((c, index) => {
+    return listOfGirls.indexOf(c) === index;
+  });
+
+  uniqueChars.filter
+
+  //remove the - and ""
+  let FinalList: string[] = []
+  uniqueChars.map((entry) => {
+    if (entry === "" || entry === "-" ){
+      return
+    } else {
+      FinalList.push(entry)
+    }
+  })
+  if (FinalList.includes("Exit")){
+    let current_exit = FinalList.indexOf("Exit")
+    arraymove(FinalList, current_exit,  0)
+  }
+
+  let current_single = FinalList.indexOf("Single")  
+  arraymove(FinalList, current_single, FinalList.length)
+
+  console.log(FinalList);
+
+  return FinalList;
+}
