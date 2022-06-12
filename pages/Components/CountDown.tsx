@@ -48,7 +48,7 @@ const CountDown = (props: Props) => {
 
       setCountdownTime(runningCountdownTime);
 
-      if (remainingDayTime < 0) {
+      if (remainingDayTime <= 0) {
         clearInterval(timeInterval);
         setExpiryTime("false");
       }
@@ -79,7 +79,7 @@ const CountDown = (props: Props) => {
     number = 1;
   }
 
-
+  // console.log(countdownTime.countdownSeconds)
   return (
     <div
       className={`${settings[number].themes} col-span-6 backdrop-blur-xl rounded drop-shadow-lg grid-cols-1 grid`}
@@ -92,16 +92,7 @@ const CountDown = (props: Props) => {
       >
         Time Until Next Episode
       </Typography>
-      {expiryDate === "false" ? (
-        <Typography variant="h6" className="list-none justify-self-center">
-        <li className="pl-5">
-          Its on NOW!
-        </li>
-        <li>
-          TUNE IN @ ITV2
-        </li>
-      </Typography>
-      ) : (
+      {countdownTime.countdownSeconds > 0 ? (
         <Typography variant="h6" className="list-none justify-self-center">
           <li>
             {countdownTime.countdownDays} days {countdownTime.countdownHours}{" "}
@@ -111,6 +102,11 @@ const CountDown = (props: Props) => {
             {countdownTime.countdownMinutes} min{" "}
             {countdownTime.countdownSeconds} sec
           </li>
+        </Typography>
+      ) : (
+        <Typography variant="h6" className="list-none justify-self-center">
+          <li className="pl-5">Its on NOW!</li>
+          <li>TUNE IN @ ITV2</li>
         </Typography>
       )}
     </div>
