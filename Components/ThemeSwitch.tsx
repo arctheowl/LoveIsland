@@ -1,5 +1,4 @@
 import { styled } from "@mui/material/styles";
-import FormGroup from "@mui/material/FormGroup";
 import Switch from "@mui/material/Switch";
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
@@ -64,8 +63,8 @@ export default function CustomizedSwitches(props: Props) {
   };
 
   return (
-    <FormGroup>
+    
       <MaterialUISwitch onChange={handleChange} />
-    </FormGroup>
+  
   );
 }

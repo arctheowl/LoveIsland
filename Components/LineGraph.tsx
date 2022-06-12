@@ -1,6 +1,6 @@
 import ReactECharts from "echarts-for-react";
 import Typography from "@mui/material/Typography";
-import {boysOptions, girlsOptions} from "./LineOptions"
+import { boysOptions, girlsOptions } from "./LineOptions";
 
 type Props = {
   theme: string;
@@ -30,9 +30,9 @@ const LineGraph = (props: Props) => {
   }
 
   return (
-    <>
+    <div className={`grid grid-cols-2 gap-4 col-span-12`}>
       <div
-        className={`${settings[number].themes} col-span-12 lg:col-span-6 backdrop-blur-xl rounded drop-shadow-lg grid-cols-1 grid justify-items-auto`}
+        className={`${settings[number].themes} col-span-2 lg:col-span-1 backdrop-blur-xl rounded drop-shadow-lg grid-cols-1 grid justify-items-auto`}
       >
         <Typography sx={{ fontSize: 24 }} className="justify-self-center">
           Boys Timeline
@@ -47,7 +47,7 @@ const LineGraph = (props: Props) => {
       </div>
 
       <div
-        className={`${settings[number].themes} col-span-12 lg:col-span-6 backdrop-blur-xl rounded drop-shadow-lg grid-cols-1 grid justify-items-auto`}
+        className={`${settings[number].themes} col-span-2 lg:col-span-1 backdrop-blur-xl rounded drop-shadow-lg grid-cols-1 grid justify-items-auto`}
       >
         <Typography sx={{ fontSize: 24 }} className="justify-self-center">
           Girls Timeline
@@ -59,7 +59,7 @@ const LineGraph = (props: Props) => {
           theme={theme}
         />
       </div>
-    </>
+    </div>
   );
 };
 
