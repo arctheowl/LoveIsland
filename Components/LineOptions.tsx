@@ -1,6 +1,6 @@
 import { EChartsOption } from "echarts-for-react";
 import TimelineBoys from "../data/TimeLineBoys.json"
-import TimelineGirls from "../data/TimelineGirls.json"
+import TimelineGirls from "../data/TimeLineGirls.json"
 
 interface IMatches {
   person: string;
