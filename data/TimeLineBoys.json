@@ -1,0 +1,50 @@
+[
+    {
+      "name": "Luca",
+      "type": "line",
+      "stack": "Total",
+      "data": ["Paige", "Paige", "Paige", "Paige", "Gemma"],
+      "smooth": true,
+      "color": "#9a60b4"
+    },
+    {
+      "name": "Dami",
+      "type": "line",
+      "stack": "Total",
+      "data": ["Amber", "Amber", "Amber", "Amber", "Amber"],
+      "smooth": true,
+      "color": "#fc8452"
+    },
+    {
+      "name": "Andrew",
+      "type": "line",
+      "stack": "Total",
+      "data": ["Tasha", "Tasha", "Tasha", "Tasha", "Tasha"],
+      "smooth": true,
+      "color": "#ee6666"
+    },
+    {
+      "name": "Liam",
+      "type": "line",
+      "stack": "Total",
+      "data": ["Gemma", "Single", "Single", "Single", "Exit"],
+      "smooth": true,
+      "color": "#3ba272"
+    },
+    {
+      "name": "Davide",
+      "type": "line",
+      "stack": "Total",
+      "data": ["-", "Gemma", "Gemma", "Gemma", "Ekin-Su"],
+      "smooth": true,
+      "color": "#91cc75" 
+    },
+    {
+      "name": "Ikenna",
+      "type": "line",
+      "stack": "Total",
+      "data": ["Indiyah", "Indiyah", "Indiyah", "Indiyah", "Indiyah"],
+      "smooth": true,
+      "color": "#5470c6"
+    }
+  ]

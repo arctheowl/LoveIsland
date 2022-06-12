@@ -29,28 +29,26 @@ const Vulnerable = (props: Props) => {
     number = 1;
   }
   return (
-    <>
-      <div
-        className={`${settings[number].themes} col-span-6 backdrop-blur-xl rounded drop-shadow-lg grid-cols-1 grid justify-items-auto`}
+    <div
+      className={`${settings[number].themes} col-span-6 backdrop-blur-xl rounded drop-shadow-lg grid-cols-1 grid justify-items-auto`}
+    >
+      <Typography
+        className="pt-4 justify-self-center md:p-0 pl-8"
+        variant="h6"
+        component="div"
       >
-        <Typography
-          className="pt-4 justify-self-center md:p-0 pl-8"
-          variant="h6"
-          component="div"
-        >
-          Currently Single
-        </Typography>
-        <Typography
-          className="pt-4 justify-self-center list-none"
-          variant="h6"
-          component="div"
-        >
-          {Singles.map((single) => {
-            return <li key={single}>{single}</li>;
-          })}
-        </Typography>
-      </div>
-    </>
+        Currently Single
+      </Typography>
+      <Typography
+        className="pt-4 justify-self-center list-none"
+        variant="h6"
+        component="div"
+      >
+        {Singles.map((single) => {
+          return <li key={single}>{single}</li>;
+        })}
+      </Typography>
+    </div>
   );
 };
 
