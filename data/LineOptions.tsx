@@ -16,7 +16,6 @@ interface ITimeLineData {
   color: string;
 }
 
-
 export const boysOptions: any = {
   title: {
     text: "",
@@ -70,7 +69,7 @@ export const boysOptions: any = {
     },
   },
   legend: {
-    data: legendData(TimelineBoys)
+    data: legendData(TimelineBoys),
   },
   grid: {
     left: "3%",
@@ -161,9 +160,7 @@ export const girlsOptions: any = {
     },
   },
   legend: {
-    data: [
-      legendData(TimelineGirls)
-    ],
+    data: [legendData(TimelineGirls)],
   },
   grid: {
     left: "3%",
@@ -187,29 +184,24 @@ export const girlsOptions: any = {
   yAxis: {
     type: "category",
 
-    data: [
-      ...dataCategories(TimelineGirls)
-    ],
+    data: [...dataCategories(TimelineGirls)],
   },
   series: TimelineGirls,
 };
 
-
-
-function arraymove(arr:any, fromIndex:any, toIndex:any) {
+function arraymove(arr: any, fromIndex: any, toIndex: any) {
   var element = arr[fromIndex];
   arr.splice(fromIndex, 1);
   arr.splice(toIndex, 0, element);
 }
 
 function legendData(TimelineBoys: ITimeLineData[]): string[] {
-
-  let legendList: string[] = []
+  let legendList: string[] = [];
   TimelineBoys.map((person) => {
-    legendList.push(person.name)
+    legendList.push(person.name);
   });
 
-  return legendList
+  return legendList;
 }
 
 function dataCategories(TimelineBoys: ITimeLineData[]): string[] {
@@ -224,26 +216,24 @@ function dataCategories(TimelineBoys: ITimeLineData[]): string[] {
     return listOfGirls.indexOf(c) === index;
   });
 
-  uniqueChars.filter
+  uniqueChars.filter;
 
   //remove the - and ""
-  let FinalList: string[] = []
+  let FinalList: string[] = [];
   uniqueChars.map((entry) => {
-    if (entry === "" || entry === "-" ){
-      return
+    if (entry === "" || entry === "-") {
+      return;
     } else {
-      FinalList.push(entry)
+      FinalList.push(entry);
     }
-  })
-  if (FinalList.includes("Exit")){
-    let current_exit = FinalList.indexOf("Exit")
-    arraymove(FinalList, current_exit,  0)
+  });
+  if (FinalList.includes("Exit")) {
+    let current_exit = FinalList.indexOf("Exit");
+    arraymove(FinalList, current_exit, 0);
   }
 
-  let current_single = FinalList.indexOf("Single")  
-  arraymove(FinalList, current_single, FinalList.length)
-
-  console.log(FinalList);
+  let current_single = FinalList.indexOf("Single");
+  arraymove(FinalList, current_single, FinalList.length);
 
   return FinalList;
 }
