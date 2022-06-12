@@ -19,12 +19,12 @@ type Props = {
 // ['Paige', 'Amber', 'Indiyah', 'Tasha', 'Gemma', 'Vulnerable']
 // ['Luca', 'Dami', 'Andrew', 'Liam', 'Davide', 'Ikenna']
 const rows = [
-  createData("Luca", "Gemma"),
+  createData("Luca", "Paige"),
   createData("Dami", "Amber"),
   createData("Andrew", "Tasha"),
-  createData("Davide", "Ekin-Su"),
+  createData("Davide", "Gemma"),
   createData("Ikenna", "Indiyah"),
-  //createData("",""),
+  createData("Liam", "Vulnerable"),
 ];
 const CoupleTable = (props: Props) => {
   const { theme } = props;
