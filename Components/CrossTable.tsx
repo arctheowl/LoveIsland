@@ -12,8 +12,8 @@ import Typography from "@mui/material/Typography";
 function createData(name: string, partner: string) {
   return { name, partner };
 }
-// ['Paige', 'Amber', 'Indiyah', 'Tasha', 'Gemma', 'Vulnerable']
-// ['Luca', 'Dami', 'Andrew', 'Liam', 'Davide', 'Ikenna']
+
+
 const rows = [
   createData("Luca", "Paige"),
   createData("Dami", "Amber"),
