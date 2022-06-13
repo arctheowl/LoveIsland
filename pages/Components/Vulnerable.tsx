@@ -1,10 +1,11 @@
 import Typography from "@mui/material/Typography";
+import Singles from "../../data/CurrentSingles.json"
 
 type Props = {
   theme: string;
 };
 
-const Singles = ["Afia", "Paige"];
+// const Singles = ["Afia", "Paige"];
 
 const Vulnerable = (props: Props) => {
   const { theme } = props;
@@ -45,7 +46,7 @@ const Vulnerable = (props: Props) => {
         component="div"
       >
         {Singles.map((single) => {
-          return <li key={single}>{single}</li>;
+          return <li key={single.name}>{single.name}</li>;
         })}
       </Typography>
     </div>
