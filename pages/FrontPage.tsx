@@ -45,9 +45,9 @@ const FrontPage = (props: Props) => {
       <div className="grid grid-cols-12 gap-4 lg:px-24 lg:py-10 p-4 ">
         <LineGraph theme={theme} />
         <StackChart theme={theme} />
-        <Vulnerable theme={theme} />
-        <CountDown theme={theme} />
         <CurrentCouples theme={theme} />
+        <CountDown theme={theme} />
+        <Vulnerable theme={theme} />
         <OffShow theme={theme} />
         
       </div>
