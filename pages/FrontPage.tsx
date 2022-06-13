@@ -5,6 +5,7 @@ import CurrentCouples from "./Components/CurrentCouples";
 import LineGraph from "./Components/LineGraph";
 import ThemeSwitch from "./Components/ThemeSwitch";
 import OffShow from "./Components/OffShow";
+import StackChart from "./Components/StackChart";
 
 type Props = {
   theme: string;
@@ -43,10 +44,12 @@ const FrontPage = (props: Props) => {
 
       <div className="grid grid-cols-12 gap-4 lg:px-24 lg:py-10 p-4 ">
         <LineGraph theme={theme} />
+        <StackChart theme={theme} />
         <Vulnerable theme={theme} />
         <CountDown theme={theme} />
         <CurrentCouples theme={theme} />
         <OffShow theme={theme} />
+        
       </div>
     </>
   );

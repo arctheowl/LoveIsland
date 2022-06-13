@@ -29,8 +29,6 @@ export const boysOptions: any = {
     },
     formatter: (info: any) => {
       if (info) {
-        let group: IMatches[] = [];
-
         const box = document.createElement("a");
         box.style.borderWidth = "2px";
         box.style.marginRight = "10px";
@@ -45,11 +43,6 @@ export const boysOptions: any = {
           if (line.value === "-") {
             return;
           }
-          group.push({
-            person: `${line.seriesName}`,
-            partner: `${line.value}`,
-            color: `${line.color}`,
-          });
 
           box.style.background = `${line.color}`;
           box.style.borderColor = `${line.color}`;
@@ -120,8 +113,6 @@ export const girlsOptions: any = {
     },
     formatter: (info: any) => {
       if (info) {
-        let group: IMatches[] = [];
-
         const box = document.createElement("a");
         box.style.borderWidth = "2px";
         box.style.marginRight = "10px";
@@ -136,11 +127,6 @@ export const girlsOptions: any = {
           if (line.value === "-") {
             return;
           }
-          group.push({
-            person: `${line.seriesName}`,
-            partner: `${line.value}`,
-            color: `${line.color}`,
-          });
 
           box.style.background = `${line.color}`;
           box.style.borderColor = `${line.color}`;
@@ -160,7 +146,7 @@ export const girlsOptions: any = {
     },
   },
   legend: {
-    data: [legendData(TimelineGirls)],
+    data: [...legendData(TimelineGirls)],
   },
   grid: {
     left: "3%",
@@ -184,7 +170,17 @@ export const girlsOptions: any = {
   yAxis: {
     type: "category",
 
-    data: [...dataCategories(TimelineGirls)],
+    data: [...dataCategories(TimelineGirls),
+     // "Tasha",
+      // "Paige",
+      // "Indiyah",
+      // "Gemma",
+      // "Ekin-Su",
+      // "Amber",
+      // "Single",
+      // "Exit",
+    
+    ],
   },
   series: TimelineGirls,
 };
@@ -233,7 +229,8 @@ function dataCategories(TimelineBoys: ITimeLineData[]): string[] {
   }
 
   let current_single = FinalList.indexOf("Single");
-  arraymove(FinalList, current_single, FinalList.length);
+  arraymove(FinalList, current_single, 1);
+  // console.log(FinalList)
 
   return FinalList;
 }
