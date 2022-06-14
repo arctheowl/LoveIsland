@@ -358,7 +358,7 @@ export const boysOptions: any = {
       },
       itemStyle: {
         borderColor: addColours("Single"),
-        color: addColours("Single")
+        color: addColours("Single"),
       },
       data: ["-", "-", "-", "-", "-", 1 + single],
     },
@@ -469,14 +469,13 @@ export const boysOptions: any = {
   ],
 };
 
-function addColours(name: string):string {
-  let newColour = ""
+function addColours(name: string): string {
+  let newColour = "";
   colours.map((k) => {
     if (k.name === name) {
-      newColour= k.colour;
+      newColour = k.colour;
     }
-
   });
 
-  return newColour
+  return newColour;
 }
