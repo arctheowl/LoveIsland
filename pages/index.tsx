@@ -1,10 +1,23 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import FrontPage from "./FrontPage";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import ReactGA from "react-ga";
 
 const Home: NextPage = () => {
   const [theme, setTheme] = useState("dark");
+  useEffect(() => {
+    ReactGA.initialize("G-5J79YQTF7X", {
+      debug: true,
+      titleCase: false,
+      gaOptions: {
+        name: "Tracker1",
+        siteSpeedSampleRate: 100
+      },
+    });
+    ReactGA.set
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
 
   return (
     <>
