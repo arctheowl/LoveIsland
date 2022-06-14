@@ -92,7 +92,7 @@ const CountDown = (props: Props) => {
       >
         Time Until Next Episode
       </Typography>
-      {countdownTime.countdownSeconds > 0 || countdownTime.countdownMinutes > 0? (
+      {countdownTime.countdownSeconds > 0 || countdownTime.countdownMinutes > 0 || countdownTime.countdownDays > 0 || countdownTime.countdownHours > 0? (
         <Typography variant="h6" className="list-none justify-self-center">
           <li>
             {countdownTime.countdownDays} days {countdownTime.countdownHours}{" "}

@@ -1,4 +1,5 @@
-
+import { kill } from "process";
+import colours from "./Colours.json";
 
 interface IMatches {
   person: string;
@@ -43,7 +44,7 @@ export const girlsOptions: any = {
       // console.log(info);
       let innerHtml = `<b style="text-align:center">${info[0].axisValue}:</b><br/><table id="myTable" border="1" cellpadding="3">`;
       info.map((data: any) => {
-        if (data.data === "-" || data.seriesName ==="") {
+        if (data.data === "-" || data.seriesName === "") {
           return;
         }
         // console.log(`${data.data}===${data.seriesName}`);
@@ -96,12 +97,6 @@ export const girlsOptions: any = {
       } else if (stringData.endsWith("8")) {
         return `Single`;
       }
-
-      //   } else if (value === "under_compliant") {
-      //     return `Undercompliant`;
-      //   }
-      //   console.log(typeof value);
-      //   return `${value}`;
     },
   },
   series: [
@@ -133,8 +128,11 @@ export const girlsOptions: any = {
       emphasis: {
         focus: "series",
       },
+      itemStyle: {
+        borderColor: addColours("Liam"),
+        color: addColours("Liam"),
+      },
       data: [1 + liam],
-      //   color: "#fc8452"
     },
     {
       name: "Davide",
@@ -146,6 +144,10 @@ export const girlsOptions: any = {
       },
       emphasis: {
         focus: "series",
+      },
+      itemStyle: {
+        borderColor: addColours("Davide"),
+        color: addColours("Davide"),
       },
       data: [3 + davide, "-", "-", "-", 4 + davide],
     },
@@ -160,6 +162,10 @@ export const girlsOptions: any = {
       emphasis: {
         focus: "series",
       },
+      itemStyle: {
+        borderColor: addColours("Luca"),
+        color: addColours("Luca"),
+      },
       data: [4 + luca, 4 + luca],
     },
     {
@@ -172,6 +178,10 @@ export const girlsOptions: any = {
       },
       emphasis: {
         focus: "series",
+      },
+      itemStyle: {
+        borderColor: addColours("Single"),
+        color: addColours("Single"),
       },
       data: ["-", 3 + single],
     },
@@ -186,6 +196,10 @@ export const girlsOptions: any = {
       emphasis: {
         focus: "series",
       },
+      itemStyle: {
+        borderColor: addColours("Jaques"),
+        color: addColours("Jaques"),
+      },
       data: ["-", 1 + jaques],
     },
     {
@@ -198,6 +212,10 @@ export const girlsOptions: any = {
       },
       emphasis: {
         focus: "series",
+      },
+      itemStyle: {
+        borderColor: addColours("Ikenna"),
+        color: addColours("Ikenna"),
       },
       data: ["-", "-", 8 + ikenna],
     },
@@ -212,6 +230,10 @@ export const girlsOptions: any = {
       emphasis: {
         focus: "series",
       },
+      itemStyle: {
+        borderColor: addColours("Andrew"),
+        color: addColours("Andrew"),
+      },
       data: ["-", "-", "-", 8 + andrew],
     },
     {
@@ -224,6 +246,10 @@ export const girlsOptions: any = {
       },
       emphasis: {
         focus: "series",
+      },
+      itemStyle: {
+        borderColor: addColours("Dami"),
+        color: addColours("Dami"),
       },
       data: ["-", "-", "-", "-", "-", 8 + dami],
     },
@@ -240,7 +266,7 @@ export const boysOptions: any = {
       // console.log(info);
       let innerHtml = `<b style="text-align:center">${info[0].axisValue}:</b><br/><table id="myTable" border="1" cellpadding="3">`;
       info.map((data: any) => {
-        if (data.data === "-" || data.seriesName ==="") {
+        if (data.data === "-" || data.seriesName === "") {
           return;
         }
         // console.log(`${data.data}===${data.seriesName}`);
@@ -319,7 +345,7 @@ export const boysOptions: any = {
       },
       data: ["-", "-", "-", 1 + placeholder, "-", 6 + placeholder],
     },
-     {
+    {
       name: "Single",
       type: "bar",
       stack: "total",
@@ -330,7 +356,11 @@ export const boysOptions: any = {
       emphasis: {
         focus: "series",
       },
-      data: ["-","-", "-", "-", "-", 1 + single],
+      itemStyle: {
+        borderColor: addColours("Single"),
+        color: addColours("Single")
+      },
+      data: ["-", "-", "-", "-", "-", 1 + single],
     },
     {
       name: "Paige",
@@ -343,7 +373,11 @@ export const boysOptions: any = {
       emphasis: {
         focus: "series",
       },
-      data: [4 + paige, "-", "-", "-", "-", 1 + paige ],
+      itemStyle: {
+        borderColor: addColours("Paige"),
+        color: addColours("Paige"),
+      },
+      data: [4 + paige, "-", "-", "-", "-", 1 + paige],
     },
     {
       name: "Gemma",
@@ -356,11 +390,14 @@ export const boysOptions: any = {
       emphasis: {
         focus: "series",
       },
+      itemStyle: {
+        borderColor: addColours("Gemma"),
+        color: addColours("Gemma"),
+      },
       data: [4 + gemma, "-", "-", 3 + gemma],
       //   color: "#fc8452"
     },
 
-   
     {
       name: "Ekin-Su",
       type: "bar",
@@ -371,6 +408,10 @@ export const boysOptions: any = {
       },
       emphasis: {
         focus: "series",
+      },
+      itemStyle: {
+        borderColor: addColours("Ekin-Su"),
+        color: addColours("Ekin-Su"),
       },
       data: ["-", "-", "-", 4 + ekinSu],
     },
@@ -385,6 +426,10 @@ export const boysOptions: any = {
       emphasis: {
         focus: "series",
       },
+      itemStyle: {
+        borderColor: addColours("Indiyah"),
+        color: addColours("Indiyah"),
+      },
       data: ["-", "-", "-", "-", 8 + indiyah],
     },
     {
@@ -397,6 +442,10 @@ export const boysOptions: any = {
       },
       emphasis: {
         focus: "series",
+      },
+      itemStyle: {
+        borderColor: addColours("Tasha"),
+        color: addColours("Tasha"),
       },
       data: ["-", "-", 8 + tasha],
     },
@@ -411,7 +460,23 @@ export const boysOptions: any = {
       emphasis: {
         focus: "series",
       },
+      itemStyle: {
+        borderColor: addColours("Amber"),
+        color: addColours("Amber"),
+      },
       data: ["-", 8 + amber],
     },
   ],
 };
+
+function addColours(name: string):string {
+  let newColour = ""
+  colours.map((k) => {
+    if (k.name === name) {
+      newColour= k.colour;
+    }
+
+  });
+
+  return newColour
+}

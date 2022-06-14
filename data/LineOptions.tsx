@@ -1,5 +1,6 @@
 import TimelineBoys from "./TimeLineBoys.json";
 import TimelineGirls from "./TimeLineGirls.json";
+import colours from "./Colours.json";
 
 interface IMatches {
   person: string;
@@ -88,18 +89,9 @@ export const boysOptions: any = {
     type: "category",
     data: [
       ...dataCategories(TimelineBoys),
-
-      // "Tasha",
-      // "Paige",
-      // "Indiyah",
-      // "Gemma",
-      // "Ekin-Su",
-      // "Amber",
-      // "Single",
-      // "Exit",
     ],
   },
-  series: TimelineBoys,
+  series: addColours(TimelineBoys),
 };
 
 export const girlsOptions: any = {
@@ -165,25 +157,42 @@ export const girlsOptions: any = {
     axisLabel: { formatter: "Day {value}" },
     type: "category",
     boundaryGap: false,
-    // data: ["0", "1", "2", "3", "4", "5", "6", "7", "8"],
   },
   yAxis: {
     type: "category",
 
-    data: [...dataCategories(TimelineGirls),
-     // "Tasha",
-      // "Paige",
-      // "Indiyah",
-      // "Gemma",
-      // "Ekin-Su",
-      // "Amber",
-      // "Single",
-      // "Exit",
-    
-    ],
+    data: [...dataCategories(TimelineGirls)],
   },
-  series: TimelineGirls,
+  series: addColours(TimelineGirls),
 };
+
+
+function addColours(TimelineBoys: ITimeLineData[]): ITimeLineData[] {
+  let FinalList: ITimeLineData[] = [];
+
+  TimelineBoys.map((person) => {
+    let name: string = person.name;
+    let setColour: string = "";
+    colours.map((k) => {
+      if (k.name === name) {
+        setColour = k.colour;
+      }
+    });
+
+    let newPerson: ITimeLineData;
+    newPerson = {
+      name: person.name,
+      type: person.type,
+      stack: person.stack,
+      data: person.data,
+      smooth: person.smooth,
+      color: setColour,
+    };
+
+    FinalList.push(newPerson);
+  });
+  return FinalList;
+}
 
 function arraymove(arr: any, fromIndex: any, toIndex: any) {
   var element = arr[fromIndex];
