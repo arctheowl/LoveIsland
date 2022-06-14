@@ -79,17 +79,13 @@ export const boysOptions: any = {
     },
   },
   xAxis: {
-    // name: 'Time',
     axisLabel: { formatter: "Day {value}" },
     type: "category",
     boundaryGap: false,
-    // data: ["0", "1", "2", "3", "4"],
   },
   yAxis: {
     type: "category",
-    data: [
-      ...dataCategories(TimelineBoys),
-    ],
+    data: [...dataCategories(TimelineBoys)],
   },
   series: addColours(TimelineBoys),
 };
@@ -166,7 +162,6 @@ export const girlsOptions: any = {
   series: addColours(TimelineGirls),
 };
 
-
 function addColours(TimelineBoys: ITimeLineData[]): ITimeLineData[] {
   let FinalList: ITimeLineData[] = [];
 
@@ -239,7 +234,6 @@ function dataCategories(TimelineBoys: ITimeLineData[]): string[] {
 
   let current_single = FinalList.indexOf("Single");
   arraymove(FinalList, current_single, 1);
-  // console.log(FinalList)
 
   return FinalList;
 }

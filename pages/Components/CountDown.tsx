@@ -79,7 +79,6 @@ const CountDown = (props: Props) => {
     number = 1;
   }
 
-  // console.log(countdownTime.countdownSeconds)
   return (
     <div
       className={`${settings[number].themes} col-span-6 backdrop-blur-xl rounded drop-shadow-lg grid-cols-1 grid`}

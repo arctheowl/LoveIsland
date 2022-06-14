@@ -41,13 +41,11 @@ export const girlsOptions: any = {
       type: "shadow",
     },
     formatter: (info: any) => {
-      // console.log(info);
       let innerHtml = `<b style="text-align:center">${info[0].axisValue}:</b><br/><table id="myTable" border="1" cellpadding="3">`;
       info.map((data: any) => {
         if (data.data === "-" || data.seriesName === "") {
           return;
         }
-        // console.log(`${data.data}===${data.seriesName}`);
         innerHtml +=
           `<tr>` +
           `<td ">${data.seriesName}</td>` +
@@ -75,9 +73,8 @@ export const girlsOptions: any = {
   },
   label: {
     formatter: (value: any) => {
-      // console.log(value.data);
       let stringData = `${value.data}`;
-      // console.log(stringData);
+
       if (stringData.endsWith("9")) {
         return ``;
       } else if (stringData.endsWith("1")) {
@@ -263,13 +260,12 @@ export const boysOptions: any = {
       type: "shadow",
     },
     formatter: (info: any) => {
-      // console.log(info);
       let innerHtml = `<b style="text-align:center">${info[0].axisValue}:</b><br/><table id="myTable" border="1" cellpadding="3">`;
       info.map((data: any) => {
         if (data.data === "-" || data.seriesName === "") {
           return;
         }
-        // console.log(`${data.data}===${data.seriesName}`);
+
         innerHtml +=
           `<tr>` +
           `<td ">${data.seriesName}</td>` +
@@ -297,9 +293,7 @@ export const boysOptions: any = {
   },
   label: {
     formatter: (value: any) => {
-      // console.log(value.data);
       let stringData = `${value.data}`;
-      // console.log(stringData);
       if (stringData.endsWith("9")) {
         return ``;
       } else if (stringData.endsWith("1")) {
@@ -319,12 +313,6 @@ export const boysOptions: any = {
       } else if (stringData.endsWith("8")) {
         return `Single`;
       }
-
-      //   } else if (value === "under_compliant") {
-      //     return `Undercompliant`;
-      //   }
-      //   console.log(typeof value);
-      //   return `${value}`;
     },
   },
   series: [
