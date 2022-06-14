@@ -1,6 +1,4 @@
-import { number } from "echarts";
-import TimelineBoys from "./TimeLineBoys.json";
-import TimelineGirls from "./TimeLineGirls.json";
+
 
 interface IMatches {
   person: string;
@@ -319,7 +317,20 @@ export const boysOptions: any = {
         borderColor: "transparent",
         color: "transparent",
       },
-      data: ["-", "-", "-", 1 + placeholder, "-", 7 + placeholder],
+      data: ["-", "-", "-", 1 + placeholder, "-", 6 + placeholder],
+    },
+     {
+      name: "Single",
+      type: "bar",
+      stack: "total",
+
+      label: {
+        show: true,
+      },
+      emphasis: {
+        focus: "series",
+      },
+      data: ["-","-", "-", "-", "-", 1 + single],
     },
     {
       name: "Paige",
@@ -349,19 +360,7 @@ export const boysOptions: any = {
       //   color: "#fc8452"
     },
 
-    {
-      name: "Single",
-      type: "bar",
-      stack: "total",
-
-      label: {
-        show: true,
-      },
-      emphasis: {
-        focus: "series",
-      },
-      data: ["-", "-"],
-    },
+   
     {
       name: "Ekin-Su",
       type: "bar",
