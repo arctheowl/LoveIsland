@@ -1,8 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import FrontPage from "./FrontPage";
-import { useState, useEffect } from "react";
-
+import { useState } from "react";
 
 const Home: NextPage = () => {
   const [theme, setTheme] = useState("dark");
