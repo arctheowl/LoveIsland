@@ -1,0 +1,76 @@
+
+Starting dev
+
+Navigate to Phoenix services 
+
+./start_development.sh --elastic-env=dev --region=eu --disable-frontend=1 --trace-elastic=1 up --build -d
+
+  
+
+  
+
+Add command below to .env file if can’t access Australia
+
+REACT_APP_RUNTIME_ENV=develop.eu 
+
+  
+
+  
+
+docker kill $(docker ps -q)
+
+
+ADDING TABS:
+UACC
+
+Config Files to edit:
+1) Datasets
+   1) services/etc/eu.etluacc/datasets/dataset_ms__germany__iqvia.json
+   2) services/etc/eu.etluacc/datasets/dataset_pso__germany__iqvia.json
+2) Create Application
+   1) services/etc/eu.etluacc/applications/patientIdentificationPersistence.json
+3) Frontend:
+   1) frontend/src/interfaces/enums.ts
+
+PRODUCTION:
+1) KPIS  services/etc/eu.etlprod/kpis/patientIdentificationPersistence/TotalPersistencePatients.json
+2) Index
+   services/etc/eu.etlprod/indextypes/persistence.json
+
+fields:
+graph2:
+time_period
+
+
+ADD TESTS:
+SubGroup 
+
+Worked on it for the decile fix and there is no testing at all for this file.
+services>data>graphs>GetMultipleSubGroupData.go
+
+
+Knowledge Transfer:
+Onboarding a new disease/dataset
+
+Either SM/PP you start with uacc/dev 
+1) Go into Dataset folder
+2) Naming convention is very important {dataset}_{diesease}_{region}_{company}.json
+3) UK has a different provider that will give data to smart targeting
+4) Indextypes holds the data structure
+
+
+Creating new disease steps:
+1) Create new dataset.json file
+2) Add dataset to the paitentIdentification.json file 
+   - Add this to imports 
+   - update variants
+
+
+Refactoring:
+1) 
+
+Smart Targeting
+
+Patient Population
+
+German work
