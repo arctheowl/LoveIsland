@@ -1,4 +1,3 @@
-import { kill } from "process";
 import colours from "./Colours.json";
 
 interface IMatches {
@@ -146,7 +145,7 @@ export const girlsOptions: any = {
         borderColor: addColours("Davide"),
         color: addColours("Davide"),
       },
-      data: [3 + davide, "-", "-", "-", 4 + davide],
+      data: [3 + davide, "-", "-", "-", 5 + davide],
     },
     {
       name: "Luca",
@@ -163,7 +162,7 @@ export const girlsOptions: any = {
         borderColor: addColours("Luca"),
         color: addColours("Luca"),
       },
-      data: [4 + luca, 4 + luca],
+      data: [5 + luca, 4 + luca],
     },
     {
       name: "Single",
@@ -197,7 +196,7 @@ export const girlsOptions: any = {
         borderColor: addColours("Jaques"),
         color: addColours("Jaques"),
       },
-      data: ["-", 1 + jaques],
+      data: ["-", 2 + jaques],
     },
     {
       name: "Ikenna",
@@ -214,7 +213,7 @@ export const girlsOptions: any = {
         borderColor: addColours("Ikenna"),
         color: addColours("Ikenna"),
       },
-      data: ["-", "-", 8 + ikenna],
+      data: ["-", "-", 9 + ikenna],
     },
     {
       name: "Andrew",
@@ -231,7 +230,7 @@ export const girlsOptions: any = {
         borderColor: addColours("Andrew"),
         color: addColours("Andrew"),
       },
-      data: ["-", "-", "-", 8 + andrew],
+      data: ["-", "-", "-", 9 + andrew],
     },
     {
       name: "Dami",
@@ -248,7 +247,7 @@ export const girlsOptions: any = {
         borderColor: addColours("Dami"),
         color: addColours("Dami"),
       },
-      data: ["-", "-", "-", "-", "-", 8 + dami],
+      data: ["-", "-", "-", "-", "-", 9 + dami],
     },
   ],
 };
@@ -365,7 +364,7 @@ export const boysOptions: any = {
         borderColor: addColours("Paige"),
         color: addColours("Paige"),
       },
-      data: [4 + paige, "-", "-", "-", "-", 1 + paige],
+      data: [4 + paige, "-", "-", "-", "-", 2 + paige],
     },
     {
       name: "Gemma",
@@ -382,7 +381,7 @@ export const boysOptions: any = {
         borderColor: addColours("Gemma"),
         color: addColours("Gemma"),
       },
-      data: [4 + gemma, "-", "-", 3 + gemma],
+      data: [5 + gemma, "-", "-", 3 + gemma],
       //   color: "#fc8452"
     },
 
@@ -401,7 +400,7 @@ export const boysOptions: any = {
         borderColor: addColours("Ekin-Su"),
         color: addColours("Ekin-Su"),
       },
-      data: ["-", "-", "-", 4 + ekinSu],
+      data: ["-", "-", "-", 5 + ekinSu],
     },
     {
       name: "Indiyah",
@@ -418,7 +417,7 @@ export const boysOptions: any = {
         borderColor: addColours("Indiyah"),
         color: addColours("Indiyah"),
       },
-      data: ["-", "-", "-", "-", 8 + indiyah],
+      data: ["-", "-", "-", "-", 9 + indiyah],
     },
     {
       name: "Tasha",
@@ -435,7 +434,7 @@ export const boysOptions: any = {
         borderColor: addColours("Tasha"),
         color: addColours("Tasha"),
       },
-      data: ["-", "-", 8 + tasha],
+      data: ["-", "-", 9 + tasha],
     },
     {
       name: "Amber",
@@ -452,7 +451,7 @@ export const boysOptions: any = {
         borderColor: addColours("Amber"),
         color: addColours("Amber"),
       },
-      data: ["-", 8 + amber],
+      data: ["-", 9 + amber],
     },
   ],
 };
