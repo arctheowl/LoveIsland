@@ -3,7 +3,7 @@
     "name": "Paige",
     "type": "line",
     "stack": "Total",
-    "data": ["Luca", "Luca", "Luca", "Luca", "Single", "Single", "Single", "Jaques"],
+    "data": ["Luca", "Luca", "Luca", "Luca", "Single", "Single", "Single", "Jaques", "Jaques"],
     "smooth": true,
     "color": "#5470c6"
   },
@@ -11,7 +11,7 @@
     "name": "Amber",
     "type": "line",
     "stack": "Total",
-    "data": ["Dami", "Dami", "Dami", "Dami", "Dami", "Dami","Dami", "Dami"],
+    "data": ["Dami", "Dami", "Dami", "Dami", "Dami", "Dami","Dami", "Dami", "Dami"],
     "smooth": true,
     "color": "#91cc75"
   },
@@ -19,7 +19,7 @@
     "name": "Tasha",
     "type": "line",
     "stack": "Total",
-    "data": ["Andrew", "Andrew", "Andrew", "Andrew", "Andrew", "Andrew", "Andrew", "Andrew"],
+    "data": ["Andrew", "Andrew", "Andrew", "Andrew", "Andrew", "Andrew", "Andrew", "Andrew", "Andrew"],
     "smooth": true,
     "color": "#9a60b4"
   },
@@ -27,7 +27,7 @@
     "name": "Gemma",
     "type": "line",
     "stack": "Total",
-    "data": ["Liam", "Davide", "Davide", "Davide", "Luca", "Luca", "Luca", "Luca"],
+    "data": ["Liam", "Davide", "Davide", "Davide", "Luca", "Luca", "Luca", "Luca", "Luca"],
     "smooth": true,
     "color": "#ee6666"
   },
@@ -35,7 +35,7 @@
     "name": "Indiyah",
     "type": "line",
     "stack": "Total",
-    "data": ["Ikenna", "Ikenna", "Ikenna", "Ikenna", "Ikenna", "Ikenna", "Ikenna", "Ikenna"],
+    "data": ["Ikenna", "Ikenna", "Ikenna", "Ikenna", "Ikenna", "Ikenna", "Ikenna", "Ikenna", "Ikenna"],
     "smooth": true,
     "color": "#73c0de"
   },
@@ -51,7 +51,7 @@
     "name": "Ekin-Su",
     "type": "line",
     "stack": "Total",
-    "data": ["-", "-", "-", "Single", "Davide", "Davide", "Davide", "Davide"],
+    "data": ["-", "-", "-", "Single", "Davide", "Davide", "Davide", "Davide", "Davide"],
     "smooth": true,
     "color": "#fc8452"
   }
