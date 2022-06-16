@@ -145,7 +145,7 @@ export const girlsOptions: any = {
         borderColor: addColours("Davide"),
         color: addColours("Davide"),
       },
-      data: [3 + davide, "-", "-", "-", 5 + davide],
+      data: [3 + davide, "-", "-", "-", 6 + davide],
     },
     {
       name: "Luca",
@@ -162,7 +162,7 @@ export const girlsOptions: any = {
         borderColor: addColours("Luca"),
         color: addColours("Luca"),
       },
-      data: [5 + luca, 4 + luca],
+      data: [6 + luca, 4 + luca],
     },
     {
       name: "Single",
@@ -196,7 +196,7 @@ export const girlsOptions: any = {
         borderColor: addColours("Jaques"),
         color: addColours("Jaques"),
       },
-      data: ["-", 2 + jaques],
+      data: ["-", 3 + jaques],
     },
     {
       name: "Ikenna",
@@ -213,7 +213,7 @@ export const girlsOptions: any = {
         borderColor: addColours("Ikenna"),
         color: addColours("Ikenna"),
       },
-      data: ["-", "-", 9 + ikenna],
+      data: ["-", "-", 10 + ikenna],
     },
     {
       name: "Andrew",
@@ -230,7 +230,7 @@ export const girlsOptions: any = {
         borderColor: addColours("Andrew"),
         color: addColours("Andrew"),
       },
-      data: ["-", "-", "-", 9 + andrew],
+      data: ["-", "-", "-", 10 + andrew],
     },
     {
       name: "Dami",
@@ -247,7 +247,7 @@ export const girlsOptions: any = {
         borderColor: addColours("Dami"),
         color: addColours("Dami"),
       },
-      data: ["-", "-", "-", "-", "-", 9 + dami],
+      data: ["-", "-", "-", "-", "-", 10 + dami],
     },
   ],
 };
@@ -364,7 +364,7 @@ export const boysOptions: any = {
         borderColor: addColours("Paige"),
         color: addColours("Paige"),
       },
-      data: [4 + paige, "-", "-", "-", "-", 2 + paige],
+      data: [4 + paige, "-", "-", "-", "-", 3 + paige],
     },
     {
       name: "Gemma",
@@ -381,7 +381,7 @@ export const boysOptions: any = {
         borderColor: addColours("Gemma"),
         color: addColours("Gemma"),
       },
-      data: [5 + gemma, "-", "-", 3 + gemma],
+      data: [6 + gemma, "-", "-", 3 + gemma],
       //   color: "#fc8452"
     },
 
@@ -400,7 +400,7 @@ export const boysOptions: any = {
         borderColor: addColours("Ekin-Su"),
         color: addColours("Ekin-Su"),
       },
-      data: ["-", "-", "-", 5 + ekinSu],
+      data: ["-", "-", "-", 6 + ekinSu],
     },
     {
       name: "Indiyah",
@@ -417,7 +417,7 @@ export const boysOptions: any = {
         borderColor: addColours("Indiyah"),
         color: addColours("Indiyah"),
       },
-      data: ["-", "-", "-", "-", 9 + indiyah],
+      data: ["-", "-", "-", "-", 10 + indiyah],
     },
     {
       name: "Tasha",
@@ -434,7 +434,7 @@ export const boysOptions: any = {
         borderColor: addColours("Tasha"),
         color: addColours("Tasha"),
       },
-      data: ["-", "-", 9 + tasha],
+      data: ["-", "-", 10 + tasha],
     },
     {
       name: "Amber",
@@ -451,7 +451,7 @@ export const boysOptions: any = {
         borderColor: addColours("Amber"),
         color: addColours("Amber"),
       },
-      data: ["-", 9 + amber],
+      data: ["-", 10 + amber],
     },
   ],
 };

@@ -22,7 +22,7 @@ const FrontPage = (props: Props) => {
             sx={{ fontSize: 24 }}
             className="text-slate-100 text-center underline font-bold md:col-start-5 md:col-span-4 col-span-10"
           >
-            My GF Watches Love Island
+            Love Island Tracker
           </Typography>
           <div className="col-start-11">
             <ThemeSwitch theme={theme} setTheme={setTheme} />
@@ -34,7 +34,7 @@ const FrontPage = (props: Props) => {
           sx={{ fontSize: 24 }}
           className="text-slate-900 text-center underline font-bold md:col-start-5 md:col-span-4 col-span-10"
         >
-          My GF Watches Love Island
+          Love Island Tracker
         </Typography>
         <div className="col-start-11">
           <ThemeSwitch theme={theme} setTheme={setTheme} />
