@@ -3,7 +3,7 @@
       "name": "Luca",
       "type": "line",
       "stack": "Total",
-      "data": ["Paige", "Paige", "Paige", "Paige", "Gemma", "Gemma", "Gemma", "Gemma", "Gemma"],
+      "data": ["Paige", "Paige", "Paige", "Paige", "Gemma", "Gemma", "Gemma", "Gemma", "Gemma", "Gemma"],
       "smooth": true,
       "color": "#9a60b4"
     },
@@ -11,7 +11,7 @@
       "name": "Dami",
       "type": "line",
       "stack": "Total",
-      "data": ["Amber", "Amber", "Amber", "Amber", "Amber", "Amber", "Amber", "Amber",  "Amber"],
+      "data": ["Amber", "Amber", "Amber", "Amber", "Amber", "Amber", "Amber", "Amber",  "Amber", "Amber"],
       "smooth": true,
       "color": "#fc8452"
     },
@@ -19,7 +19,7 @@
       "name": "Andrew",
       "type": "line",
       "stack": "Total",
-      "data": ["Tasha", "Tasha", "Tasha", "Tasha", "Tasha", "Tasha", "Tasha", "Tasha", "Tasha"],
+      "data": ["Tasha", "Tasha", "Tasha", "Tasha", "Tasha", "Tasha", "Tasha", "Tasha", "Tasha", "Tasha"],
       "smooth": true,
       "color": "#ee6666"
     },
