@@ -1,8 +1,9 @@
 [
-  { "name": "Luca", "partner": "Gemma" },
+  { "name": "Luca", "partner": "Damica" },
   { "name": "Dami", "partner": "Amber" },
   { "name": "Andrew", "partner": "Tasha" },
-  { "name": "Davide", "partner": "Ekin-Su" },
+  { "name": "Davide", "partner": "Gemma" },
   { "name": "Ikenna", "partner": "Indiyah" },
-  { "name": "Jaques", "partner": "Paige" }
+  { "name": "Jaques", "partner": "Paige" },
+  { "name": "Jay", "partner": "Ekin-Su" }
 ]
