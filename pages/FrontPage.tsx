@@ -14,6 +14,7 @@ type Props = {
 
 const FrontPage = (props: Props) => {
   const { theme, setTheme } = props;
+
   
   return (
     <>
