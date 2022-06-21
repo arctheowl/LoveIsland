@@ -5,8 +5,6 @@ type Props = {
   theme: string;
 };
 
-// const Singles = ["Afia", "Paige"];
-
 const Vulnerable = (props: Props) => {
   const { theme } = props;
 
