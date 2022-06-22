@@ -3,7 +3,7 @@
       "name": "Luca",
       "type": "line",
       "stack": "Total",
-      "data": ["Paige", "Paige", "Paige", "Paige", "Gemma", "Gemma", "Gemma", "Gemma", "Gemma", "Gemma",  "Gemma", "Damica", "Damica", "Damica", "Damica"],
+      "data": ["Paige", "Paige", "Paige", "Paige", "Gemma", "Gemma", "Gemma", "Gemma", "Gemma", "Gemma",  "Gemma", "Damica", "Damica","Damica", "Damica", "Damica"],
       "smooth": true,
       "color": "#9a60b4"
     },
@@ -11,7 +11,7 @@
       "name": "Dami",
       "type": "line",
       "stack": "Total",
-      "data": ["Amber", "Amber", "Amber", "Amber", "Amber", "Amber", "Amber", "Amber", "Amber",  "Amber", "Amber", "Amber", "Amber", "Single", "Single"],
+      "data": ["Amber", "Amber", "Amber", "Amber", "Amber", "Amber", "Amber", "Amber", "Amber",  "Amber", "Amber", "Amber", "Amber", "Single", "Single","Single"],
       "smooth": true,
       "color": "#fc8452"
     },
@@ -19,7 +19,7 @@
       "name": "Andrew",
       "type": "line",
       "stack": "Total",
-      "data": ["Tasha", "Tasha", "Tasha", "Tasha", "Tasha", "Tasha", "Tasha", "Tasha", "Tasha", "Tasha", "Tasha", "Tasha", "Tasha", "Tasha", "Tasha"],
+      "data": ["Tasha", "Tasha", "Tasha", "Tasha", "Tasha", "Tasha", "Tasha", "Tasha", "Tasha", "Tasha", "Tasha", "Tasha", "Tasha", "Tasha", "Tasha","Tasha"],
       "smooth": true,
       "color": "#ee6666"
     },
@@ -35,7 +35,7 @@
       "name": "Davide",
       "type": "line",
       "stack": "Total",
-      "data": ["-", "Gemma", "Gemma", "Gemma", "Ekin-Su", "Ekin-Su", "Ekin-Su", "Ekin-Su", "Ekin-Su", "Ekin-Su","Ekin-Su", "Gemma", "Gemma", "Gemma", "Gemma"],
+      "data": ["-", "Gemma", "Gemma", "Gemma", "Ekin-Su", "Ekin-Su", "Ekin-Su", "Ekin-Su", "Ekin-Su", "Ekin-Su","Ekin-Su", "Gemma", "Gemma", "Gemma","Gemma", "Gemma"],
       "smooth": true,
       "color": "#91cc75" 
     },
@@ -51,7 +51,7 @@
         "name": "Jaques",
         "type": "line",
         "stack": "Total",
-        "data": ["-", "-", "-", "-", "-", "-",  "Single", "Paige", "Paige", "Paige", "Paige", "Paige", "Paige", "Paige", "Paige"],
+        "data": ["-", "-", "-", "-", "-", "-",  "Single", "Paige", "Paige", "Paige", "Paige", "Paige", "Paige", "Paige","Paige", "Paige"],
         "smooth": true,
         "color": "#0000FC"
       },
@@ -59,7 +59,7 @@
         "name": "Jay",
         "type": "line",
         "stack": "Total",
-        "data": ["-", "-", "-", "-", "-", "-",  "-", "-", "Single", "Single", "Single", "Ekin-Su", "Ekin-Su", "Ekin-Su", "Ekin-Su"],
+        "data": ["-", "-", "-", "-", "-", "-",  "-", "-", "Single", "Single", "Single", "Ekin-Su", "Ekin-Su", "Ekin-Su","Ekin-Su", "Ekin-Su"],
         "smooth": true,
         "color": "#0000FC"
       },
