@@ -6,6 +6,7 @@ import LineGraph from "./Components/LineGraph";
 import ThemeSwitch from "./Components/ThemeSwitch";
 import OffShow from "./Components/OffShow";
 import StackChart from "./Components/StackChart";
+import HeatMap from "./Components/HeatMap";
 
 type Props = {
   theme: string;
@@ -51,6 +52,7 @@ const FrontPage = (props: Props) => {
         <CountDown theme={theme} />
         <Vulnerable theme={theme} />
         <OffShow theme={theme} />
+        <HeatMap theme={theme}/>
         
       </div>
     </>
