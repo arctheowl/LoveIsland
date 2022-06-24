@@ -3,7 +3,7 @@
       "name": "Luca",
       "type": "line",
       "stack": "Total",
-      "data": ["Paige", "Paige", "Paige", "Paige", "Gemma", "Gemma", "Gemma", "Gemma", "Gemma", "Gemma",  "Gemma", "Damica", "Damica","Damica", "Damica", "Damica", "Gemma",],
+      "data": ["Paige", "Paige", "Paige", "Paige", "Gemma", "Gemma", "Gemma", "Gemma", "Gemma", "Gemma",  "Gemma", "Damica", "Damica","Damica", "Damica", "Damica", "Gemma"],
       "smooth": true,
       "color": "#9a60b4"
     },
