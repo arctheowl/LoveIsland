@@ -11,7 +11,7 @@
       "name": "Dami",
       "type": "line",
       "stack": "Total",
-      "data": ["Amber", "Amber", "Amber", "Amber", "Amber", "Amber", "Amber", "Amber", "Amber",  "Amber", "Amber", "Amber", "Amber", "Single", "Single","Single", "Indiyah",],
+      "data": ["Amber", "Amber", "Amber", "Amber", "Amber", "Amber", "Amber", "Amber", "Amber",  "Amber", "Amber", "Amber", "Amber", "Single", "Single","Single", "Indiyah"],
       "smooth": true,
       "color": "#fc8452"
     },
