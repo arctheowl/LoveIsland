@@ -3,7 +3,7 @@
     "name": "Paige",
     "type": "line",
     "stack": "Total",
-    "data": ["Luca", "Luca", "Luca", "Luca", "Single", "Single", "Single", "Jaques", "Jaques", "Jaques", "Jaques", "Jaques","Jaques","Jaques", "Jaques" , "Jaques", "Jay",],
+    "data": ["Luca", "Luca", "Luca", "Luca", "Single", "Single", "Single", "Jaques", "Jaques", "Jaques", "Jaques", "Jaques","Jaques","Jaques", "Jaques" , "Jaques", "Jay"],
     "smooth": true,
     "color": "#5470c6"
   },
