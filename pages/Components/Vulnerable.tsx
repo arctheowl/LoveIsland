@@ -1,5 +1,5 @@
 import Typography from "@mui/material/Typography";
-import Singles from "../../data/CurrentSingles.json"
+import Singles from "../../data/CurrentSingles.json";
 
 type Props = {
   theme: string;
@@ -27,27 +27,34 @@ const Vulnerable = (props: Props) => {
   if (theme === "light") {
     number = 1;
   }
+  
   return (
-    <div
-      className={`${settings[number].themes} col-span-6 backdrop-blur-xl rounded drop-shadow-lg grid-cols-1 grid justify-items-auto`}
-    >
-      <Typography
-        className="pt-4 justify-self-center md:p-0 pl-8"
-        variant="h6"
-        component="div"
-      >
-        Currently Single
-      </Typography>
-      <Typography
-        className="pt-4 justify-self-center list-none"
-        variant="h6"
-        component="div"
-      >
-        {Singles.map((single) => {
-          return <li key={single.name}>{single.name}</li>;
-        })}
-      </Typography>
-    </div>
+    <>
+      {Singles[0].name !== " " ? (
+        <div
+          className={`${settings[number].themes} col-span-12 md:col-span-6 backdrop-blur-xl rounded drop-shadow-lg grid-cols-1 grid justify-items-auto`}
+        >
+          <Typography
+            className="pt-4 justify-self-center md:p-0 pl-8"
+            variant="h6"
+            component="div"
+          >
+            Currently Single
+          </Typography>
+          <Typography
+            className="pt-4 justify-self-center list-none"
+            variant="h6"
+            component="div"
+          >
+            {Singles.map((single) => {
+              return <li key={single.name}>{single.name}</li>;
+            })}
+          </Typography>
+        </div>
+      ) : (
+        <></>
+      )}
+    </>
   );
 };
 
