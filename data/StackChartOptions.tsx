@@ -1,7 +1,6 @@
 import colours from "./Colours.json";
 import BoysData from "./TimeLineBoys.json";
 import GirlsData from "./TimeLineGirls.json";
-
 interface ITimeLineData {
   name: string;
   type: string;
@@ -95,6 +94,13 @@ const StackChartYAxisData = (props: ITimeLineData[]) => {
 
 
 export const girlsOptions: any = {
+  toolbox: {
+    feature: {
+      saveAsImage: {
+        show: true
+      }
+    }
+  },
   tooltip: {
     trigger: "axis",
     axisPointer: {
@@ -150,6 +156,13 @@ export const girlsOptions: any = {
 };
 
 export const boysOptions: any = {
+  toolbox: {
+    feature: {
+      saveAsImage: {
+        show: true
+      }
+    }
+  },
   tooltip: {
     trigger: "axis",
     axisPointer: {
