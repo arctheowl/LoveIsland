@@ -1,38 +1,98 @@
 import colours from "./Colours.json";
-
-interface IMatches {
-  person: string;
-  partner: string;
-  color: string;
-}
+import BoysData from "./TimeLineBoys.json";
+import GirlsData from "./TimeLineGirls.json";
 
 interface ITimeLineData {
   name: string;
   type: string;
   stack: string;
-  data: string[];
+  data: ICountReturn[];
   smooth: boolean;
   color: string;
 }
 
-const placeholder = 0.0000009;
-const luca = 0.0000001;
-const dami = 0.0000002;
-const davide = 0.0000003;
-const andrew = 0.0000004;
-const liam = 0.0000005;
-const ikenna = 0.0000006;
-const jaques = 0.0000007;
-const jay = 0.0000011;
-const single = 0.0000008;
+interface ICountReturn {
+  partner: string;
+  length: number;
+}
 
-const gemma = 0.0000001;
-const paige = 0.0000002;
-const indiyah = 0.0000003;
-const danica = 0.0000004;
-const ekinSu = 0.0000005;
-const amber = 0.0000006;
-const tasha = 0.0000007;
+interface IXData {
+  name: string;
+  type: string;
+  stack: string;
+  label: {
+    show: boolean;
+  };
+  emphasis: {
+    focus: string;
+  };
+  itemStyle: {
+    borderColor: string;
+    color: string;
+  };
+  data: any[];
+}
+
+const StackChartXAxisData = (props: ITimeLineData[]) => {
+  let series: IXData[] = [];
+  for (let i = 0; i < props.length; i++) {
+    let defaultData: string[] = [];
+    for (let j = 0; j < i; j++) {
+      defaultData.push("-");
+    }
+    
+    props[i].data.map((partner) => {
+      
+      if (partner.partner === "-" || partner.partner === "Exit") {
+        series.push({
+          name: partner.partner,
+          label: {
+            show: true,
+          },
+          type: "bar",
+          stack: props[i].stack,
+          emphasis: {
+            focus: "series",
+          },
+          itemStyle: {
+            borderColor: "transparent",
+            color: "transparent",
+          },
+          data: [...defaultData, partner.length],
+        });
+       
+      } else {
+          series.push({
+            name: partner.partner,
+            label: {
+              show: true,
+            },
+            type: "bar",
+            stack: props[i].stack,
+            emphasis: {
+              focus: "series",
+            },
+            itemStyle: {
+              borderColor: addColours(`${partner.partner}`),
+              color: addColours(`${partner.partner}`),
+            },
+            data: [...defaultData, partner.length],
+          });
+        }
+      }
+    )}
+
+  return series;
+};
+
+const StackChartYAxisData = (props: ITimeLineData[]) => {
+  let series: string[] = [];
+  props.map((data) => {
+    series.push(data.name);
+  });
+  return series;
+};
+
 
 export const girlsOptions: any = {
   tooltip: {
@@ -42,8 +102,14 @@ export const girlsOptions: any = {
     },
     formatter: (info: any) => {
       let innerHtml = `<b style="text-align:center">${info[0].axisValue}:</b><br/><table id="myTable" border="1" cellpadding="3">`;
+
       info.map((data: any) => {
-        if (data.data === "-" || data.seriesName === "") {
+        if (
+          data.data === "-" ||
+          data.seriesName === "" ||
+          data.seriesName === "-" ||
+          data.seriesName === "Exit"
+        ) {
           return;
         }
         innerHtml +=
@@ -69,228 +135,18 @@ export const girlsOptions: any = {
   },
   yAxis: {
     type: "category",
-    data: ["Gemma", "Paige", "Indiyah", "Tasha", "Ekin-Su", "Amber", "Danica"],
+    data: StackChartYAxisData(GirlsData),
   },
   label: {
     formatter: (value: any) => {
-      let stringData = `${value.data}`;
-
-      if (stringData.endsWith("9")) {
-        return ``;
-      } else if (stringData.endsWith("11")) {
-        return `Jay`;
-      } else if (stringData.endsWith("1")) {
-        return `Luca`;
-      } else if (stringData.endsWith("2")) {
-        return `Dami`;
-      } else if (stringData.endsWith("3")) {
-        return `Davide`;
-      } else if (stringData.endsWith("4")) {
-        return `Andrew`;
-      } else if (stringData.endsWith("5")) {
-        return `Liam`;
-      } else if (stringData.endsWith("6")) {
-        return `Ikenna`;
-      } else if (stringData.endsWith("7")) {
-        return `Jaques`;
-      } else if (stringData.endsWith("8")) {
-        return `Single`;
+      let stringData = `${value.seriesName}`;
+      if (value.seriesName === "-" || value.seriesName === "Exit") {
+        return "";
       }
+      return stringData;
     },
   },
-  series: [
-    {
-      name: "",
-      type: "bar",
-      stack: "total",
-
-      label: {
-        show: true,
-      },
-      emphasis: {
-        focus: "series",
-      },
-      itemStyle: {
-        borderColor: "transparent",
-        color: "transparent",
-      },
-      data: ["-", "-", "-", "-", 4 + placeholder, "-", 10 + placeholder],
-    },
-    {
-      name: "Liam",
-      type: "bar",
-      stack: "total",
-
-      label: {
-        show: true,
-      },
-      emphasis: {
-        focus: "series",
-      },
-      itemStyle: {
-        borderColor: addColours("Liam"),
-        color: addColours("Liam"),
-      },
-      data: [1 + liam],
-    },
-    {
-      name: "Davide",
-      type: "bar",
-      stack: "total",
-
-      label: {
-        show: true,
-      },
-      emphasis: {
-        focus: "series",
-      },
-      itemStyle: {
-        borderColor: addColours("Davide"),
-        color: addColours("Davide"),
-      },
-      data: [3 + davide, "-", "-", "-", 6 + davide],
-    },
-    {
-      name: "Luca",
-      type: "bar",
-      stack: "total",
-
-      label: {
-        show: true,
-      },
-      emphasis: {
-        focus: "series",
-      },
-      itemStyle: {
-        borderColor: addColours("Luca"),
-        color: addColours("Luca"),
-      },
-      data: [6 + luca, 4 + luca, "-", "-", "-", "-", 6 + luca],
-    },
-    {
-      name: "Ikenna",
-      type: "bar",
-      stack: "total",
-
-      label: {
-        show: true,
-      },
-      emphasis: {
-        focus: "series",
-      },
-      itemStyle: {
-        borderColor: addColours("Ikenna"),
-        color: addColours("Ikenna"),
-      },
-      data: ["-", "-", 13 + ikenna],
-    },
-    {
-      name: "Single",
-      type: "bar",
-      stack: "total",
-
-      label: {
-        show: true,
-      },
-      emphasis: {
-        focus: "series",
-      },
-      itemStyle: {
-        borderColor: addColours("Single"),
-        color: addColours("Single"),
-      },
-      data: ["-", 3 + single, 3 + single],
-    },
-    {
-      name: "Jaques",
-      type: "bar",
-      stack: "total",
-
-      label: {
-        show: true,
-      },
-      emphasis: {
-        focus: "series",
-      },
-      itemStyle: {
-        borderColor: addColours("Jaques"),
-        color: addColours("Jaques"),
-      },
-      data: ["-", 9 + jaques],
-    },
-    
-    {
-      name: "Andrew",
-      type: "bar",
-      stack: "total",
-
-      label: {
-        show: true,
-      },
-      emphasis: {
-        focus: "series",
-      },
-      itemStyle: {
-        borderColor: addColours("Andrew"),
-        color: addColours("Andrew"),
-      },
-      data: ["-", "-", "-", 16 + andrew],
-    },
-    {
-      name: "Dami",
-      type: "bar",
-      stack: "total",
-
-      label: {
-        show: true,
-      },
-      emphasis: {
-        focus: "series",
-      },
-      itemStyle: {
-        borderColor: addColours("Dami"),
-        color: addColours("Dami"),
-      },
-      data: ["-", "-", "-", "-", "-", 13 + dami],
-    },
-
-    {
-      name: "Jay",
-      type: "bar",
-      stack: "total",
-
-      label: {
-        show: true,
-      },
-      emphasis: {
-        focus: "series",
-      },
-      itemStyle: {
-        borderColor: addColours("Jay"),
-        color: addColours("Jay"),
-      },
-      data: ["-", "-", "-", "-", 6 + jay],
-    },
-
-
-    {
-      name: "Davide",
-      type: "bar",
-      stack: "total",
-
-      label: {
-        show: true,
-      },
-      emphasis: {
-        focus: "series",
-      },
-      itemStyle: {
-        borderColor: addColours("Davide"),
-        color: addColours("Davide"),
-      },
-      data: [6 + davide ],
-    },
-  ],
+  series: StackChartXAxisData(GirlsData),
 };
 
 export const boysOptions: any = {
@@ -301,11 +157,16 @@ export const boysOptions: any = {
     },
     formatter: (info: any) => {
       let innerHtml = `<b style="text-align:center">${info[0].axisValue}:</b><br/><table id="myTable" border="1" cellpadding="3">`;
+
       info.map((data: any) => {
-        if (data.data === "-" || data.seriesName === "") {
+        if (
+          data.data === "-" ||
+          data.seriesName === "" ||
+          data.seriesName === "-" ||
+          data.seriesName === "Exit"
+        ) {
           return;
         }
-
         innerHtml +=
           `<tr>` +
           `<td ">${data.seriesName}</td>` +
@@ -314,7 +175,7 @@ export const boysOptions: any = {
       });
       innerHtml += "</table>";
       return `
-              ${innerHtml}`;
+          ${innerHtml}`;
     },
   },
   legend: { show: false },
@@ -329,208 +190,19 @@ export const boysOptions: any = {
   },
   yAxis: {
     type: "category",
-    data: ["Luca", "Dami", "Andrew", "Davide", "Ikenna", "Jaques", "Jay"],
+    data: StackChartYAxisData(BoysData),
   },
   label: {
     formatter: (value: any) => {
-      let stringData = `${value.data}`;
-      if (stringData.endsWith("9")) {
-        return ``;
-      } else if (stringData.endsWith("1")) {
-        return `Gemma`;
-      } else if (stringData.endsWith("2")) {
-        return `Paige`;
-      } else if (stringData.endsWith("3")) {
-        return `Indiyah`;
-      } else if (stringData.endsWith("4")) {
-        return `Danica`;
-      } else if (stringData.endsWith("5")) {
-        return `Ekin-Su`;
-      } else if (stringData.endsWith("6")) {
-        return `Amber`;
-      } else if (stringData.endsWith("7")) {
-        return `Tasha`;
-      } else if (stringData.endsWith("8")) {
-        return `Single`;
+      // console.log(value)
+      let stringData = `${value.seriesName}`;
+      if (value.seriesName === "-" || value.seriesName === "Exit") {
+        return "";
       }
+      return stringData;
     },
   },
-  series: [
-    {
-      name: "",
-      type: "bar",
-      stack: "total",
-
-      label: {
-        show: true,
-      },
-      emphasis: {
-        focus: "series",
-      },
-      itemStyle: {
-        borderColor: "transparent",
-        color: "transparent",
-      },
-      data: ["-", "-", "-", 1 + placeholder, "-", 6 + placeholder, 8 + placeholder],
-    },
-    {
-      name: "Amber",
-      type: "bar",
-      stack: "total",
-
-      label: {
-        show: true,
-      },
-      emphasis: {
-        focus: "series",
-      },
-      itemStyle: {
-        borderColor: addColours("Amber"),
-        color: addColours("Amber"),
-      },
-      data: ["-", 13 + amber],
-    },
-
-    {
-      name: "Single",
-      type: "bar",
-      stack: "total",
-
-      label: {
-        show: true,
-      },
-      emphasis: {
-        focus: "series",
-      },
-      itemStyle: {
-        borderColor: addColours("Single"),
-        color: addColours("Single"),
-      },
-      data: ["-", 3 + single, "-", "-", "-", 1 + single, 2 + single],
-    },
-    {
-      name: "Paige",
-      type: "bar",
-      stack: "total",
-
-      label: {
-        show: true,
-      },
-      emphasis: {
-        focus: "series",
-      },
-      itemStyle: {
-        borderColor: addColours("Paige"),
-        color: addColours("Paige"),
-      },
-      data: [4 + paige, "-", "-", "-", "-", 9 + paige],
-    },
-    {
-      name: "Gemma",
-      type: "bar",
-      stack: "total",
-
-      label: {
-        show: true,
-      },
-      emphasis: {
-        focus: "series",
-      },
-      itemStyle: {
-        borderColor: addColours("Gemma"),
-        color: addColours("Gemma"),
-      },
-      data: [6 + gemma, "-", "-", 3 + gemma],
-      //   color: "#fc8452"
-    },
-
-    {
-      name: "Ekin-Su",
-      type: "bar",
-      stack: "total",
-
-      label: {
-        show: true,
-      },
-      emphasis: {
-        focus: "series",
-      },
-      itemStyle: {
-        borderColor: addColours("Ekin-Su"),
-        color: addColours("Ekin-Su"),
-      },
-      data: ["-", "-", "-", 6 + ekinSu, "-", "-", 6 + ekinSu],
-    },
-    {
-      name: "Indiyah",
-      type: "bar",
-      stack: "total",
-
-      label: {
-        show: true,
-      },
-      emphasis: {
-        focus: "series",
-      },
-      itemStyle: {
-        borderColor: addColours("Indiyah"),
-        color: addColours("Indiyah"),
-      },
-      data: ["-", "-", "-", "-", 13 + indiyah],
-    },
-    {
-      name: "Tasha",
-      type: "bar",
-      stack: "total",
-
-      label: {
-        show: true,
-      },
-      emphasis: {
-        focus: "series",
-      },
-      itemStyle: {
-        borderColor: addColours("Tasha"),
-        color: addColours("Tasha"),
-      },
-      data: ["-", "-", 16 + tasha],
-    },
-        {
-      name: "Danica",
-      type: "bar",
-      stack: "total",
-      label: {
-        show: true,
-      },
-      emphasis: {
-        focus: "series",
-      },
-      itemStyle: {
-        borderColor: addColours("Danica"),
-        color: addColours("Danica"),
-      },
-      data: [6 + danica],
-    },
-    {
-      name: "Gemma",
-      type: "bar",
-      stack: "total",
-
-      label: {
-        show: true,
-      },
-      emphasis: {
-        focus: "series",
-      },
-      itemStyle: {
-        borderColor: addColours("Gemma"),
-        color: addColours("Gemma"),
-      },
-      data: ["-", "-", "-", 6 + gemma],
-      //   color: "#fc8452"
-    },
-
-  ],
+  series: StackChartXAxisData(BoysData),
 };
 
 function addColours(name: string): string {

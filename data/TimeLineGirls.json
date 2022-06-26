@@ -1,65 +1,199 @@
 [
   {
-    "name": "Paige",
-    "type": "line",
-    "stack": "Total",
-    "data": ["Luca", "Luca", "Luca", "Luca", "Single", "Single", "Single", "Jaques", "Jaques", "Jaques", "Jaques", "Jaques","Jaques","Jaques", "Jaques" , "Jaques", "Jay"],
-    "smooth": true,
-    "color": "#5470c6"
-  },
-  {
-    "name": "Amber",
-    "type": "line",
-    "stack": "Total",
-    "data": ["Dami", "Dami", "Dami", "Dami", "Dami", "Dami", "Dami","Dami", "Dami", "Dami", "Dami", "Dami", "Dami", "Exit"],
-    "smooth": true,
-    "color": "#91cc75"
-  },
-  {
-    "name": "Tasha",
-    "type": "line",
-    "stack": "Total",
-    "data": ["Andrew", "Andrew", "Andrew", "Andrew", "Andrew", "Andrew", "Andrew", "Andrew", "Andrew", "Andrew", "Andrew","Andrew","Andrew", "Andrew","Andrew","Andrew", "Andrew"],
-    "smooth": true,
-    "color": "#9a60b4"
-  },
-  {
     "name": "Gemma",
     "type": "line",
-    "stack": "Total",
-    "data": ["Liam", "Davide", "Davide", "Davide", "Luca", "Luca", "Luca", "Luca", "Luca", "Luca", "Luca", "Davide", "Davide","Davide","Davide", "Davide", "Luca"],
+    "stack": "total",
+    "data": [{
+      "partner": "Liam",
+      "length": 1
+    },
+    {
+      "partner": "Davide",
+      "length": 3
+    },
+    {
+      "partner": "Luca",
+      "length": 7
+    },
+    {
+      "partner": "Davide",
+      "length": 5
+    },
+    {
+      "partner": "Luca",
+      "length": 2
+    }
+    ],
     "smooth": true,
     "color": "#ee6666"
   },
   {
+    "name": "Paige",
+    "type": "line",
+    "stack": "total",
+    "data": [
+      {
+        "partner": "Luca",
+        "length": 4
+      },
+      {
+        "partner": "Single",
+        "length": 3
+      },
+      {
+        "partner": "Jaques",
+        "length": 9
+      },
+      {
+        "partner": "Jay",
+        "length": 2
+      }
+    ],
+    "smooth": true,
+    "color": "#5470c6"
+  },
+  {
     "name": "Indiyah",
     "type": "line",
-    "stack": "Total",
-    "data": ["Ikenna", "Ikenna", "Ikenna", "Ikenna", "Ikenna", "Ikenna", "Ikenna", "Ikenna", "Ikenna", "Ikenna", "Ikenna", "Ikenna", "Ikenna",  "Sinlge","Sinlge", "Sinlge", "Dami"],
+    "stack": "total",
+    "data": [
+      {
+        "partner": "Ikenna",
+        "length": 13
+      },
+      {
+        "partner": "Single",
+        "length": 3
+      },
+      {
+        "partner": "Dami",
+        "length": 2
+      }
+    ],
     "smooth": true,
     "color": "#73c0de"
   },
   {
-    "name": "Afia",
+    "name": "Tasha",
     "type": "line",
-    "stack": "Total",
-    "data": ["-", "-", "-", "Single", "Single", "Single", "Single", "Exit"],
+    "stack": "total",
+    "data": [
+      {
+        "partner": "Andrew",
+        "length": 18
+      }
+    ],
     "smooth": true,
-    "color": "#3ba272"
+    "color": "#9a60b4"
   },
   {
     "name": "Ekin-Su",
     "type": "line",
-    "stack": "Total",
-    "data": ["-", "-", "-", "Single", "Davide", "Davide", "Davide", "Davide", "Davide", "Davide", "Davide", "Jay", "Jay", "Jay","Jay", "Jay", "Charlie"],
+    "stack": "total",
+    "data": [
+      {
+        "partner": "-",
+        "length": 3
+      },
+      {
+        "partner": "Single",
+        "length": 1
+      },
+      {
+        "partner": "Davide",
+        "length": 7
+      },
+      {
+        "partner": "Jay",
+        "length": 5
+      },
+      {
+        "partner": "Charlie",
+        "length": 2
+      }
+    ],
     "smooth": true,
     "color": "#fc8452"
-  }, 
+  },
+  {
+    "name": "Amber",
+    "type": "line",
+    "stack": "total",
+    "data": [
+      {
+        "partner": "Dami",
+        "length": 13
+      },
+      {
+        "partner": "Exit",
+        "length": 1
+      }
+    ],
+    "smooth": true,
+    "color": "#91cc75"
+  },
+
   {
     "name": "Danica",
     "type": "line",
-    "stack": "Total",
-    "data": ["-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "Luca", "Luca", "Luca","Luca", "Luca", "Jaques"],
+    "stack": "total",
+    "data": [
+      {
+        "partner": "-",
+        "length": 11
+      },
+      {
+        "partner": "Luca",
+        "length": 5
+      },
+      {
+        "partner": "Jaques",
+        "length": 2
+      }
+    ],
+    "smooth": true,
+    "color": "#fc8452"
+  },
+  {
+    "name": "Afia",
+    "type": "line",
+    "stack": "total",
+    "data": [
+      {
+        "partner": "-",
+        "length": 3
+      },
+      {
+        "partner": "Single",
+        "length": 4
+      },
+      {
+        "partner": "Exit",
+        "length": 1
+      }
+    ],
+    "smooth": true,
+    "color": "#3ba272"
+  },
+
+  {
+    "name": "Antigoni",
+    "type": "line",
+    "stack": "total",
+    "data": [
+      {
+        "partner":  "-",
+        "length": 14
+      },
+      {
+        "partner":  "Single",
+        "length": 2
+      },
+      {
+        "partner":  "Davide",
+        "length": 2
+      }
+    ],
     "smooth": true,
     "color": "#fc8452"
   }

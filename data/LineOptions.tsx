@@ -7,7 +7,19 @@ interface IMatches {
   partner: string;
   color: string;
 }
+interface INewTimeLineData {
+  name: string;
+  type: string;
+  stack: string;
+  data: ICountReturn[];
+  smooth: boolean;
+  color: string;
+}
 
+interface ICountReturn {
+  partner: string;
+  length: number;
+}
 interface ITimeLineData {
   name: string;
   type: string;
@@ -16,6 +28,30 @@ interface ITimeLineData {
   smooth: boolean;
   color: string;
 }
+
+const sortingData: any = (NewTimeLine: INewTimeLineData[]) => {
+  let FinalLineData: ITimeLineData[] = [];
+  NewTimeLine.map((person) => {
+    let finalPersonData: ITimeLineData;
+    let finalData: string[] = [];
+    person.data.map((data) => {
+      for (let i = 0; i < data.length; i++) {
+        finalData.push(data.partner);
+      }
+      finalPersonData = {
+        color: person.color,
+        name: person.name,
+        smooth: person.smooth,
+        type: person.type,
+        stack: person.stack,
+        data: finalData,
+      };
+
+      FinalLineData.push(finalPersonData);
+    });
+  });
+  return FinalLineData;
+};
 
 export const boysOptions: any = {
   title: {
@@ -39,11 +75,16 @@ export const boysOptions: any = {
         box.style.display = "inline-block";
 
         let innerHtml = `<b style="text-align:center">${info[0].axisValueLabel}:</b><br/><table id="myTable" border="1" cellpadding="3">`;
-
+        let listOfNames: string[] = []
         info.map((line: any) => {
           if (line.value === "-") {
             return;
           }
+          if (listOfNames.includes(line.value)){
+            return;
+          }
+          
+          
 
           box.style.background = `${line.color}`;
           box.style.borderColor = `${line.color}`;
@@ -53,7 +94,9 @@ export const boysOptions: any = {
             `<td ">${line.seriesName}</td>` +
             `<td ">${line.value} </td>` +
             "</tr>";
+            listOfNames.push(line.value)
         });
+     
         innerHtml += "</table>";
         return `
           ${innerHtml}`;
@@ -87,7 +130,7 @@ export const boysOptions: any = {
     type: "category",
     data: [...dataCategories(TimelineBoys)],
   },
-  series: addColours(TimelineBoys),
+  series: addColours(sortingData(TimelineBoys)),
 };
 
 export const girlsOptions: any = {
@@ -110,11 +153,16 @@ export const girlsOptions: any = {
         box.style.display = "inline-block";
 
         let innerHtml = `<b style="text-align:center">${info[0].axisValueLabel}:</b><br/><table id="myTable" border="1" cellpadding="3">`;
-
+        let listOfNames: string[] = []
         info.map((line: any) => {
           if (line.value === "-") {
             return;
           }
+          if (listOfNames.includes(line.value)){
+            return;
+          }
+          
+          
 
           box.style.background = `${line.color}`;
           box.style.borderColor = `${line.color}`;
@@ -124,10 +172,12 @@ export const girlsOptions: any = {
             `<td ">${line.seriesName}</td>` +
             `<td ">${line.value} </td>` +
             "</tr>";
+            listOfNames.push(line.value)
         });
+     
         innerHtml += "</table>";
         return `
-            ${innerHtml}`;
+          ${innerHtml}`;
       } else {
         return "No Data";
       }
@@ -159,7 +209,7 @@ export const girlsOptions: any = {
 
     data: [...dataCategories(TimelineGirls)],
   },
-  series: addColours(TimelineGirls),
+  series: addColours(sortingData(TimelineGirls)),
 };
 
 function addColours(TimelineBoys: ITimeLineData[]): ITimeLineData[] {
@@ -195,7 +245,7 @@ function arraymove(arr: any, fromIndex: any, toIndex: any) {
   arr.splice(toIndex, 0, element);
 }
 
-function legendData(TimelineBoys: ITimeLineData[]): string[] {
+function legendData(TimelineBoys: INewTimeLineData[]): string[] {
   let legendList: string[] = [];
   TimelineBoys.map((person) => {
     legendList.push(person.name);
@@ -204,11 +254,12 @@ function legendData(TimelineBoys: ITimeLineData[]): string[] {
   return legendList;
 }
 
-function dataCategories(TimelineBoys: ITimeLineData[]): string[] {
+function dataCategories(TimelineBoys: INewTimeLineData[]): string[] {
   let listOfGirls = [""];
+
   TimelineBoys.map((person) => {
     person.data.map((partner) => {
-      listOfGirls.push(partner);
+      listOfGirls.push(partner.partner);
     });
   });
 
