@@ -5,10 +5,14 @@ type Data = {
   name: string;
   type: string;
   stack: string;
-  data: string[];
+  data: ICountReturn[];
   smooth: boolean;
   color: string;
 };
+interface ICountReturn {
+  partner: string;
+  length: number;
+}
 
 export default function handler(
   req: NextApiRequest,
