@@ -80,7 +80,7 @@ export const boysOptions: any = {
           if (line.value === "-") {
             return;
           }
-          if (listOfNames.includes(line.value)){
+          if (listOfNames.includes(line.seriesName)){
             return;
           }
           
@@ -94,7 +94,7 @@ export const boysOptions: any = {
             `<td ">${line.seriesName}</td>` +
             `<td ">${line.value} </td>` +
             "</tr>";
-            listOfNames.push(line.value)
+            listOfNames.push(line.seriesName)
         });
      
         innerHtml += "</table>";
@@ -158,7 +158,8 @@ export const girlsOptions: any = {
           if (line.value === "-") {
             return;
           }
-          if (listOfNames.includes(line.value)){
+          console.log(line)
+          if (listOfNames.includes(line.seriesName)){
             return;
           }
           
@@ -172,7 +173,7 @@ export const girlsOptions: any = {
             `<td ">${line.seriesName}</td>` +
             `<td ">${line.value} </td>` +
             "</tr>";
-            listOfNames.push(line.value)
+            listOfNames.push(line.seriesName)
         });
      
         innerHtml += "</table>";
