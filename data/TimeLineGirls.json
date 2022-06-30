@@ -21,7 +21,7 @@
     },
     {
       "partner": "Luca",
-      "length": 4
+      "length": 5
     }
     ],
     "smooth": true,
@@ -46,7 +46,7 @@
       },
       {
         "partner": "Jay",
-        "length": 4
+        "length": 5
       }
     ],
     "smooth": true,
@@ -67,7 +67,7 @@
       },
       {
         "partner": "Dami",
-        "length": 4
+        "length": 5
       }
     ],
     "smooth": true,
@@ -80,7 +80,7 @@
     "data": [
       {
         "partner": "Andrew",
-        "length": 20
+        "length": 21
       }
     ],
     "smooth": true,
@@ -110,28 +110,17 @@
       {
         "partner": "Charlie",
         "length": 4
+      },
+      {
+        "partner": "Davide",
+        "length": 1
       }
+
     ],
     "smooth": true,
     "color": "#fc8452"
   },
-  {
-    "name": "Amber",
-    "type": "line",
-    "stack": "total",
-    "data": [
-      {
-        "partner": "Dami",
-        "length": 13
-      },
-      {
-        "partner": "Exit",
-        "length": 1
-      }
-    ],
-    "smooth": true,
-    "color": "#91cc75"
-  },
+  
 
   {
     "name": "Danica",
@@ -149,6 +138,36 @@
       {
         "partner": "Jaques",
         "length": 4
+      },
+      {
+        "partner": "Jay",
+        "length": 1
+      }
+    ],
+    "smooth": true,
+    "color": "#fc8452"
+  },
+  
+  {
+    "name": "Antigoni",
+    "type": "line",
+    "stack": "total",
+    "data": [
+      {
+        "partner":  "-",
+        "length": 14
+      },
+      {
+        "partner":  "Single",
+        "length": 2
+      },
+      {
+        "partner":  "Davide",
+        "length": 4
+      },
+      {
+        "partner": "Charlie",
+        "length": 1
       }
     ],
     "smooth": true,
@@ -175,26 +194,22 @@
     "smooth": true,
     "color": "#3ba272"
   },
-
   {
-    "name": "Antigoni",
+    "name": "Amber",
     "type": "line",
     "stack": "total",
     "data": [
       {
-        "partner":  "-",
-        "length": 14
+        "partner": "Dami",
+        "length": 13
       },
       {
-        "partner":  "Single",
-        "length": 2
-      },
-      {
-        "partner":  "Davide",
-        "length": 4
+        "partner": "Exit",
+        "length": 1
       }
     ],
     "smooth": true,
-    "color": "#fc8452"
+    "color": "#91cc75"
   }
+
 ]

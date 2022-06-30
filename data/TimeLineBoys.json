@@ -18,7 +18,7 @@
         },
         {
           "partner": "Gemma",
-          "length": 4
+          "length": 5
         }],
       "smooth": true,
       "color": "#9a60b4"
@@ -38,7 +38,7 @@
         },
         {
           "partner": "Indiyah",
-          "length": 4
+          "length": 5
         }
       ],
       "smooth": true,
@@ -51,7 +51,7 @@
       "data": [
         {
           "partner": "Tasha",
-          "length": 20
+          "length": 21
         }
       ],
       "smooth": true,
@@ -82,28 +82,16 @@
         {
           "partner": "Antigoni",
           "length": 4
+        },
+        {
+          "partner": "Ekin-Su",
+          "length": 1
         }
       ],
       "smooth": true,
       "color": "#91cc75" 
     },
-    {
-      "name": "Ikenna",
-      "type": "line",
-      "stack": "Total",
-      "data": [
-        {
-          "partner": "Indiyah",
-          "length": 13
-        },
-        {
-          "partner": "Exit",
-          "length": 1
-        }
-      ],
-      "smooth": true,
-      "color": "#5470c6"
-    },
+    
     {
         "name": "Jaques",
         "type": "line",
@@ -124,6 +112,10 @@
           {
             "partner": "Danica",
             "length": 4
+          },
+          {
+            "partner": "Paige",
+            "length": 1
           }
         ],
         "smooth": true,
@@ -150,6 +142,10 @@
           {
             "partner": "Paige",
             "length": 4
+          },
+          { 
+            "partner": "Danica",
+            "length": 1
           }
         ],
         "smooth": true,
@@ -172,6 +168,10 @@
           {
             "partner": "Ekin-Su",
             "length": 4
+          },
+          {
+            "partner": "Antigoni",
+            "length": 1
           }
         ],
         "smooth": true,
@@ -218,5 +218,22 @@
         ],
         "smooth": true,
         "color": "#0000FC"
-      }
+      },
+    {
+      "name": "Ikenna",
+      "type": "line",
+      "stack": "Total",
+      "data": [
+        {
+          "partner": "Indiyah",
+          "length": 13
+        },
+        {
+          "partner": "Exit",
+          "length": 1
+        }
+      ],
+      "smooth": true,
+      "color": "#5470c6"
+    }
   ]
