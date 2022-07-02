@@ -10,7 +10,7 @@ const CasaAmorCountDown = (props: Props) => {
   const date = new Date();
   const date2 = date.getDate();
 
-  let expiryDate = `4 jul 2022 21:00:00`
+  let expiryDate = `1 jul 2022 21:00:00`
 
   const [expiryTime, setExpiryTime] = useState(expiryDate);
   const [countdownTime, setCountdownTime] = useState({
@@ -98,8 +98,8 @@ const CasaAmorCountDown = (props: Props) => {
         </Typography>
       ) : (
         <Typography variant="h6" className="list-none justify-self-center">
-          <li className="pl-5">Its on NOW!</li>
-          <li>TUNE IN @ ITV2</li>
+          <li className="pl-5">We are Living</li>
+          <li>The Casa Amor Dream</li>
         </Typography>
       )}
     </div>
