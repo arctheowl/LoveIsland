@@ -12,10 +12,10 @@ const CountDown = (props: Props) => {
 
   let expiryDate;
 
-  if (date.getDate() === 6) {
-    expiryDate = `${date2 + 1} jun 2022 21:00:00`;
+  if (date.getDay() === 6) {
+    expiryDate = `${date2 + 1} jul 2022 21:00:00`;
   } else {
-    expiryDate = `${date2} jun 2022 21:00:00`;
+    expiryDate = `${date2} jul 2022 21:00:00`;
   }
 
   const [expiryTime, setExpiryTime] = useState(expiryDate);
@@ -79,6 +79,7 @@ const CountDown = (props: Props) => {
     number = 1;
   }
 
+  // console.log(date2)
   return (
     <div
       className={`${settings[number].themes} col-span-6 backdrop-blur-xl rounded drop-shadow-lg grid-cols-1 grid`}
@@ -91,7 +92,7 @@ const CountDown = (props: Props) => {
       >
         Time Until Next Episode
       </Typography>
-      {countdownTime.countdownSeconds > 0 || countdownTime.countdownMinutes > 0 || countdownTime.countdownDays > 0 || countdownTime.countdownHours > 0? (
+      {countdownTime.countdownSeconds > 0 && countdownTime.countdownMinutes > 0 && countdownTime.countdownDays > 0 && countdownTime.countdownHours > 0 ? (
         <Typography variant="h6" className="list-none justify-self-center">
           <li>
             {countdownTime.countdownDays} days {countdownTime.countdownHours}{" "}

@@ -18,7 +18,7 @@
         },
         {
           "partner": "Gemma",
-          "length": 5
+          "length": 6
         }],
       "smooth": true,
       "color": "#9a60b4"
@@ -38,7 +38,7 @@
         },
         {
           "partner": "Indiyah",
-          "length": 5
+          "length": 6
         }
       ],
       "smooth": true,
@@ -51,7 +51,7 @@
       "data": [
         {
           "partner": "Tasha",
-          "length": 21
+          "length": 22
         }
       ],
       "smooth": true,
@@ -85,7 +85,7 @@
         },
         {
           "partner": "Ekin-Su",
-          "length": 1
+          "length": 2
         }
       ],
       "smooth": true,
@@ -115,7 +115,7 @@
           },
           {
             "partner": "Paige",
-            "length": 1
+            "length": 2
           }
         ],
         "smooth": true,
@@ -145,7 +145,7 @@
           },
           { 
             "partner": "Danica",
-            "length": 1
+            "length": 2
           }
         ],
         "smooth": true,
@@ -171,7 +171,7 @@
           },
           {
             "partner": "Antigoni",
-            "length": 1
+            "length": 2
           }
         ],
         "smooth": true,
