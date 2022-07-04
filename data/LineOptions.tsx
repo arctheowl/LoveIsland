@@ -1,12 +1,15 @@
 import TimelineBoys from "./TimeLineBoys.json";
 import TimelineGirls from "./TimeLineGirls.json";
 import colours from "./Colours.json";
+import { EChartsOption } from "echarts-for-react";
 
-interface IMatches {
-  person: string;
-  partner: string;
-  color: string;
-}
+// // interface IMatches {
+//   person: string;
+//   partner: string;
+//   color: string;
+// }
+//
+
 interface INewTimeLineData {
   name: string;
   type: string;
@@ -27,10 +30,47 @@ interface ITimeLineData {
   data: string[];
   smooth: boolean;
   color: string;
+  markArea?: {
+    itemStyle: {
+      color: string;
+    };
+    data: [
+      [
+        {
+          name: string;
+          xAxis: string;
+        }
+      ]
+    ];
+  };
 }
+
+let casaAmor: any = {
+  name: "Casa Amor",
+  type: "line",
+  smooth: true,
+  // prettier-ignore
+  markArea: {
+    itemStyle: {
+      color: 'rgba(255, 173, 177, 0.4)'
+    },
+    data: [
+      [
+        {
+          name: 'Casa Amor',
+          xAxis: '22'
+        },
+        {
+          xAxis: '24'
+        }
+      ]
+    ]
+  },
+};
 
 const sortingData: any = (NewTimeLine: INewTimeLineData[]) => {
   let FinalLineData: ITimeLineData[] = [];
+
   NewTimeLine.map((person) => {
     let finalPersonData: ITimeLineData;
     let finalData: string[] = [];
@@ -53,7 +93,7 @@ const sortingData: any = (NewTimeLine: INewTimeLineData[]) => {
   return FinalLineData;
 };
 
-export const boysOptions: any = {
+export const boysOptions: EChartsOption = {
   title: {
     text: "",
   },
@@ -75,16 +115,14 @@ export const boysOptions: any = {
         box.style.display = "inline-block";
 
         let innerHtml = `<b style="text-align:center">${info[0].axisValueLabel}:</b><br/><table id="myTable" border="1" cellpadding="3">`;
-        let listOfNames: string[] = []
+        let listOfNames: string[] = [];
         info.map((line: any) => {
           if (line.value === "-") {
             return;
           }
-          if (listOfNames.includes(line.seriesName)){
+          if (listOfNames.includes(line.seriesName)) {
             return;
           }
-          
-          
 
           box.style.background = `${line.color}`;
           box.style.borderColor = `${line.color}`;
@@ -94,9 +132,9 @@ export const boysOptions: any = {
             `<td ">${line.seriesName}</td>` +
             `<td ">${line.value} </td>` +
             "</tr>";
-            listOfNames.push(line.seriesName)
+          listOfNames.push(line.seriesName);
         });
-     
+
         innerHtml += "</table>";
         return `
           ${innerHtml}`;
@@ -121,6 +159,7 @@ export const boysOptions: any = {
       },
     },
   },
+
   xAxis: {
     axisLabel: { formatter: "Day {value}" },
     type: "category",
@@ -130,7 +169,7 @@ export const boysOptions: any = {
     type: "category",
     data: [...dataCategories(TimelineBoys)],
   },
-  series: addColours(sortingData(TimelineBoys)),
+  series: [...addColours(sortingData(TimelineBoys)), casaAmor],
 };
 
 export const girlsOptions: any = {
@@ -153,17 +192,15 @@ export const girlsOptions: any = {
         box.style.display = "inline-block";
 
         let innerHtml = `<b style="text-align:center">${info[0].axisValueLabel}:</b><br/><table id="myTable" border="1" cellpadding="3">`;
-        let listOfNames: string[] = []
+        let listOfNames: string[] = [];
         info.map((line: any) => {
           if (line.value === "-") {
             return;
           }
-          console.log(line)
-          if (listOfNames.includes(line.seriesName)){
+          console.log(line);
+          if (listOfNames.includes(line.seriesName)) {
             return;
           }
-          
-          
 
           box.style.background = `${line.color}`;
           box.style.borderColor = `${line.color}`;
@@ -173,9 +210,9 @@ export const girlsOptions: any = {
             `<td ">${line.seriesName}</td>` +
             `<td ">${line.value} </td>` +
             "</tr>";
-            listOfNames.push(line.seriesName)
+          listOfNames.push(line.seriesName);
         });
-     
+
         innerHtml += "</table>";
         return `
           ${innerHtml}`;
@@ -210,11 +247,11 @@ export const girlsOptions: any = {
 
     data: [...dataCategories(TimelineGirls)],
   },
-  series: addColours(sortingData(TimelineGirls)),
+  series: [...addColours(sortingData(TimelineGirls)), casaAmor],
 };
 
 function addColours(TimelineBoys: ITimeLineData[]): ITimeLineData[] {
-  let FinalList: ITimeLineData[] = [];
+  let FinalList: any[] = [];
 
   TimelineBoys.map((person) => {
     let name: string = person.name;
@@ -237,6 +274,7 @@ function addColours(TimelineBoys: ITimeLineData[]): ITimeLineData[] {
 
     FinalList.push(newPerson);
   });
+
   return FinalList;
 }
 

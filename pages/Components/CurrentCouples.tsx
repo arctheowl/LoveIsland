@@ -48,7 +48,7 @@ const CoupleTable = (props: Props) => {
           component="div"
           className="list-none justify-self-center pt-4 md:p-0 pl-8"
         >
-          Current Couples
+          Couples Before Casa Amor
         </Typography>
         <TableContainer className={`p-5 ${settings[number].themes}`}>
           <Table

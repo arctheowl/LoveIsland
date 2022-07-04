@@ -8,6 +8,19 @@ interface ITimeLineData {
   data: ICountReturn[];
   smooth: boolean;
   color: string;
+  markArea?: {
+    itemStyle: {
+      color: string;
+    };
+    data: [
+      [
+        {
+          name: string;
+          xAxis: string;
+        }
+      ]
+    ];
+  };
 }
 
 interface ICountReturn {
@@ -32,6 +45,32 @@ interface IXData {
   data: any[];
 }
 
+let casaAmor: any = {
+  name: "Casa Amor",
+  type: "line",
+  smooth: true,
+  // prettier-ignore
+  markArea: {
+    itemStyle: {
+      color: 'rgba(255, 173, 177, 0.4)'
+    },
+    data: [
+      [
+        {
+          name: 'Casa Amor',
+          label: {
+            show: true
+          },
+          xAxis: '23'
+        },
+        {
+          xAxis: '25'
+        }
+      ]
+    ]
+  },
+};
+
 const StackChartXAxisData = (props: ITimeLineData[]) => {
   let series: IXData[] = [];
   for (let i = 0; i < props.length; i++) {
@@ -39,9 +78,8 @@ const StackChartXAxisData = (props: ITimeLineData[]) => {
     for (let j = 0; j < i; j++) {
       defaultData.push("-");
     }
-    
+
     props[i].data.map((partner) => {
-      
       if (partner.partner === "-" || partner.partner === "Exit") {
         series.push({
           name: partner.partner,
@@ -59,27 +97,26 @@ const StackChartXAxisData = (props: ITimeLineData[]) => {
           },
           data: [...defaultData, partner.length],
         });
-       
       } else {
-          series.push({
-            name: partner.partner,
-            label: {
-              show: true,
-            },
-            type: "bar",
-            stack: props[i].stack,
-            emphasis: {
-              focus: "series",
-            },
-            itemStyle: {
-              borderColor: addColours(`${partner.partner}`),
-              color: addColours(`${partner.partner}`),
-            },
-            data: [...defaultData, partner.length],
-          });
-        }
+        series.push({
+          name: partner.partner,
+          label: {
+            show: true,
+          },
+          type: "bar",
+          stack: props[i].stack,
+          emphasis: {
+            focus: "series",
+          },
+          itemStyle: {
+            borderColor: addColours(`${partner.partner}`),
+            color: addColours(`${partner.partner}`),
+          },
+          data: [...defaultData, partner.length],
+        });
       }
-    )}
+    });
+  }
 
   return series;
 };
@@ -92,14 +129,13 @@ const StackChartYAxisData = (props: ITimeLineData[]) => {
   return series;
 };
 
-
 export const girlsOptions: any = {
   toolbox: {
     feature: {
       saveAsImage: {
-        show: true
-      }
-    }
+        show: true,
+      },
+    },
   },
   tooltip: {
     trigger: "axis",
@@ -148,20 +184,22 @@ export const girlsOptions: any = {
       let stringData = `${value.seriesName}`;
       if (value.seriesName === "-" || value.seriesName === "Exit") {
         return "";
+      } else if (value.seriesName === null) {
+        return "Casa Amor";
       }
       return stringData;
     },
   },
-  series: StackChartXAxisData(GirlsData),
+  series: [...StackChartXAxisData(GirlsData), casaAmor],
 };
 
 export const boysOptions: any = {
   toolbox: {
     feature: {
       saveAsImage: {
-        show: true
-      }
-    }
+        show: true,
+      },
+    },
   },
   tooltip: {
     trigger: "axis",
@@ -211,11 +249,13 @@ export const boysOptions: any = {
       let stringData = `${value.seriesName}`;
       if (value.seriesName === "-" || value.seriesName === "Exit") {
         return "";
+      } else if (value.seriesName === null) {
+        return "Casa Amor";
       }
       return stringData;
     },
   },
-  series: StackChartXAxisData(BoysData),
+  series: [...StackChartXAxisData(BoysData), casaAmor],
 };
 
 function addColours(name: string): string {
