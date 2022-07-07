@@ -9,8 +9,8 @@ export const boysOptions = {
     triggerOn: "mousemove",
   },
   animation: true,
-  animationDuration: 10000,
-  animationDelay: 1000,
+  animationDuration: 3000,
+//   animationDelay: 1000,
   series: [
     {
       type: "sankey",
@@ -77,8 +77,8 @@ export const girlsOptions = {
     triggerOn: "mousemove",
   },
   animation: true,
-  animationDuration: 10000,
-  animationDelay: 1000,
+  animationDuration: 3000,
+//   animationDelay: 1000,
   series: [
     {
       type: "sankey",
