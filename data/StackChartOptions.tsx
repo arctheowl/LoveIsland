@@ -1,3 +1,4 @@
+import { listItemSecondaryActionClasses } from "@mui/material";
 import colours from "./Colours.json";
 import BoysData from "./TimeLineBoys.json";
 import GirlsData from "./TimeLineGirls.json";
@@ -64,7 +65,7 @@ let casaAmor: any = {
           xAxis: '23'
         },
         {
-          xAxis: '25'
+          xAxis: '27'
         }
       ]
     ]
@@ -189,6 +190,10 @@ export const girlsOptions: any = {
       }
       return stringData;
     },
+    fontSize: 10
+  },
+  labelLayout: {
+    hideOverlap: true,
   },
   series: [...StackChartXAxisData(GirlsData), casaAmor],
 };
@@ -254,6 +259,14 @@ export const boysOptions: any = {
       }
       return stringData;
     },
+    // width: 50,
+    // // position: "inside",
+    // overflow: 'truncate',
+    // ellipsis: ','
+    fontSize: 10
+  },
+  labelLayout: {
+    hideOverlap: true,
   },
   series: [...StackChartXAxisData(BoysData), casaAmor],
 };

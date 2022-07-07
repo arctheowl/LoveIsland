@@ -25,7 +25,7 @@
     },
     {
       "partner": "Single",
-      "length": 2
+      "length": 4
     }
     ],
     "smooth": true,
@@ -58,7 +58,7 @@
       },
       {
         "partner": "Single",
-        "length": 2
+        "length": 4
       }
     ],
     "smooth": true,
@@ -83,7 +83,7 @@
       },
       {
         "partner": "Single",
-        "length": 2
+        "length": 4
       }
     ],
     "smooth": true,
@@ -100,7 +100,7 @@
       },
       {
         "partner": "Single",
-        "length": 2
+        "length": 4
       }
     ],
     "smooth": true,
@@ -137,7 +137,7 @@
       },
       {
         "partner": "Single",
-        "length": 2
+        "length": 4
       }
 
     ],
@@ -169,7 +169,7 @@
       },
       {
         "partner": "Single",
-        "length": 2
+        "length": 4
       }
     ],
     "smooth": true,

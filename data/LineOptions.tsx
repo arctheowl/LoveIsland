@@ -61,7 +61,7 @@ let casaAmor: any = {
           xAxis: '22'
         },
         {
-          xAxis: '24'
+          xAxis: '26'
         }
       ]
     ]
