@@ -132,7 +132,7 @@ const StackChartYAxisData = (props: ITimeLineData[]) => {
 
 export const girlsOptions: any = {
   animation: true,
-  animationDuration: 3000,
+  animationDuration: 1500,
   
   toolbox: {
     feature: {
@@ -203,7 +203,7 @@ export const girlsOptions: any = {
 
 export const boysOptions: any = {
   animation: true,
-  animationDuration: 3000,
+  animationDuration: 1500,
   toolbox: {
     feature: {
       saveAsImage: {
