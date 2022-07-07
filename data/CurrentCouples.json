@@ -1,8 +1,11 @@
 [
-  { "name": "Luca", "partner": "Gemma" },
-  { "name": "Andrew", "partner": "Tasha" },
-  { "name": "Davide", "partner": "Ekin-Su" },
-  { "name": "Jaques", "partner": "Paige" },
-  { "name": "Jay", "partner": "Danica" },
-  { "name": "Dami", "partner": "Indiyah" }
+    { "name": "Luca", "partner": "Gemma" },
+    { "name": "Andrew", "partner": "Coco" },
+    { "name": "Billy", "partner": "Tasha" },
+    { "name": "Davide", "partner": "Ekin-Su" },
+    { "name": "Jaques", "partner": "Paige" },
+    { "name": "Jay", "partner": "Chyna" },
+    { "name": "Dami", "partner": "Summer" },
+    { "name": "Deji", "partner": "Indiyah" }
 ]
+  

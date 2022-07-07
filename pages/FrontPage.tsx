@@ -6,6 +6,7 @@ import LineGraph from "./Components/LineGraph";
 import ThemeSwitch from "./Components/ThemeSwitch";
 import OffShow from "./Components/OffShow";
 import StackChart from "./Components/StackChart";
+import PreCasaCouples from "./Components/PreCasaCouples"
 import CasaAmorCountDown from "./Components/CasaCountDown";
 import Sankey from "./Components/Sankey"
 
@@ -51,6 +52,7 @@ const FrontPage = (props: Props) => {
         <LineGraph theme={theme} />
         <Sankey theme={theme} />  
         <CurrentCouples theme={theme} />
+        <PreCasaCouples theme={theme} />
         <CountDown theme={theme} />
         <CasaAmorCountDown theme={theme}/>
         <Vulnerable theme={theme} />

@@ -6,14 +6,14 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Typography from "@mui/material/Typography";
-import CurrentCouples from "../../data/CurrentCouples.json";
+import PreCasaCouples from "../../data/PreCasaCouples.json";
 
 
 type Props = {
   theme: string;
 };
 
-const rows = CurrentCouples;
+const rows = PreCasaCouples;
 
 const CoupleTable = (props: Props) => {
   const { theme } = props;
@@ -48,7 +48,7 @@ const CoupleTable = (props: Props) => {
           component="div"
           className="list-none justify-self-center pt-4 md:p-0 pl-8"
         >
-          Current Couples
+          Couples Before Casa Amor
         </Typography>
         <TableContainer className={`p-5 ${settings[number].themes}`}>
           <Table
