@@ -1,0 +1,66 @@
+{
+  "boys": {
+    "nodes": [
+      { "name": "Total" },
+      { "name": "Josh" },
+      { "name": "Deji" },
+      { "name": "Jack" },
+      { "name": "Billy" },
+      { "name": "George" },
+      { "name": "Samuel" },
+      { "name": "Single" },
+      { "name": "Paige" },
+      { "name": "Gemma" },
+      { "name": "Tasha" },
+      { "name": "Ekin-Su" },
+      { "name": "Danica" },
+      { "name": "Indiyah" }
+    ],
+    "links": [
+      { "source": "Total", "target": "Josh", "value": 1 },
+      { "source": "Total", "target": "Deji", "value": 1 },
+      { "source": "Total", "target": "Jack", "value": 1 },
+      { "source": "Total", "target": "Billy", "value": 1 },
+      { "source": "Total", "target": "George", "value": 1 },
+      { "source": "Total", "target": "Samuel", "value": 1 },
+      { "source": "Josh", "target": "Single", "value": 1 },
+      { "source": "Deji", "target": "Single", "value": 1 },
+      { "source": "Jack", "target": "Single", "value": 1 },
+      { "source": "Billy", "target": "Single", "value": 1 },
+      { "source": "George", "target": "Single", "value": 1 },
+      { "source": "Samuel", "target": "Single", "value": 1 }
+    ]
+  },
+  "girls": {
+    "nodes": [
+      { "name": "Total" },
+      { "name": "Mollie" },
+      { "name": "Jazmine" },
+      { "name": "Chyna" },
+      { "name": "Summer" },
+      { "name": "Coco" },
+      { "name": "Cheyanne" },
+      { "name": "Single" },
+      { "name": "Jaques" },
+      { "name": "Luca" },
+      { "name": "Dami" },
+      { "name": "Jay" },
+      { "name": "Andrew" },
+      { "name": "Davide" }
+    ],
+    "links": [
+      { "source": "Total", "target": "Mollie", "value": 1 },
+      { "source": "Total", "target": "Jazmine", "value": 1 },
+      { "source": "Total", "target": "Chyna", "value": 1 },
+      { "source": "Total", "target": "Summer", "value": 1 },
+      { "source": "Total", "target": "Coco", "value": 1 },
+      { "source": "Total", "target": "Cheyanne", "value": 1 },
+      { "source": "Mollie", "target": "Single", "value": 1 },
+      { "source": "Chyna", "target": "Single", "value": 1 },
+      { "source": "Summer", "target": "Single", "value": 1 },
+      { "source": "Coco", "target": "Single", "value": 1 },
+      { "source": "Cheyanne", "target": "Single", "value": 1 },
+      { "source": "Jazmine", "target": "Single", "value": 1 }
+    ]
+  }
+}

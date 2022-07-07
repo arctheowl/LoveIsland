@@ -94,6 +94,8 @@ const sortingData: any = (NewTimeLine: INewTimeLineData[]) => {
 };
 
 export const boysOptions: EChartsOption = {
+  animation: true,
+  animationDuration: 3000,
   title: {
     text: "",
   },
@@ -173,6 +175,8 @@ export const boysOptions: EChartsOption = {
 };
 
 export const girlsOptions: any = {
+  animation: true,
+  animationDuration: 3000,
   title: {},
   tooltip: {
     trigger: "axis",
