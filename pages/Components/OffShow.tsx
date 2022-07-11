@@ -4,7 +4,7 @@ type Props = {
   theme: string;
 };
 
-const Singles = ["Liam", "Afia", "Remi", "Amber", "Ikenna", "Charlie"];
+const Singles = ["Liam", "Afia", "Remi", "Amber", "Ikenna", "Charlie", "Jay"];
 const Singles2 = [
   "Antigoni",
   "Jack",
@@ -13,6 +13,7 @@ const Singles2 = [
   "Mollie",
   "Jazmine",
   "Cheyanne",
+  "Chyna"
 ];
 
 const OffShow = (props: Props) => {
