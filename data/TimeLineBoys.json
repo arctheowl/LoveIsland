@@ -163,6 +163,24 @@
     "smooth": true,
     "color": "#0000FC"
   },
+  {
+    "name": "Adam",
+    "type": "line",
+    "stack": "Total",
+    "data": [
+      {
+        "partner": "-",
+        "length": 30
+      },
+      {
+        "partner": "Single",
+        "length": 1
+      }
+    ],
+    "smooth": true,
+    "color": "#fc8452"
+  },
+
 
   {
     "name": "Jay",
@@ -195,7 +213,11 @@
       },
       {
         "partner": "Chyna",
-        "length": 4
+        "length": 3
+      },
+      {
+        "partner": "Exit",
+        "length": 1
       }
     ],
     "smooth": true,
