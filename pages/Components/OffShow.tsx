@@ -4,7 +4,7 @@ type Props = {
   theme: string;
 };
 
-const Singles = ["Liam", "Afia", "Remi", "Amber", "Ikenna", "Charlie", "Jay"];
+const Singles = ["Liam", "Afia", "Remi", "Amber", "Ikenna", "Charlie", "Jay", "Jaques"];
 const Singles2 = [
   "Antigoni",
   "Jack",
@@ -41,7 +41,7 @@ const OffShow = (props: Props) => {
 
   return (
     <div
-      className={`${settings[number].themes} col-span-12 backdrop-blur-xl rounded drop-shadow-lg grid-cols-1 grid justify-items-auto`}
+      className={`${settings[number].themes} col-span-12 backdrop-blur-xl rounded drop-shadow-lg grid-cols-1 grid justify-items-auto py-8`}
     >
       <Typography
         className="pt-4 justify-self-center md:p-0 pl-8"

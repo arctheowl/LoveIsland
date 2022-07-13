@@ -54,7 +54,7 @@ const FrontPage = (props: Props) => {
         <CurrentCouples theme={theme} />
         <PreCasaCouples theme={theme} />
         <CountDown theme={theme} />
-        <CasaAmorCountDown theme={theme}/>
+        {/* <CasaAmorCountDown theme={theme}/> */}
         <Vulnerable theme={theme} />
         <OffShow theme={theme} />  
             

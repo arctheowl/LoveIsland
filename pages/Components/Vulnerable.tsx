@@ -32,7 +32,7 @@ const Vulnerable = (props: Props) => {
     <>
       {Singles[0].name !== " " ? (
         <div
-          className={`${settings[number].themes} col-span-12 md:col-span-6 backdrop-blur-xl rounded drop-shadow-lg grid-cols-1 grid justify-items-auto`}
+          className={`${settings[number].themes} col-span-12 md:col-span-6 backdrop-blur-xl rounded drop-shadow-lg grid-cols-1 grid justify-items-auto py-8`}
         >
           <Typography
             className="pt-4 justify-self-center md:p-0 pl-8"
