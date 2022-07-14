@@ -9,10 +9,14 @@ import { Dispatch, SetStateAction } from "react";
 interface Iprops {
   setSelection: Dispatch<SetStateAction<string>>;
   selection: string;
-  timeLine: any
+  timeLine: any;
 }
 
-export default function Dropdown({ setSelection, selection, timeLine }: Iprops) {
+export default function Dropdown({
+  setSelection,
+  selection,
+  timeLine,
+}: Iprops) {
   const [open, setOpen] = useState(false);
 
   const handleChange = (event: SelectChangeEvent<typeof selection>) => {
@@ -29,7 +33,7 @@ export default function Dropdown({ setSelection, selection, timeLine }: Iprops) 
 
   return (
     <div>
-      <InputLabel id="demo-controlled-open-select-label" color="secondary">Islanders</InputLabel>
+      <InputLabel id="demo-controlled-open-select-label">Islanders</InputLabel>
       <Select
         labelId="demo-controlled-open-select-label"
         id="demo-controlled-open-select"
@@ -39,9 +43,8 @@ export default function Dropdown({ setSelection, selection, timeLine }: Iprops) 
         value={selection}
         label="Islanders"
         onChange={handleChange}
-        color="secondary"
       >
-        {timeLine.map((data:any) => {
+        {timeLine.map((data: any) => {
           return (
             <MenuItem value={data.name} key={data.name}>
               {data.name}

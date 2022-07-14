@@ -50,14 +50,14 @@ const FrontPage = (props: Props) => {
       <div className="grid grid-cols-12 gap-4 lg:px-24 lg:py-10 p-4 ">
         <StackChart theme={theme} />
         <LineGraph theme={theme} />
-        {theme === "dark" ? (
+        {/* {theme === "dark" ? (
           <></>
         ) : (
-          <>
-            <BoySoloTimeline theme={theme} />
-            <GirlSoloTimeline theme={theme} />
-          </>
-        )}
+          <> */}
+            {/* <BoySoloTimeline theme={theme} />
+            <GirlSoloTimeline theme={theme} /> */}
+          {/* </>
+        )} */}
         <Sankey theme={theme} />
         <CurrentCouples theme={theme} />
         <PreCasaCouples theme={theme} />
