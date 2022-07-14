@@ -4,7 +4,6 @@ import Step from "@mui/material/Step";
 import StepLabel from "@mui/material/StepLabel";
 import GirlsTimeline from "../../data/TimeLineGirls.json";
 import { useState } from "react";
-import Dropdown from "./Dropdown";
 import { Typography } from "@mui/material";
 
 type Props = {
@@ -56,7 +55,7 @@ export default function GirlSoloTimeline({ theme }: Props) {
         Girls Journey
       </Typography>
       <Box sx={{ width: "100%", padding: 5 }} color="secondary">
-        <Dropdown setSelection={setSelection} selection={selection} timeLine={GirlsTimeline} />
+        {/* <Dropdown setSelection={setSelection} selection={selection} timeLine={GirlsTimeline} /> */}
         <Stepper alternativeLabel sx={{ padding: 5, color: "white"}} color="secondary">
           {steps.map((label, index) => {
             if (label !== "-") {
