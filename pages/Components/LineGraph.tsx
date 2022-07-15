@@ -1,6 +1,8 @@
 import ReactECharts from "echarts-for-react";
 import Typography from "@mui/material/Typography";
-import { boysOptions, girlsOptions } from "../../data/LineOptions";
+import { boysOptions, girlsOptions, everyBoysOptions, everyGirlsOptions } from "../../data/LineOptions";
+import { useState } from "react";
+import { FormControl, FormControlLabel, Switch } from "@mui/material";
 
 type Props = {
   theme: string;
@@ -8,7 +10,8 @@ type Props = {
 
 const LineGraph = (props: Props) => {
   const { theme } = props;
-
+  const [boysSelection, setBoysSelection] = useState<boolean>(false);
+  const [girlSelection, setGirlssSelection] = useState<boolean>(false);
   const settings = [
     {
       name: "dark",
@@ -32,32 +35,73 @@ const LineGraph = (props: Props) => {
   return (
     <div className={`grid grid-cols-2 gap-4 col-span-12`}>
       <div
-        className={`${settings[number].themes} col-span-2 lg:col-span-1 backdrop-blur-xl rounded drop-shadow-lg grid-cols-1 grid justify-items-auto animate-fade-in-left`}
+        className={`${settings[number].themes} col-span-2 lg:col-span-1 backdrop-blur-xl rounded drop-shadow-lg grid-cols-3 grid justify-items-auto animate-fade-in-left`}
       >
-        <Typography sx={{ fontSize: 24 }} className="justify-self-center">
+        <FormControl
+          component="fieldset"
+          className="col-span-1 justify-self-start"
+        >
+          <FormControlLabel
+            value="top"
+            control={<Switch color="primary" size="small" />}
+            label="Current/Out"
+            labelPlacement="top"
+            onChange={() => setBoysSelection(!boysSelection)}
+          />
+        </FormControl>
+        <Typography sx={{ fontSize: 24 }} className="justify-self-start">
           Boys Timeline
         </Typography>
-
-        <ReactECharts
-          option={boysOptions}
-          notMerge={true}
-          lazyUpdate={true}
-          theme={theme}
-        />
+        <div className="col-span-3">{boysSelection ? (
+            <ReactECharts
+              option={everyBoysOptions}
+              notMerge={true}
+              lazyUpdate={true}
+              theme={theme}
+            />
+          ) : (
+            <ReactECharts
+              option={boysOptions}
+              notMerge={true}
+              lazyUpdate={true}
+              theme={theme}
+            />
+          )}</div>
       </div>
 
       <div
-        className={`${settings[number].themes} col-span-2 lg:col-span-1 backdrop-blur-xl rounded drop-shadow-lg grid-cols-1 grid justify-items-auto animate-fade-in-right`}
+        className={`${settings[number].themes} col-span-2 lg:col-span-1 backdrop-blur-xl rounded drop-shadow-lg grid-cols-3 grid justify-items-auto animate-fade-in-left`}
       >
-        <Typography sx={{ fontSize: 24 }} className="justify-self-center">
+        <FormControl
+          component="fieldset"
+          className="col-span-1 justify-self-start"
+        >
+          <FormControlLabel
+            value="top"
+            control={<Switch color="primary" size="small" />}
+            label="Current/Out"
+            labelPlacement="top"
+            onChange={() => setGirlssSelection(!girlSelection)}
+          />
+        </FormControl>
+        <Typography sx={{ fontSize: 24 }} className="justify-self-start">
           Girls Timeline
         </Typography>
-        <ReactECharts
-          option={girlsOptions}
-          notMerge={true}
-          lazyUpdate={true}
-          theme={theme}
-        />
+        <div className="col-span-3">{ girlSelection ? (
+            <ReactECharts
+              option={everyGirlsOptions}
+              notMerge={true}
+              lazyUpdate={true}
+              theme={theme}
+            />
+          ) : (
+            <ReactECharts
+              option={girlsOptions}
+              notMerge={true}
+              lazyUpdate={true}
+              theme={theme}
+            />
+          )}</div>
       </div>
     </div>
   );

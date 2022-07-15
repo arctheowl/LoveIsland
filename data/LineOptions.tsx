@@ -1,15 +1,9 @@
 import TimelineBoys from "./TimeLineBoys.json";
 import TimelineGirls from "./TimeLineGirls.json";
+import EveryBoysData from "./EveryTimeLineBoys.json";
+import EveryGirlsData from "./EveryTimeLineGirls.json";
 import colours from "./Colours.json";
 import { EChartsOption } from "echarts-for-react";
-
-// // interface IMatches {
-//   person: string;
-//   partner: string;
-//   color: string;
-// }
-//
-
 interface INewTimeLineData {
   name: string;
   type: string;
@@ -58,10 +52,10 @@ let casaAmor: any = {
       [
         {
           name: 'Casa Amor',
-          xAxis: '22'
+          xAxis: '23'
         },
         {
-          xAxis: '26'
+          xAxis: '27'
         }
       ]
     ]
@@ -174,6 +168,88 @@ export const boysOptions: EChartsOption = {
   series: [...addColours(sortingData(TimelineBoys)), casaAmor],
 };
 
+
+export const everyBoysOptions: EChartsOption = {
+  animation: true,
+  animationDuration: 2000,
+  title: {
+    text: "",
+  },
+  tooltip: {
+    trigger: "axis",
+    axisPointer: {
+      label: {
+        formatter: "Day {value}",
+      },
+    },
+    formatter: (info: any) => {
+      if (info) {
+        const box = document.createElement("a");
+        box.style.borderWidth = "2px";
+        box.style.marginRight = "10px";
+        box.style.height = "10px";
+        box.style.width = "10px";
+        box.style.borderRadius = "5px";
+        box.style.display = "inline-block";
+
+        let innerHtml = `<b style="text-align:center">${info[0].axisValueLabel}:</b><br/><table id="myTable" border="1" cellpadding="3">`;
+        let listOfNames: string[] = [];
+        info.map((line: any) => {
+          if (line.value === "-") {
+            return;
+          }
+          if (listOfNames.includes(line.seriesName)) {
+            return;
+          }
+
+          box.style.background = `${line.color}`;
+          box.style.borderColor = `${line.color}`;
+          innerHtml +=
+            `<tr>` +
+            `<td>${box.outerHTML}</td>` +
+            `<td ">${line.seriesName}</td>` +
+            `<td ">${line.value} </td>` +
+            "</tr>";
+          listOfNames.push(line.seriesName);
+        });
+
+        innerHtml += "</table>";
+        return `
+          ${innerHtml}`;
+      } else {
+        return "No Data";
+      }
+    },
+  },
+  legend: {
+    data: legendData(EveryBoysData),
+  },
+  grid: {
+    left: "3%",
+    right: "4%",
+    bottom: "3%",
+    containLabel: true,
+  },
+  toolbox: {
+    feature: {
+      saveAsImage: {
+        name: "Love Island Timeline Boys",
+      },
+    },
+  },
+
+  xAxis: {
+    axisLabel: { formatter: "Day {value}" },
+    type: "category",
+    boundaryGap: false,
+  },
+  yAxis: {
+    type: "category",
+    data: [...dataCategories(EveryBoysData)],
+  },
+  series: [...addColours(sortingData(EveryBoysData)), casaAmor],
+};
+
 export const girlsOptions: any = {
   animation: true,
   animationDuration: 2000,
@@ -252,6 +328,88 @@ export const girlsOptions: any = {
     data: [...dataCategories(TimelineGirls)],
   },
   series: [...addColours(sortingData(TimelineGirls)), casaAmor],
+};
+
+
+
+export const everyGirlsOptions: any = {
+  animation: true,
+  animationDuration: 2000,
+  title: {},
+  tooltip: {
+    trigger: "axis",
+    axisPointer: {
+      label: {
+        formatter: "Day {value}",
+      },
+    },
+    formatter: (info: any) => {
+      if (info) {
+        const box = document.createElement("a");
+        box.style.borderWidth = "2px";
+        box.style.marginRight = "10px";
+        box.style.height = "10px";
+        box.style.width = "10px";
+        box.style.borderRadius = "5px";
+        box.style.display = "inline-block";
+
+        let innerHtml = `<b style="text-align:center">${info[0].axisValueLabel}:</b><br/><table id="myTable" border="1" cellpadding="3">`;
+        let listOfNames: string[] = [];
+        info.map((line: any) => {
+          if (line.value === "-") {
+            return;
+          }
+          console.log(line);
+          if (listOfNames.includes(line.seriesName)) {
+            return;
+          }
+
+          box.style.background = `${line.color}`;
+          box.style.borderColor = `${line.color}`;
+          innerHtml +=
+            `<tr>` +
+            `<td>${box.outerHTML}</td>` +
+            `<td ">${line.seriesName}</td>` +
+            `<td ">${line.value} </td>` +
+            "</tr>";
+          listOfNames.push(line.seriesName);
+        });
+
+        innerHtml += "</table>";
+        return `
+          ${innerHtml}`;
+      } else {
+        return "No Data";
+      }
+    },
+  },
+  legend: {
+    data: [...legendData(EveryGirlsData)],
+  },
+  grid: {
+    left: "3%",
+    right: "4%",
+    bottom: "3%",
+    containLabel: true,
+  },
+  toolbox: {
+    feature: {
+      saveAsImage: {
+        name: "Love Island Timeline Girls",
+      },
+    },
+  },
+  xAxis: {
+    axisLabel: { formatter: "Day {value}" },
+    type: "category",
+    boundaryGap: false,
+  },
+  yAxis: {
+    type: "category",
+
+    data: [...dataCategories(EveryGirlsData)],
+  },
+  series: [...addColours(sortingData(EveryGirlsData)), casaAmor],
 };
 
 function addColours(TimelineBoys: ITimeLineData[]): ITimeLineData[] {

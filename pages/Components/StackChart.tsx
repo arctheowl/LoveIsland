@@ -61,7 +61,6 @@ const StackChart = (props: Props) => {
           Boys Bar
         </Typography>
         <div className="col-span-3">
-          {/* <Switch label="Label" onChange={()=>setBoysSelection(!boysSelection)} /> */}
           {boysSelection ? (
             <ReactECharts
               option={everyBoysOptions}
