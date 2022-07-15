@@ -1,267 +1,29 @@
-[
+[ 
   {
-    "name": "Gemma",
-    "type": "line",
-    "stack": "total",
-    "data": [{
-      "partner": "Liam",
-      "length": 1
+  "name": "Chyna",
+  "type": "line",
+  "stack": "total",
+  "data": [
+    {
+      "partner":  "-",
+      "length": 23
     },
     {
-      "partner": "Davide",
-      "length": 3
-    },
-    {
-      "partner": "Luca",
-      "length": 7
-    },
-    {
-      "partner": "Davide",
-      "length": 5
-    },
-    {
-      "partner": "Luca",
-      "length": 7
-    },
-    {
-      "partner": "Single",
+      "partner":  "Single",
       "length": 4
     },
     {
-      "partner": "Luca",
-      "length": 7
+      "partner":  "Jay",
+      "length": 3
+    },
+    {
+      "partner":  "Exit",
+      "length": 1
     }
-    ],
-    "smooth": true,
-    "color": "#ee6666"
+  ],
+  "smooth": true,
+  "color": "#fc8452"
   },
-  {
-    "name": "Paige",
-    "type": "line",
-    "stack": "total",
-    "data": [
-      {
-        "partner": "Luca",
-        "length": 4
-      },
-      {
-        "partner": "Single",
-        "length": 3
-      },
-      {
-        "partner": "Jaques",
-        "length": 9
-      },
-      {
-        "partner": "Jay",
-        "length": 4
-      },
-      {
-        "partner": "Jaques",
-        "length": 3
-      },
-      {
-        "partner": "Single",
-        "length": 4
-      },
-      {
-        "partner": "Jaques",
-        "length": 5
-      },
-      {
-        "partner": "Single",
-        "length": 1
-      },
-      {
-        "partner": "Adam",
-        "length": 1
-      }
-    ],
-    "smooth": true,
-    "color": "#5470c6"
-  },
-  {
-    "name": "Tasha",
-    "type": "line",
-    "stack": "total",
-    "data": [
-      {
-        "partner": "Andrew",
-        "length": 23
-      },
-      {
-        "partner": "Single",
-        "length": 4
-      },
-      {
-        "partner": "Billy",
-        "length": 6
-      },
-      {
-        "partner": "Andrew",
-        "length": 1
-      }
-    ],
-    "smooth": true,
-    "color": "#9a60b4"
-  },
-  {
-    "name": "Indiyah",
-    "type": "line",
-    "stack": "total",
-    "data": [
-      {
-        "partner": "Ikenna",
-        "length": 13
-      },
-      {
-        "partner": "Single",
-        "length": 3
-      },
-      {
-        "partner": "Dami",
-        "length": 7
-      },
-      {
-        "partner": "Single",
-        "length": 4
-      },
-      {
-        "partner": "Deji",
-        "length": 6
-      },
-      {
-        "partner": "Dami",
-        "length": 1
-      }
-    ],
-    "smooth": true,
-    "color": "#73c0de"
-  },
-  {
-    "name": "Ekin-Su",
-    "type": "line",
-    "stack": "total",
-    "data": [
-      {
-        "partner": "-",
-        "length": 3
-      },
-      {
-        "partner": "Single",
-        "length": 1
-      },
-      {
-        "partner": "Davide",
-        "length": 7
-      },
-      {
-        "partner": "Jay",
-        "length": 5
-      },
-      {
-        "partner": "Charlie",
-        "length": 4
-      },
-      {
-        "partner": "Davide",
-        "length": 3
-      },
-      {
-        "partner": "Single",
-        "length": 4
-      },
-      {
-        "partner": "Davide",
-        "length": 7
-      }
-
-    ],
-    "smooth": true,
-    "color": "#fc8452"
-  },
-  
-
-  {
-    "name": "Danica",
-    "type": "line",
-    "stack": "total",
-    "data": [
-      {
-        "partner": "-",
-        "length": 11
-      },
-      {
-        "partner": "Luca",
-        "length": 5
-      },
-      {
-        "partner": "Jaques",
-        "length": 4
-      },
-      {
-        "partner": "Jay",
-        "length": 3
-      },
-      {
-        "partner": "Single",
-        "length": 4
-      },
-      {
-        "partner": "Josh",
-        "length": 6
-      },
-      {
-        "partner": "Billy",
-        "length": 1
-      }
-    ],
-    "smooth": true,
-    "color": "#fc8452"
-  },
-  {
-    "name": "Summer",
-    "type": "line",
-    "stack": "Total",
-    "data": [
-      {
-        "partner": "-",
-        "length": 27
-      },
-      {
-        "partner": "Dami",
-        "length": 6
-      },
-      {
-        "partner": "Josh",
-        "length": 1
-      }
-    ],
-    "smooth": true,
-    "color": "#ee6666"
-  },
-  {
-    "name": "Coco",
-    "type": "line",
-    "stack": "Total",
-    "data": [
-      {
-        "partner": "-",
-        "length": 27
-      },
-      {
-        "partner": "Andrew",
-        "length": 6
-      },
-      {
-        "partner": "Deji",
-        "length": 1
-      }
-    ],
-    "smooth": true,
-    "color": "#ee6666"
-  },
-  
   {
     "name": "Antigoni",
     "type": "line",
@@ -330,5 +92,4 @@
     "smooth": true,
     "color": "#91cc75"
   }
-
 ]

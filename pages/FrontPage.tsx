@@ -8,8 +8,6 @@ import OffShow from "./Components/OffShow";
 import StackChart from "./Components/StackChart";
 import PreCasaCouples from "./Components/PreCasaCouples";
 import Sankey from "./Components/Sankey";
-import GirlSoloTimeline from "./Components/GirlSoloTimeline";
-import BoySoloTimeline from "./Components/BoySoloTimeline";
 
 type Props = {
   theme: string;
@@ -50,19 +48,10 @@ const FrontPage = (props: Props) => {
       <div className="grid grid-cols-12 gap-4 lg:px-24 lg:py-10 p-4 ">
         <StackChart theme={theme} />
         <LineGraph theme={theme} />
-        {/* {theme === "dark" ? (
-          <></>
-        ) : (
-          <> */}
-            {/* <BoySoloTimeline theme={theme} />
-            <GirlSoloTimeline theme={theme} /> */}
-          {/* </>
-        )} */}
         <Sankey theme={theme} />
         <CurrentCouples theme={theme} />
         <PreCasaCouples theme={theme} />
         <CountDown theme={theme} />
-        {/* <CasaAmorCountDown theme={theme}/> */}
         <Vulnerable theme={theme} />
         <OffShow theme={theme} />
       </div>

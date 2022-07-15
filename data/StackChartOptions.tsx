@@ -1,5 +1,6 @@
-import { listItemSecondaryActionClasses } from "@mui/material";
 import colours from "./Colours.json";
+import EveryBoysData from "./EveryTimeLineBoys.json";
+import EveryGirlsData from "./EveryTimeLineGirls.json";
 import BoysData from "./TimeLineBoys.json";
 import GirlsData from "./TimeLineGirls.json";
 interface ITimeLineData {
@@ -133,7 +134,6 @@ const StackChartYAxisData = (props: ITimeLineData[]) => {
 export const girlsOptions: any = {
   animation: true,
   animationDuration: 1500,
-  
   toolbox: {
     feature: {
       saveAsImage: {
@@ -209,6 +209,9 @@ export const boysOptions: any = {
       saveAsImage: {
         show: true,
       },
+      // restore: {
+      //   show: true,
+      // },
     },
   },
   tooltip: {
@@ -255,7 +258,6 @@ export const boysOptions: any = {
   },
   label: {
     formatter: (value: any) => {
-      // console.log(value)
       let stringData = `${value.seriesName}`;
       if (value.seriesName === "-" || value.seriesName === "Exit") {
         return "";
@@ -264,16 +266,156 @@ export const boysOptions: any = {
       }
       return stringData;
     },
-    // width: 50,
-    // // position: "inside",
-    // overflow: 'truncate',
-    // ellipsis: ','
+    // fontSize: 10
+  },
+  // labelLayout: {
+  //   hideOverlap: true,
+  // },
+  series: [...StackChartXAxisData(BoysData), casaAmor],
+};
+
+
+export const everyGirlsOptions: any = {
+  animation: true,
+  animationDuration: 1500,
+  toolbox: {
+    feature: {
+      saveAsImage: {
+        show: true,
+      },
+    },
+  },
+  tooltip: {
+    trigger: "axis",
+    axisPointer: {
+      type: "shadow",
+    },
+    formatter: (info: any) => {
+      let innerHtml = `<b style="text-align:center">${info[0].axisValue}:</b><br/><table id="myTable" border="1" cellpadding="3">`;
+
+      info.map((data: any) => {
+        if (
+          data.data === "-" ||
+          data.seriesName === "" ||
+          data.seriesName === "-" ||
+          data.seriesName === "Exit"
+        ) {
+          return;
+        }
+        innerHtml +=
+          `<tr>` +
+          `<td ">${data.seriesName}</td>` +
+          `<td ">${Math.round(data.data)} </td>` +
+          "</tr>";
+      });
+      innerHtml += "</table>";
+      return `
+          ${innerHtml}`;
+    },
+  },
+  legend: { show: false },
+  grid: {
+    left: "3%",
+    right: "4%",
+    bottom: "3%",
+    containLabel: true,
+  },
+  xAxis: {
+    type: "value",
+  },
+  yAxis: {
+    type: "category",
+    data: StackChartYAxisData(EveryGirlsData),
+  },
+  label: {
+    formatter: (value: any) => {
+      let stringData = `${value.seriesName}`;
+      if (value.seriesName === "-" || value.seriesName === "Exit") {
+        return "";
+      } else if (value.seriesName === null) {
+        return "Casa Amor";
+      }
+      return stringData;
+    },
     fontSize: 10
   },
   labelLayout: {
     hideOverlap: true,
   },
-  series: [...StackChartXAxisData(BoysData), casaAmor],
+  series: [...StackChartXAxisData(EveryGirlsData), casaAmor],
+};
+
+export const everyBoysOptions: any = {
+  animation: true,
+  animationDuration: 1500,
+  toolbox: {
+    feature: {
+      saveAsImage: {
+        show: true,
+      },
+      // restore: {
+      //   show: true,
+      // },
+    },
+  },
+  tooltip: {
+    trigger: "axis",
+    axisPointer: {
+      type: "shadow",
+    },
+    formatter: (info: any) => {
+      let innerHtml = `<b style="text-align:center">${info[0].axisValue}:</b><br/><table id="myTable" border="1" cellpadding="3">`;
+
+      info.map((data: any) => {
+        if (
+          data.data === "-" ||
+          data.seriesName === "" ||
+          data.seriesName === "-" ||
+          data.seriesName === "Exit"
+        ) {
+          return;
+        }
+        innerHtml +=
+          `<tr>` +
+          `<td ">${data.seriesName}</td>` +
+          `<td ">${Math.round(data.data)} </td>` +
+          "</tr>";
+      });
+      innerHtml += "</table>";
+      return `
+          ${innerHtml}`;
+    },
+  },
+  legend: { show: false },
+  grid: {
+    left: "3%",
+    right: "4%",
+    bottom: "3%",
+    containLabel: true,
+  },
+  xAxis: {
+    type: "value",
+  },
+  yAxis: {
+    type: "category",
+    data: StackChartYAxisData(EveryBoysData),
+  },
+  label: {
+    formatter: (value: any) => {
+      let stringData = `${value.seriesName}`;
+      if (value.seriesName === "-" || value.seriesName === "Exit") {
+        return "";
+      } else if (value.seriesName === null) {
+        return "Casa Amor";
+      }
+      return stringData;
+    },
+    fontSize: 10
+  },
+  labelLayout: {
+    hideOverlap: true,
+  },
+  series: [...StackChartXAxisData(EveryBoysData), casaAmor],
 };
 
 function addColours(name: string): string {
