@@ -169,7 +169,16 @@ export const girlsOptions: any = {
           ${innerHtml}`;
     },
   },
-  legend: { show: false },
+  legend: {
+    show: true,
+    data: [
+      {
+        name: "Casa Amor",
+        // compulsorily set icon as a circle
+        icon: "circle",
+      },
+    ],
+  },
   grid: {
     left: "3%",
     right: "4%",
@@ -193,7 +202,7 @@ export const girlsOptions: any = {
       }
       return stringData;
     },
-    fontSize: 10
+    fontSize: 10,
   },
   labelLayout: {
     hideOverlap: true,
@@ -242,7 +251,16 @@ export const boysOptions: any = {
           ${innerHtml}`;
     },
   },
-  legend: { show: false },
+  legend: {
+    show: true,
+    data: [
+      {
+        name: "Casa Amor",
+        // compulsorily set icon as a circle
+        icon: "circle",
+      },
+    ],
+  },
   grid: {
     left: "3%",
     right: "4%",
@@ -273,7 +291,6 @@ export const boysOptions: any = {
   // },
   series: [...StackChartXAxisData(BoysData), casaAmor],
 };
-
 
 export const everyGirlsOptions: any = {
   animation: true,
@@ -313,7 +330,16 @@ export const everyGirlsOptions: any = {
           ${innerHtml}`;
     },
   },
-  legend: { show: false },
+  legend: {
+    show: true,
+    data: [
+      {
+        name: "Casa Amor",
+        // compulsorily set icon as a circle
+        icon: "circle",
+      },
+    ],
+  },
   grid: {
     left: "3%",
     right: "4%",
@@ -337,7 +363,7 @@ export const everyGirlsOptions: any = {
       }
       return stringData;
     },
-    fontSize: 10
+    fontSize: 10,
   },
   labelLayout: {
     hideOverlap: true,
@@ -386,7 +412,16 @@ export const everyBoysOptions: any = {
           ${innerHtml}`;
     },
   },
-  legend: { show: false },
+  legend: {
+    show: true,
+    data: [
+      {
+        name: "Casa Amor",
+        // compulsorily set icon as a circle
+        icon: "circle",
+      },
+    ],
+  },
   grid: {
     left: "3%",
     right: "4%",
@@ -410,7 +445,7 @@ export const everyBoysOptions: any = {
       }
       return stringData;
     },
-    fontSize: 10
+    fontSize: 10,
   },
   labelLayout: {
     hideOverlap: true,

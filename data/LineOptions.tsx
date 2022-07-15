@@ -447,7 +447,11 @@ function arraymove(arr: any, fromIndex: any, toIndex: any) {
 }
 
 function legendData(TimelineBoys: INewTimeLineData[]): string[] {
-  let legendList: string[] = [];
+  let legendList: any[] = [
+      {
+        name: "Casa Amor",
+        icon: "circle",
+      }];
   TimelineBoys.map((person) => {
     legendList.push(person.name);
   });
