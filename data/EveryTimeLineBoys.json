@@ -1,5 +1,30 @@
 [
   {
+    "name": "Josh",
+    "type": "line",
+    "stack": "Total",
+    "data": [
+      {
+        "partner": "-",
+        "length": 27
+      },
+      {
+        "partner": "Danica",
+        "length": 6
+      },
+      {
+        "partner": "Summer",
+        "length": 1
+      },
+      {
+        "partner": "Exit",
+        "length": 1
+      }
+    ],
+    "smooth": true,
+    "color": "#ee6666"
+  },
+  {
     "name": "Jaques",
     "type": "line",
     "stack": "Total",

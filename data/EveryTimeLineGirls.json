@@ -1,28 +1,53 @@
-[ 
+[
   {
-  "name": "Chyna",
-  "type": "line",
-  "stack": "total",
-  "data": [
-    {
-      "partner":  "-",
-      "length": 23
-    },
-    {
-      "partner":  "Single",
-      "length": 4
-    },
-    {
-      "partner":  "Jay",
-      "length": 3
-    },
-    {
-      "partner":  "Exit",
-      "length": 1
-    }
-  ],
-  "smooth": true,
-  "color": "#fc8452"
+    "name": "Coco",
+    "type": "line",
+    "stack": "Total",
+    "data": [
+      {
+        "partner": "-",
+        "length": 27
+      },
+      {
+        "partner": "Andrew",
+        "length": 6
+      },
+      {
+        "partner": "Deji",
+        "length": 1
+      },
+      {
+        "partner": "Exit",
+        "length": 1
+      }
+    ],
+    "smooth": true,
+    "color": "#ee6666"
+  },
+  {
+    "name": "Chyna",
+    "type": "line",
+    "stack": "total",
+    "data": [
+      {
+        "partner": "-",
+        "length": 23
+      },
+      {
+        "partner": "Single",
+        "length": 4
+      },
+      {
+        "partner": "Jay",
+        "length": 3
+      },
+      {
+        "partner": "Exit",
+        "length": 1
+      }
+    ],
+    "smooth": true,
+    "color": "#fc8452"
   },
   {
     "name": "Antigoni",
@@ -30,15 +55,15 @@
     "stack": "total",
     "data": [
       {
-        "partner":  "-",
+        "partner": "-",
         "length": 14
       },
       {
-        "partner":  "Single",
+        "partner": "Single",
         "length": 2
       },
       {
-        "partner":  "Davide",
+        "partner": "Davide",
         "length": 4
       },
       {
@@ -49,7 +74,6 @@
         "partner": "Exit",
         "length": 1
       }
-
     ],
     "smooth": true,
     "color": "#fc8452"

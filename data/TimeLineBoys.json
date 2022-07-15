@@ -155,27 +155,6 @@
     "color": "#ee6666"
   },
   {
-    "name": "Josh",
-    "type": "line",
-    "stack": "Total",
-    "data": [
-      {
-        "partner": "-",
-        "length": 27
-      },
-      {
-        "partner": "Danica",
-        "length": 6
-      },
-      {
-        "partner": "Summer",
-        "length": 1
-      }
-    ],
-    "smooth": true,
-    "color": "#ee6666"
-  },
-  {
     "name": "Deji",
     "type": "line",
     "stack": "Total",
