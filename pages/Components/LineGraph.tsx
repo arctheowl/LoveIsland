@@ -70,7 +70,7 @@ const LineGraph = (props: Props) => {
       </div>
 
       <div
-        className={`${settings[number].themes} col-span-2 lg:col-span-1 backdrop-blur-xl rounded drop-shadow-lg grid-cols-3 grid justify-items-auto animate-fade-in-left`}
+        className={`${settings[number].themes} col-span-2 lg:col-span-1 backdrop-blur-xl rounded drop-shadow-lg grid-cols-3 grid justify-items-auto animate-fade-in-right`}
       >
         <FormControl
           component="fieldset"
