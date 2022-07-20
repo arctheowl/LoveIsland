@@ -4,16 +4,23 @@ type Props = {
   theme: string;
 };
 
-const Singles = ["Liam", "Afia", "Remi", "Amber", "Ikenna", "Charlie", "Jay", "Jaques"];
+const Singles = ["Liam", "Afia", "Remi", "Amber", "Ikenna", "Charlie", "Billy"];
 const Singles2 = [
   "Antigoni",
   "Jack",
   "George",
   "Samuel",
   "Mollie",
+  "Jay", 
+];
+const Singles3 = [
+
   "Jazmine",
   "Cheyanne",
-  "Chyna"
+  "Chyna",
+  "Coco",
+  "Jaques",
+  "Summer"
 ];
 
 const OffShow = (props: Props) => {
@@ -50,7 +57,7 @@ const OffShow = (props: Props) => {
       >
         Off The Show
       </Typography>
-      <div className="grid grid-cols-2">
+      <div className="grid grid-cols-3">
         <div className="grid-cols-1 grid justify-items-auto">
           <Typography
             className="pt-4 justify-self-center list-none"
@@ -69,6 +76,17 @@ const OffShow = (props: Props) => {
             component="div"
           >
             {Singles2.map((single) => {
+              return <li key={single}>{single}</li>;
+            })}
+          </Typography>
+        </div>
+        <div className="grid-cols-1 grid justify-items-auto">
+          <Typography
+            className="pt-4 justify-self-center list-none"
+            variant="h6"
+            component="div"
+          >
+            {Singles3.map((single) => {
               return <li key={single}>{single}</li>;
             })}
           </Typography>

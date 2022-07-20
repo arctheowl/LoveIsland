@@ -30,7 +30,7 @@
       },
       {
         "partner": "Luca",
-        "length": 10
+        "length": 11
       }
     ],
     "smooth": true,
@@ -76,7 +76,7 @@
       },
       {
         "partner": "Adam",
-        "length": 4
+        "length": 5
       }
     ],
     "smooth": true,
@@ -101,7 +101,7 @@
       },
       {
         "partner": "Andrew",
-        "length": 4
+        "length": 5
       }
     ],
     "smooth": true,
@@ -134,7 +134,7 @@
       },
       {
         "partner": "Dami",
-        "length": 4
+        "length": 5
       }
     ],
     "smooth": true,
@@ -175,7 +175,7 @@
       },
       {
         "partner": "Davide",
-        "length": 10
+        "length": 11
       }
     ],
     "smooth": true,
@@ -212,32 +212,7 @@
       },
       {
         "partner": "Billy",
-        "length": 4
-      }
-    ],
-    "smooth": true,
-    "color": "#ee6666"
-  },
-  {
-    "name": "Summer",
-    "type": "line",
-    "stack": "Total",
-    "data": [
-      {
-        "partner": "-",
-        "length": 27
-      },
-      {
-        "partner": "Dami",
-        "length": 6
-      },
-      {
-        "partner": "Josh",
-        "length": 1
-      },
-      {
-        "partner": "Single",
-        "length": 3
+        "length": 5
       }
     ],
     "smooth": true,
