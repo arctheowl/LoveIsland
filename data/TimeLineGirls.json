@@ -30,7 +30,7 @@
       },
       {
         "partner": "Luca",
-        "length": 11
+        "length": 12
       }
     ],
     "smooth": true,
@@ -76,7 +76,7 @@
       },
       {
         "partner": "Adam",
-        "length": 5
+        "length": 6
       }
     ],
     "smooth": true,
@@ -101,7 +101,7 @@
       },
       {
         "partner": "Andrew",
-        "length": 5
+        "length": 6
       }
     ],
     "smooth": true,
@@ -134,7 +134,7 @@
       },
       {
         "partner": "Dami",
-        "length": 5
+        "length": 6
       }
     ],
     "smooth": true,
@@ -175,7 +175,7 @@
       },
       {
         "partner": "Davide",
-        "length": 11
+        "length": 12
       }
     ],
     "smooth": true,
@@ -212,8 +212,13 @@
       },
       {
         "partner": "Billy",
-        "length": 5
+        "length": 4
+      },
+      {
+        "partner": "Single",
+        "length": 2
       }
+
     ],
     "smooth": true,
     "color": "#ee6666"
