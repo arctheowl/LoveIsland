@@ -26,7 +26,7 @@
       },
       {
         "partner": "Gemma",
-        "length": 13
+        "length": 14
       }
     ],
     "smooth": true,
@@ -60,7 +60,7 @@
       },
       {
         "partner": "Indiyah",
-        "length": 7
+        "length": 8
       }
     ],
     "smooth": true,
@@ -85,7 +85,7 @@
       },
       {
         "partner": "Tasha",
-        "length": 7
+        "length": 8
       }
     ],
     "smooth": true,
@@ -127,7 +127,7 @@
       },
       {
         "partner": "Ekin-Su",
-        "length": 13
+        "length": 14
       }
     ],
     "smooth": true,
@@ -153,6 +153,10 @@
       {
         "partner": "Single",
         "length": 6
+      },
+      {
+        "partner": "Lacy",
+        "length": 1
       }
     ],
     "smooth": true,
@@ -174,7 +178,49 @@
       },
       {
         "partner": "Paige",
-        "length": 7
+        "length": 8
+      }
+    ],
+    "smooth": true,
+    "color": "#fc8452"
+  },
+  {
+    "name": "Jaime",
+    "type": "line",
+    "stack": "Total",
+    "data": [
+      {
+        "partner": "-",
+        "length": 38
+      },
+      {
+        "partner": "Single",
+        "length": 2
+      },
+      {
+        "partner": "Danica",
+        "length": 1
+      }
+    ],
+    "smooth": true,
+    "color": "#fc8452"
+  },
+  {
+    "name": "Reece",
+    "type": "line",
+    "stack": "Total",
+    "data": [
+      {
+        "partner": "-",
+        "length": 38
+      },
+      {
+        "partner": "Single",
+        "length": 2
+      },
+      {
+        "partner": "Natalia",
+        "length": 1
       }
     ],
     "smooth": true,

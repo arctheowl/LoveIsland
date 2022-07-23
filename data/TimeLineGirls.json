@@ -30,7 +30,7 @@
       },
       {
         "partner": "Luca",
-        "length": 13
+        "length": 14
       }
     ],
     "smooth": true,
@@ -76,7 +76,7 @@
       },
       {
         "partner": "Adam",
-        "length": 7
+        "length": 8
       }
     ],
     "smooth": true,
@@ -101,7 +101,7 @@
       },
       {
         "partner": "Andrew",
-        "length": 7
+        "length": 8
       }
     ],
     "smooth": true,
@@ -134,7 +134,7 @@
       },
       {
         "partner": "Dami",
-        "length": 7
+        "length": 8
       }
     ],
     "smooth": true,
@@ -175,7 +175,7 @@
       },
       {
         "partner": "Davide",
-        "length": 13
+        "length": 14
       }
     ],
     "smooth": true,
@@ -217,10 +217,56 @@
       {
         "partner": "Single",
         "length": 3
+      },
+      {
+        "partner": "Jaime",
+        "length": 1
       }
 
     ],
     "smooth": true,
     "color": "#ee6666"
+  },
+  {
+    "name": "Lacy",
+    "type": "line",
+    "stack": "Total",
+    "data": [
+      {
+        "partner": "-",
+        "length": 38
+      },
+      {
+        "partner": "Single",
+        "length": 2
+      },
+      {
+        "partner": "Danica",
+        "length": 1
+      }
+    ],
+    "smooth": true,
+    "color": "#fc8452"
+  },
+  {
+    "name": "Natalia",
+    "type": "line",
+    "stack": "Total",
+    "data": [
+      {
+        "partner": "-",
+        "length": 38
+      },
+      {
+        "partner": "Single",
+        "length": 2
+      },
+      {
+        "partner": "Reece",
+        "length": 1
+      }
+    ],
+    "smooth": true,
+    "color": "#fc8452"
   }
 ]

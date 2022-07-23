@@ -286,9 +286,9 @@ export const boysOptions: any = {
     },
     // fontSize: 10
   },
-  // labelLayout: {
-  //   hideOverlap: true,
-  // },
+  labelLayout: {
+    hideOverlap: true,
+  },
   series: [...StackChartXAxisData(BoysData), casaAmor],
 };
 
