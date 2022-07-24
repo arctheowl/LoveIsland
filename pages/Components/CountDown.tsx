@@ -9,13 +9,14 @@ const CountDown = (props: Props) => {
   const { theme } = props;
   const date = new Date();
   const date2 = date.getDate();
-
+  // console.log(date2);
+  // console.log(date);
   let expiryDate;
 
   if (date.getDay() === 6) {
     expiryDate = `${date2 + 1} jul 2022 21:00:00`;
   } else {
-    expiryDate = `${date2} jul 2022 21:00:00`;
+    expiryDate = `${date2} jul 2022 23:00:00`;
   }
 
   const [expiryTime, setExpiryTime] = useState(expiryDate);
@@ -79,7 +80,7 @@ const CountDown = (props: Props) => {
     number = 1;
   }
 
-  // console.log(date2)
+  // console.log(countdownTime.countdownSeconds)
   return (
     <div
       className={`${settings[number].themes} col-span-6 backdrop-blur-xl rounded drop-shadow-lg grid-cols-1 grid`}

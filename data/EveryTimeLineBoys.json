@@ -1,5 +1,63 @@
 [
   {
+    "name": "Deji",
+    "type": "line",
+    "stack": "Total",
+    "data": [
+      {
+        "partner": "-",
+        "length": 27
+      },
+      {
+        "partner": "Indiyah",
+        "length": 6
+      },
+      {
+        "partner": "Coco",
+        "length": 1
+      },
+      {
+        "partner": "Single",
+        "length": 6
+      },
+      {
+        "partner": "Lacy",
+        "length": 2
+      },
+      {
+        "partner": "Exit",
+        "length": 1
+      }
+    ],
+    "smooth": true,
+    "color": "#ee6666"
+  },
+  {
+    "name": "Reece",
+    "type": "line",
+    "stack": "Total",
+    "data": [
+      {
+        "partner": "-",
+        "length": 38
+      },
+      {
+        "partner": "Single",
+        "length": 2
+      },
+      {
+        "partner": "Natalia",
+        "length": 2
+      },
+      {
+        "partner": "Exit",
+        "length": 1
+      }
+    ],
+    "smooth": true,
+    "color": "#fc8452"
+  },
+  {
     "name": "Billy",
     "type": "line",
     "stack": "Total",

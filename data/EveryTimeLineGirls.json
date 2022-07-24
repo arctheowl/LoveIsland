@@ -1,5 +1,55 @@
 [
   {
+    "name": "Lacy",
+    "type": "line",
+    "stack": "Total",
+    "data": [
+      {
+        "partner": "-",
+        "length": 38
+      },
+      {
+        "partner": "Single",
+        "length": 2
+      },
+      {
+        "partner": "Deji",
+        "length": 2
+      },
+      {
+        "partner": "Exit",
+        "length": 1
+      }
+    ],
+    "smooth": true,
+    "color": "#fc8452"
+  },
+  {
+    "name": "Natalia",
+    "type": "line",
+    "stack": "Total",
+    "data": [
+      {
+        "partner": "-",
+        "length": 38
+      },
+      {
+        "partner": "Single",
+        "length": 2
+      },
+      {
+        "partner": "Reece",
+        "length": 2
+      },
+      {
+        "partner": "Exit",
+        "length": 1
+      }
+    ],
+    "smooth": true,
+    "color": "#fc8452"
+  },
+  {
     "name": "Summer",
     "type": "line",
     "stack": "Total",
