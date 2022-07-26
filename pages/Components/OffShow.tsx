@@ -11,7 +11,9 @@ const Singles2 = [
   "George",
   "Samuel",
   "Mollie",
-  "Jay", 
+  "Jay",
+  "Deji",
+  "Lacy"
 ];
 const Singles3 = [
 
@@ -20,7 +22,9 @@ const Singles3 = [
   "Chyna",
   "Coco",
   "Jaques",
-  "Summer"
+  "Summer",
+  "Reece",
+  "Natalia"
 ];
 
 const OffShow = (props: Props) => {
