@@ -4,7 +4,7 @@ type Props = {
   theme: string;
 };
 
-const Singles = ["Liam", "Afia", "Remi", "Amber", "Ikenna", "Charlie", "Billy"];
+const Singles = ["Liam", "Afia", "Remi", "Amber", "Ikenna", "Charlie", "Billy", "Danica"];
 const Singles2 = [
   "Antigoni",
   "Jack",
@@ -13,10 +13,10 @@ const Singles2 = [
   "Mollie",
   "Jay",
   "Deji",
-  "Lacy"
+  "Lacy",
+  "Jaime"
 ];
 const Singles3 = [
-
   "Jazmine",
   "Cheyanne",
   "Chyna",

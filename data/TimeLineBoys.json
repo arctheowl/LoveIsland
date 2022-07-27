@@ -26,7 +26,7 @@
       },
       {
         "partner": "Gemma",
-        "length": 17
+        "length": 18
       }
     ],
     "smooth": true,
@@ -60,7 +60,7 @@
       },
       {
         "partner": "Indiyah",
-        "length": 11
+        "length": 12
       }
     ],
     "smooth": true,
@@ -85,7 +85,7 @@
       },
       {
         "partner": "Tasha",
-        "length": 11
+        "length": 12
       }
     ],
     "smooth": true,
@@ -127,7 +127,7 @@
       },
       {
         "partner": "Ekin-Su",
-        "length": 17
+        "length": 18
       }
     ],
     "smooth": true,
@@ -148,28 +148,7 @@
       },
       {
         "partner": "Paige",
-        "length": 11
-      }
-    ],
-    "smooth": true,
-    "color": "#fc8452"
-  },
-  {
-    "name": "Jaime",
-    "type": "line",
-    "stack": "Total",
-    "data": [
-      {
-        "partner": "-",
-        "length": 38
-      },
-      {
-        "partner": "Single",
-        "length": 2
-      },
-      {
-        "partner": "Danica",
-        "length": 4
+        "length": 12
       }
     ],
     "smooth": true,

@@ -1,5 +1,54 @@
 [
   {
+    "name": "Danica",
+    "type": "line",
+    "stack": "Total",
+    "data": [
+      {
+        "partner": "-",
+        "length": 11
+      },
+      {
+        "partner": "Luca",
+        "length": 5
+      },
+      {
+        "partner": "Jaques",
+        "length": 4
+      },
+      {
+        "partner": "Jay",
+        "length": 3
+      },
+      {
+        "partner": "Single",
+        "length": 4
+      },
+      {
+        "partner": "Josh",
+        "length": 6
+      },
+      {
+        "partner": "Billy",
+        "length": 4
+      },
+      {
+        "partner": "Single",
+        "length": 3
+      },
+      {
+        "partner": "Jaime",
+        "length": 4
+      },
+      {
+        "partner": "Exit",
+        "length": 1
+      }
+    ],
+    "smooth": true,
+    "color": "#ee6666"
+  },
+  {
     "name": "Lacy",
     "type": "line",
     "stack": "Total",

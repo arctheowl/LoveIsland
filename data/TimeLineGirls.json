@@ -30,7 +30,7 @@
       },
       {
         "partner": "Luca",
-        "length": 17
+        "length": 18
       }
     ],
     "smooth": true,
@@ -76,7 +76,7 @@
       },
       {
         "partner": "Adam",
-        "length": 11
+        "length": 12
       }
     ],
     "smooth": true,
@@ -101,7 +101,7 @@
       },
       {
         "partner": "Andrew",
-        "length": 11
+        "length": 12
       }
     ],
     "smooth": true,
@@ -134,7 +134,7 @@
       },
       {
         "partner": "Dami",
-        "length": 11
+        "length": 12
       }
     ],
     "smooth": true,
@@ -175,56 +175,10 @@
       },
       {
         "partner": "Davide",
-        "length": 17
+        "length": 18
       }
     ],
     "smooth": true,
     "color": "#91cc75"
-  },
-  {
-    "name": "Danica",
-    "type": "line",
-    "stack": "Total",
-    "data": [
-      {
-        "partner": "-",
-        "length": 11
-      },
-      {
-        "partner": "Luca",
-        "length": 5
-      },
-      {
-        "partner": "Jaques",
-        "length": 4
-      },
-      {
-        "partner": "Jay",
-        "length": 3
-      },
-      {
-        "partner": "Single",
-        "length": 4
-      },
-      {
-        "partner": "Josh",
-        "length": 6
-      },
-      {
-        "partner": "Billy",
-        "length": 4
-      },
-      {
-        "partner": "Single",
-        "length": 3
-      },
-      {
-        "partner": "Jaime",
-        "length": 4
-      }
-
-    ],
-    "smooth": true,
-    "color": "#ee6666"
   }
 ]
