@@ -10,6 +10,19 @@ module.exports = {
     // },
     extend: {
       keyframes: {
+        'wiggle': {
+          '0%': {
+            transform: 'rotate(-12deg)'
+          },
+          '50%': {
+            transform: 'rotate(12deg)'
+          },
+         
+          '100%': {
+           
+            transform: 'rotate(-12deg)'
+        }
+      },
           'fade-in-left': {
               '0%': {
                   opacity: '0',
@@ -33,7 +46,8 @@ module.exports = {
       },
       animation: {
           'fade-in-left': 'fade-in-left 1.5s ease-out',
-          'fade-in-right': 'fade-in-right 1.5s ease-out'
+          'fade-in-right': 'fade-in-right 1.5s ease-out',
+          'wiggle': 'wiggle 0.5s infinite'
       }
   },
   },
