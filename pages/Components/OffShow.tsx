@@ -1,31 +1,40 @@
 import Typography from "@mui/material/Typography";
+import EveryBoy from "../../data/EveryTimeLineBoys.json";
+import EveryGirl from "../../data/EveryTimeLineGirls.json";
 
 type Props = {
   theme: string;
 };
 
-const Singles = ["Liam", "Afia", "Remi", "Amber", "Ikenna", "Charlie", "Billy", "Danica"];
-const Singles2 = [
-  "Antigoni",
-  "Jack",
-  "George",
-  "Samuel",
-  "Mollie",
-  "Jay",
-  "Deji",
-  "Lacy",
-  "Jaime"
-];
-const Singles3 = [
-  "Jazmine",
-  "Cheyanne",
-  "Chyna",
-  "Coco",
-  "Jaques",
-  "Summer",
-  "Reece",
-  "Natalia"
-];
+// const Singles = [
+//   "Liam",
+//   "Afia",
+//   "Remi",
+//   "Amber",
+//   "Ikenna",
+//   "Charlie",
+//   "Billy",
+//   "Danica",
+//   "Paige",
+//   "Jazmine",
+//   "Cheyanne",
+//   "Chyna",
+//   "Coco",
+//   "Jaques",
+//   "Summer",
+//   "Reece",
+//   "Natalia",
+//   "Adam",
+//   "Antigoni",
+//   "Jack",
+//   "George",
+//   "Samuel",
+//   "Mollie",
+//   "Jay",
+//   "Deji",
+//   "Lacy",
+//   "Jaime",
+// ]
 
 const OffShow = (props: Props) => {
   const { theme } = props;
@@ -55,46 +64,28 @@ const OffShow = (props: Props) => {
       className={`${settings[number].themes} col-span-12 backdrop-blur-xl rounded drop-shadow-lg grid-cols-1 grid justify-items-auto py-8`}
     >
       <Typography
-        className="pt-4 justify-self-center md:p-0 pl-8"
+        className="py-4 justify-self-center md:pb-10 pl-8"
         variant="h6"
         component="div"
       >
         Off The Show
       </Typography>
-      <div className="grid grid-cols-3">
-        <div className="grid-cols-1 grid justify-items-auto">
-          <Typography
-            className="pt-4 justify-self-center list-none"
-            variant="h6"
-            component="div"
-          >
-            {Singles.map((single) => {
-              return <li key={single}>{single}</li>;
-            })}
-          </Typography>
-        </div>
-        <div className="grid-cols-1 grid justify-items-auto">
-          <Typography
-            className="pt-4 justify-self-center list-none"
-            variant="h6"
-            component="div"
-          >
-            {Singles2.map((single) => {
-              return <li key={single}>{single}</li>;
-            })}
-          </Typography>
-        </div>
-        <div className="grid-cols-1 grid justify-items-auto">
-          <Typography
-            className="pt-4 justify-self-center list-none"
-            variant="h6"
-            component="div"
-          >
-            {Singles3.map((single) => {
-              return <li key={single}>{single}</li>;
-            })}
-          </Typography>
-        </div>
+
+      <div className="flex flex-wrap list-none gap-5 flex-grow md:flex-col md:h-52 md:pl-10">
+        {EveryBoy.map((single) => {
+          return (
+            <li key={single.name}>
+              <p className="text-lg">{single.name}</p>
+            </li>
+          );
+        })}
+        {EveryGirl.map((single) => {
+          return (
+            <li key={single.name}>
+              <p className="text-lg">{single.name}</p>
+            </li>
+          );
+        })}
       </div>
     </div>
   );

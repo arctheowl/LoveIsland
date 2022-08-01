@@ -34,6 +34,7 @@ interface IXData {
   name: string;
   type: string;
   stack: string;
+  barWidth?: string
   label: {
     show: boolean;
   };
@@ -114,6 +115,7 @@ const StackChartXAxisData = (props: ITimeLineData[]) => {
             borderColor: addColours(`${partner.partner}`),
             color: addColours(`${partner.partner}`),
           },
+          barWidth: '80%',
           data: [...defaultData, partner.length],
         });
       }
@@ -300,6 +302,9 @@ export const everyGirlsOptions: any = {
       saveAsImage: {
         show: true,
       },
+      // restore: {
+      //   show: true,
+      // },
     },
   },
   tooltip: {
@@ -370,6 +375,7 @@ export const everyGirlsOptions: any = {
   },
   series: [...StackChartXAxisData(EveryGirlsData), casaAmor],
 };
+
 
 export const everyBoysOptions: any = {
   animation: true,

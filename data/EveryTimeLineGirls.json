@@ -2,7 +2,7 @@
   {
     "name": "Danica",
     "type": "line",
-    "stack": "Total",
+    "stack": "total",
     "data": [
       {
         "partner": "-",
@@ -46,12 +46,12 @@
       }
     ],
     "smooth": true,
-    "color": "#ee6666"
+    "color": "#fc8452"
   },
   {
     "name": "Lacy",
     "type": "line",
-    "stack": "Total",
+    "stack": "total",
     "data": [
       {
         "partner": "-",
@@ -76,7 +76,7 @@
   {
     "name": "Natalia",
     "type": "line",
-    "stack": "Total",
+    "stack": "total",
     "data": [
       {
         "partner": "-",
@@ -101,7 +101,7 @@
   {
     "name": "Summer",
     "type": "line",
-    "stack": "Total",
+    "stack": "total",
     "data": [
       {
         "partner": "-",
@@ -125,12 +125,12 @@
       }
     ],
     "smooth": true,
-    "color": "#ee6666"
+    "color": "#fc8452"
   },
   {
     "name": "Coco",
     "type": "line",
-    "stack": "Total",
+    "stack": "total",
     "data": [
       {
         "partner": "-",
@@ -150,7 +150,7 @@
       }
     ],
     "smooth": true,
-    "color": "#ee6666"
+    "color": "#fc8452"
   },
   {
     "name": "Chyna",
