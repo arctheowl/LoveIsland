@@ -32,7 +32,7 @@ const Sankey = (props: Props) => {
   return (
     <div className={`grid grid-cols-2 gap-4 col-span-12`}>
       <div
-        className={`${settings[number].themes} col-span-2 lg:col-span-1 backdrop-blur-xl rounded drop-shadow-lg grid-cols-1 grid justify-items-auto animate-fade-in-left`}
+        className={`${settings[number].themes} col-span-2 lg:col-span-1 backdrop-blur-xl rounded-2xl drop-shadow-lg grid-cols-1 grid justify-items-auto animate-fade-in-left`}
       >
         <Typography sx={{ fontSize: 24 }} className="justify-self-center">
           Casa Amor Boys
@@ -47,7 +47,7 @@ const Sankey = (props: Props) => {
       </div>
 
       <div
-        className={`${settings[number].themes} col-span-2 lg:col-span-1 backdrop-blur-xl rounded drop-shadow-lg grid-cols-1 grid justify-items-auto animate-fade-in-right`}
+        className={`${settings[number].themes} col-span-2 lg:col-span-1 backdrop-blur-xl rounded-2xl drop-shadow-lg grid-cols-1 grid justify-items-auto animate-fade-in-right`}
       >
         <Typography sx={{ fontSize: 24 }} className="justify-self-center">
           Casa Amor Girls

@@ -61,7 +61,7 @@ const OffShow = (props: Props) => {
 
   return (
     <div
-      className={`${settings[number].themes} col-span-12 backdrop-blur-xl rounded drop-shadow-lg grid-cols-1 grid justify-items-auto py-8`}
+      className={`${settings[number].themes} col-span-12 backdrop-blur-xl rounded-2xl drop-shadow-lg grid-cols-1 grid justify-items-auto py-8`}
     >
       <Typography
         className="py-4 justify-self-center md:pb-10 pl-8"

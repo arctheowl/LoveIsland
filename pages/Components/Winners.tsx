@@ -72,45 +72,47 @@ const Winners = ({ theme }: IProps) => {
     number = 1;
   }
   return (
-    <div className={`gap-4 col-span-12`}>
+    <div className={`gap-4 col-span-12 md:grid md:grid-cols-7`}>
       <div
-        className={`${settings[number].themes} lg:col-span-1 backdrop-blur-xl rounded drop-shadow-lg grid-cols-1 grid justify-items-auto animate-fade-in-left p-5`}
+        className={`${settings[number].themes} animate-fade-in-left p-5 md:col-span-3 md:col-start-3 rounded-2xl`}
       >
         <div className="flex flex-col justify-center items-center text-4xl py-5">
           Winners
         </div>
         <div className="flex flex-col justify-center items-center text-4xl  gap-3 ">
-          <div className="flex gap-3">
-            <div className="flex gap-3 text-[#ffd700] hover:animate-wiggle">
-              <FaCrown />
+          <div className="flex flex-col items-start  text-4xl  gap-3 ">
+            <div className="flex gap-3">
+              <div className="flex gap-3 text-[#ffd700] hover:animate-wiggle">
+                <FaCrown />
+              </div>
+              <h1>{ListofWinners.get(1)?.boy} &</h1>
+              <div className="flex flex-col justify-center items-center text-lg  gap-3">
+                <Confetti />
+              </div>
+              <h1>{ListofWinners.get(1)?.girl}</h1>
             </div>
-            <h1>{ListofWinners.get(1)?.boy}</h1>
-            <div className="flex flex-col justify-center items-center text-lg  gap-3">
-              <Confetti />
+            <div className="flex gap-3">
+              <div className="flex gap-3 text-[#d4d2cf] hover:animate-spin">
+                <FaCrown />
+              </div>
+              <h1>{ListofWinners.get(2)?.boy} &</h1>
+              <h1>{ListofWinners.get(2)?.girl}</h1>
             </div>
-            <h1>{ListofWinners.get(1)?.girl}</h1>
-          </div>
-          <div className="flex gap-3">
-            <div className="flex gap-3 text-[#d4d2cf] hover:animate-spin">
-              <FaCrown />
+            <div className="flex gap-3">
+              <div className="flex gap-3 text-[#cd7f32] hover:animate-bounce">
+                <FaCrown />
+              </div>
+              <h1>{ListofWinners.get(3)?.boy} &</h1>
+              <h1>{ListofWinners.get(3)?.girl}</h1>
             </div>
-            <h1>{ListofWinners.get(2)?.boy}</h1>
-            <h1>{ListofWinners.get(2)?.girl}</h1>
-          </div>
-          <div className="flex gap-3">
-            <div className="flex gap-3 text-[#cd7f32] hover:animate-bounce">
-              <FaCrown />
+            <div className="flex gap-3">
+              <RiNumber4 /> <h1>{ListofWinners.get(4)?.boy} &</h1>
+              <h1>{ListofWinners.get(4)?.girl}</h1>
             </div>
-            <h1>{ListofWinners.get(3)?.boy}</h1>
-            <h1>{ListofWinners.get(3)?.girl}</h1>
-          </div>
-          <div className="flex gap-3">
-            <RiNumber4 /> <h1>{ListofWinners.get(4)?.boy}</h1>
-            <h1>{ListofWinners.get(4)?.girl}</h1>
-          </div>
-          <div className="flex gap-3">
-            <RiNumber5 /> <h1>{ListofWinners.get(5)?.boy}</h1>
-            <h1>{ListofWinners.get(5)?.girl}</h1>
+            <div className="flex gap-3">
+              <RiNumber5 /> <h1>{ListofWinners.get(5)?.boy} &</h1>
+              <h1>{ListofWinners.get(5)?.girl}</h1>
+            </div>
           </div>
         </div>
       </div>
