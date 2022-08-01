@@ -1,8 +1,6 @@
 import React from "react";
-import { FaCrown, FaMedal } from "react-icons/fa";
+import { FaCrown } from "react-icons/fa";
 import { RiNumber4, RiNumber5 } from "react-icons/ri";
-import Firework from "./Fireworks";
-import Confetti from "./Confetti";
 
 type IProps = {
   theme: string;
@@ -76,7 +74,7 @@ const Winners = ({ theme }: IProps) => {
       <div
         className={`${settings[number].themes} animate-fade-in-left p-5 md:col-span-3 md:col-start-3 rounded-2xl`}
       >
-        <Confetti />
+        
         <div className="flex flex-col justify-center items-center text-2xl md:text-4xl py-5">
           Winners
         </div>

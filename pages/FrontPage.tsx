@@ -9,6 +9,7 @@ import StackChart from "./Components/StackChart";
 import PreCasaCouples from "./Components/PreCasaCouples";
 import Sankey from "./Components/Sankey";
 import Winners from "./Components/Winners";
+import Confetti from "./Components/Confetti";
 
 type Props = {
   theme: string;
@@ -47,7 +48,8 @@ const FrontPage = (props: Props) => {
       )}
 
       <div className="grid grid-cols-12 gap-4 lg:px-24 lg:py-10 p-4 ">
-        <Winners theme={theme}/>
+        <Confetti />
+        <Winners theme={theme} />
         <StackChart theme={theme} />
         <LineGraph theme={theme} />
         <Sankey theme={theme} />
