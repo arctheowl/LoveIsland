@@ -24,15 +24,15 @@ const ListofWinners = new Map<number, IListofWinners>([
   [
     2,
     {
-      boy: "Dami",
-      girl: "Indiyah",
+      boy: "Luca",
+      girl: "Gemma",
     },
   ],
   [
     3,
     {
-      boy: "Luca",
-      girl: "Gemma",
+      boy: "Dami",
+      girl: "Indiyah",
     },
   ],
   [
@@ -76,6 +76,7 @@ const Winners = ({ theme }: IProps) => {
       <div
         className={`${settings[number].themes} animate-fade-in-left p-5 md:col-span-3 md:col-start-3 rounded-2xl`}
       >
+        <Confetti />
         <div className="flex flex-col justify-center items-center text-2xl md:text-4xl py-5">
           Winners
         </div>
@@ -86,9 +87,6 @@ const Winners = ({ theme }: IProps) => {
                 <FaCrown />
               </div>
               <h1>{ListofWinners.get(1)?.boy} &</h1>
-              <div className="flex flex-col justify-center items-center text-lg  gap-3">
-                <Confetti />
-              </div>
               <h1>{ListofWinners.get(1)?.girl}</h1>
             </div>
             <div className="flex gap-3">

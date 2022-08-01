@@ -1,47 +1,25 @@
 import React from "react";
-import Particles from "react-particles";
-import type { Engine } from "tsparticles-engine";
-import { loadConfettiPreset } from "tsparticles-preset-confetti";
+import Confetti from "react-confetti";
 
-const Confetti = () => {
-  const options: any = {
-    // ...
-    emitters: [
-      {
-        life: {
-          duration: 5,
-          count: 1,
-        },
-        position: {
-          x: 0,
-          y: 30,
-        },
-        particles: {
-          move: {
-            direction: "top-right",
-          },
-        },
-      },
-      {
-        life: {
-          duration: 5,
-          count: 1,
-        },
-        position: {
-          x: 100,
-          y: 30,
-        },
-        particles: {
-          move: {
-            direction: "top-left",
-          },
-        },
-      },
-    ],
-    preset: "confetti",
-  };
+type Props = {};
 
-  return <Particles options={options} />;
+const ConfettiBackground = (props: Props) => {
+  const [showConfetti, setShowConfetti] = React.useState(true);
+  setTimeout(() => {
+    setShowConfetti(false);
+  }, 10000);
+  return (
+    <div>
+      {showConfetti ? (
+        <>
+          <Confetti width={5000} height={700} />
+        </>
+      ) : (
+        <>
+        </>
+      )}
+    </div>
+  );
 };
 
-export default Confetti;
+export default ConfettiBackground;
