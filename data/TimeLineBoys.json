@@ -132,26 +132,5 @@
     ],
     "smooth": true,
     "color": "#91cc75"
-  },
-  {
-    "name": "Adam",
-    "type": "line",
-    "stack": "Total",
-    "data": [
-      {
-        "partner": "-",
-        "length": 30
-      },
-      {
-        "partner": "Single",
-        "length": 3
-      },
-      {
-        "partner": "Paige",
-        "length": 13
-      }
-    ],
-    "smooth": true,
-    "color": "#fc8452"
   }
 ]

@@ -37,52 +37,6 @@
     "color": "#9a60b4"
   },
   {
-    "name": "Paige",
-    "type": "line",
-    "stack": "Total",
-    "data": [
-      {
-        "partner": "Luca",
-        "length": 4
-      },
-      {
-        "partner": "Single",
-        "length": 3
-      },
-      {
-        "partner": "Jaques",
-        "length": 9
-      },
-
-      {
-        "partner": "Jay",
-        "length": 4
-      },
-      {
-        "partner": "Jaques",
-        "length": 3
-      },
-      {
-        "partner": "Single",
-        "length": 4
-      },
-      {
-        "partner": "Jaques",
-        "length": 5
-      },
-      {
-        "partner": "Single",
-        "length": 1
-      },
-      {
-        "partner": "Adam",
-        "length": 14
-      }
-    ],
-    "smooth": true,
-    "color": "#fc8452"
-  },
-  {
     "name": "Tasha",
     "type": "line",
     "stack": "Total",

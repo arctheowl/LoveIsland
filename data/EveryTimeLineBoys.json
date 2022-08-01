@@ -1,5 +1,26 @@
 [
   {
+    "name": "Adam",
+    "type": "line",
+    "stack": "Total",
+    "data": [
+      {
+        "partner": "-",
+        "length": 30
+      },
+      {
+        "partner": "Single",
+        "length": 3
+      },
+      {
+        "partner": "Paige",
+        "length": 13
+      }
+    ],
+    "smooth": true,
+    "color": "#fc8452"
+  },
+  {
     "name": "Jaime",
     "type": "line",
     "stack": "Total",
