@@ -8,7 +8,6 @@ import TableRow from "@mui/material/TableRow";
 import Typography from "@mui/material/Typography";
 import CurrentCouples from "../../data/CurrentCouples.json";
 
-
 type Props = {
   theme: string;
 };
@@ -39,68 +38,53 @@ const CoupleTable = (props: Props) => {
   }
 
   return (
-
-      <div
-        className={`${settings[number].themes} col-span-12 md:col-span-6 backdrop-blur-xl rounded-2xl drop-shadow-lg grid-cols-1 grid justify-items-auto`}
+    <div
+      className={`${settings[number].themes} col-span-12 md:col-span-6 backdrop-blur-xl rounded-2xl drop-shadow-lg grid-cols-1 grid justify-items-auto`}
+    >
+      <Typography
+        variant="h6"
+        component="div"
+        className="list-none justify-self-center pt-4 md:p-0 pl-8"
       >
-        <Typography
-          variant="h6"
-          component="div"
-          className="list-none justify-self-center pt-4 md:p-0 pl-8"
+        Final Couples
+      </Typography>
+      <TableContainer className={`p-5 ${settings[number].themes}`}>
+        <Table
+          size="small"
+          aria-label="simple table"
+          className={`${settings[number].themes}`}
         >
-          Final Couples
-        </Typography>
-        <TableContainer className={`p-5 ${settings[number].themes}`}>
-          <Table
-            size="small"
-            aria-label="simple table"
-            className={`${settings[number].themes}`}
-          >
-            <TableHead>
-              <TableRow>
+          <TableHead>
+          </TableHead>
+          <TableBody>
+            {rows.map((row) => (
+              <TableRow
+                key={row.name}
+                // sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                className={`${settings[number].themes}`}
+              >
                 <TableCell
                   sx={{ color: settings[number].text }}
+                  component="th"
+                  scope="row"
                   className={`${settings[number].themes}`}
                 >
-                  Boys
+                  <p className="text-lg md:text-2xl">{row.name}</p>
                 </TableCell>
                 <TableCell
                   sx={{ color: settings[number].text }}
-                  className={`${settings[number].themes}`}
                   align="right"
+                  className={`${settings[number].themes}`}
                 >
-                  Girls
+                  <p className="text-lg md:text-2xl">{row.partner}</p>
+                  
                 </TableCell>
               </TableRow>
-            </TableHead>
-            <TableBody>
-              {rows.map((row) => (
-                <TableRow
-                  key={row.name}
-                  // sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-                  className={`${settings[number].themes}`}
-                >
-                  <TableCell
-                    sx={{ color: settings[number].text }}
-                    component="th"
-                    scope="row"
-                    className={`${settings[number].themes}`}
-                  >
-                    {row.name}
-                  </TableCell>
-                  <TableCell
-                    sx={{ color: settings[number].text }}
-                    align="right"
-                    className={`${settings[number].themes}`}
-                  >
-                    {row.partner}
-                  </TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </TableContainer>
-      </div>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
+    </div>
   );
 };
 

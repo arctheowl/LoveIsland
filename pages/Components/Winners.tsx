@@ -76,11 +76,11 @@ const Winners = ({ theme }: IProps) => {
       <div
         className={`${settings[number].themes} animate-fade-in-left p-5 md:col-span-3 md:col-start-3 rounded-2xl`}
       >
-        <div className="flex flex-col justify-center items-center text-4xl py-5">
+        <div className="flex flex-col justify-center items-center text-2xl md:text-4xl py-5">
           Winners
         </div>
         <div className="flex flex-col justify-center items-center text-4xl  gap-3 ">
-          <div className="flex flex-col items-start  text-4xl  gap-3 ">
+          <div className="flex flex-col items-start text-lg md:text-4xl  gap-3 ">
             <div className="flex gap-3">
               <div className="flex gap-3 text-[#ffd700] hover:animate-wiggle">
                 <FaCrown />
