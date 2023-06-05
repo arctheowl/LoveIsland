@@ -2,7 +2,7 @@ import Box from "@mui/material/Box";
 import Stepper from "@mui/material/Stepper";
 import Step from "@mui/material/Step";
 import StepLabel from "@mui/material/StepLabel";
-import BoysTimeline from "../../data/TimeLineBoys.json";
+import BoysTimeline from "../data/2022/TimeLineBoys.json";
 import { useState } from "react";
 import { Typography } from "@mui/material";
 
