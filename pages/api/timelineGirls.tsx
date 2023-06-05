@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import TimeLineGirls from "../../data/TimeLineGirls.json";
+import TimeLineGirls from "../../data/2022/TimeLineGirls.json";
 
 type Data = {
   name: string;

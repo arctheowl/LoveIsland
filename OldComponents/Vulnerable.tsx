@@ -1,5 +1,5 @@
 import Typography from "@mui/material/Typography";
-import Singles from "../../data/CurrentSingles.json";
+import Singles from "../data/2022/CurrentSingles.json";
 
 type Props = {
   theme: string;

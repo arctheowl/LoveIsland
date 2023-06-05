@@ -1,6 +1,6 @@
 import ReactECharts from "echarts-for-react";
 import Typography from "@mui/material/Typography";
-import { boysOptions, girlsOptions, everyBoysOptions, everyGirlsOptions } from "../../data/LineOptions";
+import { boysOptions, girlsOptions, everyBoysOptions, everyGirlsOptions } from "../data/2022/LineOptions";
 import { useState } from "react";
 import { FormControl, FormControlLabel, Switch } from "@mui/material";
 

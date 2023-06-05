@@ -5,7 +5,7 @@ import {
   girlsOptions,
   everyBoysOptions,
   everyGirlsOptions,
-} from "../../data/StackChartOptions";
+} from "../data/2022/StackChartOptions";
 import { useState } from "react";
 import { FormControl, Switch } from "@mui/material";
 import FormControlLabel from "@mui/material/FormControlLabel";

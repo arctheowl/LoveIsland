@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import CurrentCouples from '../../data/CurrentCouples.json'
+import CurrentCouples from '../../data/2022/CurrentCouples.json'
 
 type Data = {
   name: string,

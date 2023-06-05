@@ -1,6 +1,6 @@
 import ReactECharts from "echarts-for-react";
 import Typography from "@mui/material/Typography";
-import { boysOptions, girlsOptions } from "../../data/SankeyOptions";
+import { boysOptions, girlsOptions } from "../data/2022/SankeyOptions";
 
 type Props = {
   theme: string;

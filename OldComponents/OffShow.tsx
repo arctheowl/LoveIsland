@@ -1,6 +1,6 @@
 import Typography from "@mui/material/Typography";
-import EveryBoy from "../../data/EveryTimeLineBoys.json";
-import EveryGirl from "../../data/EveryTimeLineGirls.json";
+import EveryBoy from "../data/2022/EveryTimeLineBoys.json";
+import EveryGirl from "../data/2022/EveryTimeLineGirls.json";
 
 type Props = {
   theme: string;
